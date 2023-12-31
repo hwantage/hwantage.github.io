@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hwantage.github.io/categories/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/post/hello_world/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/post/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/tag_name1/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/tag_name2/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/categories/technology/</loc>
+    <lastmod>2023-12-31T22:51:57+09:00</lastmod>
+  </url>
+</urlset>
