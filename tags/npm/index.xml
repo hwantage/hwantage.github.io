@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/npm/</link>
+    <description>Recent content in npm on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© hwantage</copyright>
+    <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>npm 패키지 배포하기</title>
+      <link>https://hwantage.github.io/posts/npmjs/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://hwantage.github.io/posts/npmjs/</guid>
+      <description>npm 모듈 혹은 npm 패키지를 생성하여 실제로 NPM Registry에 업로드까지 하여 오픈소스로서 NPM 생태계에 기여하는 방법 안내.&#xA;CSS 중복 선택자 제거, 번들링, 압축&#xA;위 포스트에서 작성한 커스텀 스크립트를 npm 패키지로 만들어 배포하도록 한다.&#xA;NPM 가입 NPM Registry 가입은 NPM 공식 페이지에서 가입할 수 있다.&#xA;패키지 만들기 src/index.js&#xA;const postcss = require(&amp;#39;postcss&amp;#39;); const plugin = (opts = {}) =&amp;gt; { return { postcssPlugin: &amp;#39;postcss-delete-duplicate-selector&amp;#39;, Once (root, { result }) { const filteredRules = new Map(); root.</description>
+    </item>
+  </channel>
+</rss>

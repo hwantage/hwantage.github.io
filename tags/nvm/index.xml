@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nvm on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/nvm/</link>
+    <description>Recent content in nvm on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© hwantage</copyright>
+    <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/nvm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>node.js의 버전 관리</title>
+      <link>https://hwantage.github.io/posts/nvm/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://hwantage.github.io/posts/nvm/</guid>
+      <description>새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.&#xA;D:\redmanager\views&amp;gt;npm run start &amp;gt; tuto@0.1.0 start &amp;gt; set PORT=1024 &amp;amp;&amp;amp; react-scripts start Starting the development server... Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\redmanager\views\node_modules\webpack\lib\util\createHash.js:90:53) at NormalModule._initBuildHash (D:\redmanager\views\node_modules\webpack\lib\NormalModule.js:401:16) at handleParseError (D:\redmanager\views\node_modules\webpack\lib\NormalModule.js:449:10) at D:\redmanager\views\node_modules\webpack\lib\NormalModule.js:481:5 at D:\redmanager\views\node_modules\webpack\lib\NormalModule.js:342:12 at D:\redmanager\views\node_modules\loader-runner\lib\LoaderRunner.js:373:3 at iterateNormalLoaders (D:\redmanager\views\node_modules\loader-runner\lib\LoaderRunner.js:214:10) at iterateNormalLoaders (D:\redmanager\views\node_modules\loader-runner\lib\LoaderRunner.js:221:10) at D:\redmanager\views\node_modules\loader-runner\lib\LoaderRunner.js:236:3 at runSyncOrAsync (D:\redmanager\views\node_modules\loader-runner\lib\LoaderRunner.js:130:11) at iterateNormalLoaders (D:\redmanager\views\node_modules\loader-runner\lib\LoaderRunner.</description>
+    </item>
+  </channel>
+</rss>

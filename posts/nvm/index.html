@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>node.js의 버전 관리 - Hwantage world</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="NVM(Node Version Manager)를 이용한 node  버전 관리 방법" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="node.js의 버전 관리" />
+<meta property="og:description" content="NVM(Node Version Manager)를 이용한 node  버전 관리 방법" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hwantage.github.io/posts/nvm/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-01-03T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="node.js의 버전 관리"/>
+<meta name="twitter:description" content="NVM(Node Version Manager)를 이용한 node  버전 관리 방법"/>
+<script src="https://hwantage.github.iojs/feather.min.js"></script>
+	
+	
+        <link href="https://hwantage.github.io/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://hwantage.github.io/css/main.7b36f81e9cafaf35c608ee61667b59cd5882d8fcc0ef3636091ed7bdf41972e2.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="https://hwantage.github.io/css/dark.c95c5dcf5f32f8b67bd36f7dab66680e068fce2b303087294114aabf7a7c080b.css"  disabled />
+	
+
+	
+	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
+
+	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://hwantage.github.io">Hwantage world</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		| <span id="dark-mode-toggle" onclick="toggleTheme()"></span>
+		<script src="https://hwantage.github.iojs/themetoggle.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">node.js의 버전 관리</h1>
+			<div class="meta">Posted on Jan 3, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<p>새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews&gt;npm run start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&gt; tuto@0.1.0 start
+</span></span><span style="display:flex;"><span>&gt; set PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">1024</span> <span style="color:#f92672">&amp;&amp;</span> react-scripts start
+</span></span><span style="display:flex;"><span>Starting the development server...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Error: error:0308010C:digital envelope routines::unsupported
+</span></span><span style="display:flex;"><span>    at new Hash <span style="color:#f92672">(</span>node:internal/crypto/hash:71:19<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Object.createHash <span style="color:#f92672">(</span>node:crypto:133:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at module.exports <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\u</span>til<span style="color:#ae81ff">\c</span>reateHash.js:90:53<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at NormalModule._initBuildHash <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:401:16<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at handleParseError <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:449:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:481:5
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:342:12
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:373:3
+</span></span><span style="display:flex;"><span>    at iterateNormalLoaders <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:214:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at iterateNormalLoaders <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:221:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:236:3
+</span></span><span style="display:flex;"><span>    at runSyncOrAsync <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:130:11<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at iterateNormalLoaders <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:232:2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Array.&lt;anonymous&gt; <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:205:4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Storage.finished <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\e</span>nhanced-resolve<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\C</span>achedInputFileSystem.js:55:16<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\e</span>nhanced-resolve<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\C</span>achedInputFileSystem.js:91:9
+</span></span><span style="display:flex;"><span>Browserslist: caniuse-lite is outdated. Please run:
+</span></span><span style="display:flex;"><span>  npx browserslist@latest --update-db
+</span></span><span style="display:flex;"><span>  Why you should <span style="color:#66d9ef">do</span> it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+</span></span><span style="display:flex;"><span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\r</span>eact-scripts<span style="color:#ae81ff">\s</span>cripts<span style="color:#ae81ff">\s</span>tart.js:19
+</span></span><span style="display:flex;"><span>  throw err;
+</span></span><span style="display:flex;"><span>  ^
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Error: error:0308010C:digital envelope routines::unsupported
+</span></span><span style="display:flex;"><span>    at new Hash <span style="color:#f92672">(</span>node:internal/crypto/hash:71:19<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at Object.createHash <span style="color:#f92672">(</span>node:crypto:133:10<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at module.exports <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\u</span>til<span style="color:#ae81ff">\c</span>reateHash.js:90:53<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at NormalModule._initBuildHash <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:401:16<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:433:10
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\w</span>ebpack<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\N</span>ormalModule.js:308:13
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:367:11
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:233:18
+</span></span><span style="display:flex;"><span>    at context.callback <span style="color:#f92672">(</span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\l</span>oader-runner<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\L</span>oaderRunner.js:111:13<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    at D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews<span style="color:#ae81ff">\n</span>ode_modules<span style="color:#ae81ff">\b</span>abel-loader<span style="color:#ae81ff">\l</span>ib<span style="color:#ae81ff">\i</span>ndex.js:51:103
+</span></span><span style="display:flex;"><span>    at process.processTicksAndRejections <span style="color:#f92672">(</span>node:internal/process/task_queues:95:5<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  opensslErrorStack: <span style="color:#f92672">[</span> <span style="color:#e6db74">&#39;error:03000086:digital envelope routines::initialization error&#39;</span> <span style="color:#f92672">]</span>,
+</span></span><span style="display:flex;"><span>  library: <span style="color:#e6db74">&#39;digital envelope routines&#39;</span>,
+</span></span><span style="display:flex;"><span>  reason: <span style="color:#e6db74">&#39;unsupported&#39;</span>,
+</span></span><span style="display:flex;"><span>  code: <span style="color:#e6db74">&#39;ERR_OSSL_EVP_UNSUPPORTED&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Node.js v18.15.0
+</span></span></code></pre></div><p>확인해 보니 최신버전의 node 가 설치 되어 발생하는 문제였다.</p>
+<p>다시 삭제하고 재설치 해야 하나 싶었는데 <code>nvm</code> 으로 node의 버전을 손쉽게 관리 할 수 있었다.</p>
+<p>협업을 할 때, 또는 다양한 프로젝트를 동시에 진행해야 할 때 다양한 라이브러리 / 프레임워크 / 개발툴의 버전 호환 문제를 겪을 수 있다.</p>
+<p>그때마다 Node.js를 재설치 및 삭제하는 방법으로는 한계가 있고 불편할 뿐더러 시간도 아깝다.</p>
+<p>이런 상황에서 Node.js 버전을 상황에 따라 변경해 가면서 사용하게끔 도와주는 것이 NVM이다.</p>
+<p>NVM 은 <code>Node Version Manager</code> 의 약자로써 Node.js의 도구이며, 상황에 따라 버전을 변경해 가면서 사용할 수 있도록 도와준다.</p>
+<p>터미널에서 명령어로 매우 간단하게 노드 버젼을 스위칭할 수 있다.</p>
+<p>nvm-windows는 MIT 라이센스의 오픈 소스로 Go로 작성되었다.</p>
+<p>아래 링크에서 <a href="https://github.com/coreybutler/nvm-windows/releases/download/1.1.10/nvm-setup.exe">nvm-setup.exe</a> 5.22 MBNov 13, 2022 로 설치를 진행해 보았다.</p>
+<p><a href="https://github.com/coreybutler/nvm-windows/releases">https://github.com/coreybutler/nvm-windows/releases</a></p>
+<p>nvm-windows는 <strong>Node.js v4+에서 지원되기 때문에 기본적인 Node.js는 설치</strong>가 되어 있어야 한다.</p>
+<ul>
+<li>컴퓨터에 다양한 버전의 Node.js 를 설치할 수 있게 해준다.</li>
+<li>use 커맨드를 이용해 사용할 Node 버전으로 간단하게 스위칭할수 있게 해준다.</li>
+<li>디폴트 버전을 설정하거나 / 설치한 버전들의 전체 리스트를 확인하거나 / 필요 없는 버전을 삭제하는 등등&hellip; 소위 버전 관리가 쉬워진다.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>node -v              <span style="color:#75715e"># 노드 버전 확인</span>
+</span></span><span style="display:flex;"><span>nvm list             <span style="color:#75715e"># 설치된 노드 버전 리스트 확인</span>
+</span></span><span style="display:flex;"><span>nvm install lts      <span style="color:#75715e"># 최신 lts 버전 설치</span>
+</span></span><span style="display:flex;"><span>nvm install 14.17.4  <span style="color:#75715e"># 특정 버전 node 설치</span>
+</span></span><span style="display:flex;"><span>nvm use 14.17.4      <span style="color:#75715e"># 14.17.4 버전으로 스위칭</span>
+</span></span></code></pre></div><p>아래는 실제로 수행했던 cmd 창 갈무리.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews&gt;**nvm install 14.17.4**
+</span></span><span style="display:flex;"><span>Downloading node.js version 14.17.4 <span style="color:#f92672">(</span>64-bit<span style="color:#f92672">)</span>...
+</span></span><span style="display:flex;"><span>Complete
+</span></span><span style="display:flex;"><span>Creating C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\U</span>ser<span style="color:#ae81ff">\A</span>ppData<span style="color:#ae81ff">\R</span>oaming<span style="color:#ae81ff">\n</span>vm<span style="color:#ae81ff">\t</span>emp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Downloading npm version 6.14.14... Complete
+</span></span><span style="display:flex;"><span>Installing npm v6.14.14...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Installation complete. If you want to use this version, type
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>nvm use 14.17.4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews&gt;**nvm list**
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  * 18.15.0 <span style="color:#f92672">(</span>Currently using 64-bit executable<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    14.17.4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews&gt;**nvm use 14.17.4**
+</span></span><span style="display:flex;"><span>Now using node v14.17.4 <span style="color:#f92672">(</span>64-bit<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>D:<span style="color:#ae81ff">\r</span>edmanager<span style="color:#ae81ff">\v</span>iews&gt;nvm list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    18.15.0
+</span></span><span style="display:flex;"><span>  * 14.17.4 <span style="color:#f92672">(</span>Currently using 64-bit executable<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>더 자세한 내용은 git 링크에서 확인하십시오.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/node">node</a></li>
+					
+					<li><a href="/tags/node.js">node.js</a></li>
+					
+					<li><a href="/tags/nvm">nvm</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        var disqus_shortname = 'hwantage';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/hwantage" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © hwantage |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
