@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>image on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/image/</link>
+    <description>Recent content in image on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/image/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>이미지 업로드 테스트</title>
+      <link>https://hwantage.github.io/posts/test/</link>
+      <pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://hwantage.github.io/posts/test/</guid>
+      <description>안녕하세요. JAM Stack 개념 SSG 툴 Github pages 사용법 HUGO를 이용한 블로그 생성 Github 계정 생성 및 사용 Markdown 사용법 VSCode Markdown 에디터 활용법 Git submodule 이해 - 최형근 Github Actions 이해 정적 사이트 생성기(Static Site Generator, SSG)는 웹 사이트를 만들기 위한 도구입니다.</description>
+    </item>
+  </channel>
+</rss>

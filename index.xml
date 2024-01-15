@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hwantage world</title>
+    <link>https://hwantage.github.io/</link>
+    <description>Recent content on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <atom:link href="https://hwantage.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to hwantage world!</title>
+      <link>https://hwantage.github.io/</link>
+      <pubDate>Mon, 01 Jan 2024 09:16:45 +0000</pubDate>
+      <guid>https://hwantage.github.io/</guid>
+      <description>프론트엔드 개발자 hwantage 입니다. 블로그에 오신것을 환영합니다.&#xA;Skills export default () =&amp;gt; ({ name: &amp;#34;jung hwan&amp;#34; | &amp;#34;Kim&amp;#34;, email: &amp;#34;hwantagexsw2@gmail.</description>
+    </item>
+  </channel>
+</rss>

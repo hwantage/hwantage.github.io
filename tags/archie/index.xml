@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>archie on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/archie/</link>
+    <description>Recent content in archie on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/archie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>휴고를 이용한 정적 블로그 생성</title>
+      <link>https://hwantage.github.io/posts/first/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://hwantage.github.io/posts/first/</guid>
+      <description>Window에서 Go 설치하기 go 홈페이지에 접속하여 다운로드 버튼을 눌러 설치를 진행하면 된다.&#xA;윈도우즈 버전으로 설치 진행</description>
+    </item>
+  </channel>
+</rss>
