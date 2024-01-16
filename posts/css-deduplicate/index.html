@@ -3,7 +3,7 @@
   <head><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS-Deduplicate</title>
+<title>CSS-Deduplication (postcss 커스텀 스크립트를 이용한 CSS 중복 제거)</title>
 <meta name="description" content="두 개의 CSS 파일을 하나의 파일로 병합하고, 중복을 제거합니다. 이후 최적화를 위한 압축을 수행합니다.">
 <link rel="canonical" href="https://hwantage.github.io/posts/css-deduplicate/">
 <link rel="robots" href="/robots.txt" />
@@ -44,7 +44,7 @@
     
     <li>
       <a href="/posts/" class="">
-        Home
+        Blog posts
       </a>
     </li>
     
@@ -127,18 +127,30 @@
   
     <main id="content">
 
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">CSS-Deduplication (postcss 커스텀 스크립트를 이용한 CSS 중복 제거)</h2>
 
-
-
-<div class="flex flex-col gap-1">
-  <h1 class="text-2xl font-extrabold">
-    
-      CSS-Deduplicate
+    <div class="meta">
       
-    </h1>
+      <time datetime="2024-01-15 13:14:52 &#43;0900 KST" title='Mon, Jan 15, 2024, 1:14 PM KST'>
+        15/01/2024 - Estimated reading time: 3 minutes
+      </time>
+
+       
+       — 
+        
+          <a class="categories" href="/categories/css/" alt="CSS">
+            CSS
+          </a>
+         
+      
+    </div>
+  </header>
+
   
-  
-    <p>본 포스팅을 통해 postcss 를 이용하는 방법에 대해 배울 수 있습니다. 또한 원하는 플러그인이 없는 경우 custom 플러그인을 작성하는 방법을 학습할 수 있습니다.</p>
+
+  <section><p>본 포스팅을 통해 postcss 를 이용하는 방법에 대해 배울 수 있습니다. 또한 원하는 플러그인이 없는 경우 custom 플러그인을 작성하는 방법을 학습할 수 있습니다.</p>
 <h1 id="abstract">Abstract</h1>
 <ol>
 <li>두 개의 파일을 하나의 파일로 병합.</li>
@@ -302,15 +314,36 @@
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">/</span><span style="color:#ff79c6">_</span># <span style="color:#ff79c6">sourceMappingURL</span><span style="color:#ff79c6">=</span><span style="color:#ff79c6">data</span>:application<span style="color:#ff79c6">/</span><span style="color:#ff79c6">json</span><span style="color:#ff79c6">;</span><span style="color:#ff79c6">base64</span><span style="color:#ff79c6">,</span><span style="color:#ff79c6">eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiUzQ2lucHV0JTIwY3NzJTIwMSUzRSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxHQUFHLGFBQWEsQ0FBQyxpQkFBaUIsQ0FBQyxNQUFNLFNBQVMsQ0FBQyxPQUFPLHFCQUFxQixDQUFDLEtBQUssV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLGtCQUFrQixDQUFDLFFBQVEsU0FBUyIsImZpbGUiOiJvdXRwdXQubWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxe21hcmdpbjowIGF1dG87cGFkZGluZy1sZWZ0OjEwcHh9LnRlc3R7Y29sb3I6cmVkfS5oZWxsb3tiYWNrZ3JvdW5kLWNvbG9yOiMwMGZ9LmZvb3t3aWR0aDoxMDBweDtoZWlnaHQ6MTAwcHh9aDEsaDJ7bWFyZ2luOjEwIDEwIDEwIDEwfS5od2FuNzd7Y29sb3I6cmVkfSJdfQ</span><span style="color:#ff79c6">==</span> <span style="color:#ff79c6">_</span><span style="color:#ff79c6">/</span>
 </span></span></code></pre></div><p>build 스크립트에서 <code>postcss ...</code> 와 같이 설정하는 경우 <code>postcss.config.js</code> 파일의 내용을 기반으로 스크립트를 수행한다.</p>
 <p><code>postcss --use postcss-clean</code> 과 같이 플러그인의 이름을 직접 지정하는 경우 <code>postcss.config.js</code> 파일을 참고하지 않고 바로 <code>postcss-cli</code>를 통해서 플러그인을 실행할 수 있다.</p>
-
-  
-</div>
-
-<section class="flex flex-col gap-10">
-  
 </section>
 
+  
+    
+  
 
+    
+  
+
+
+  <footer>
+    
+      <div class="pb-14 taxonomy-list tags-list">
+      
+        <a href="/tags/postcss/" alt="PostCSS">
+          PostCSS
+        </a>
+      
+        <a href="/tags/css-deduplicate/" alt="CSS deduplicate">
+          CSS deduplicate
+        </a>
+      
+        <a href="/tags/file-merge/" alt="file merge">
+          file merge
+        </a>
+      
+      </div>
+    
+  </footer>
+</article>
 
 
     </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
