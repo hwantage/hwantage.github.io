@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>심볼릭 링크로 마크다운 에디터로 업로드한 파일을 HUGO에서 바로 확인</title>
+<meta name="description" content="마크업 에디터를 통해 이미지를 붙여넣기 하면 링크 경로가 맞지 않아 심볼릭 링크를 생성하여 이미지가 정상적으로 뜨도록 설정해보자.">
+<link rel="canonical" href="https://hwantage.github.io/posts/symboliclink/">
+<link rel="robots" href="/robots.txt" />
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.ae63891363b874de0ed4feb69beb0991bbf9fd9132d8abe3321ba8fefc4c13df.css" integrity="sha256-rmOJE2O4dN4O1P62m+sJkbv5/ZEy2KvjMhuo/vxME98=" /></head>
+
+  <body class="max-w-screen-md mx-auto">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="https://hwantage.github.io/">
+    <img
+      srcset="/img/hwan_hu72e61269eeccda4aa4bc95e3d0272f79_310207_80x80_fill_q90_box_smart1_3.png 80w"
+      src="/img/hwan.png"
+      width="317"
+      height="334"
+      alt="Hwantage world"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="https://hwantage.github.io/">
+  <h1 id="site-title">Hwantage world</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/posts/" class="">
+        Blog posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">심볼릭 링크로 마크다운 에디터로 업로드한 파일을 HUGO에서 바로 확인</h2>
+
+    <div class="meta">
+      
+      <time datetime="2024-01-16 13:14:52 &#43;0900 KST" title='Tue, Jan 16, 2024, 1:14 PM KST'>
+        16/01/2024 - Estimated reading time: 2 minutes
+      </time>
+
+       
+       — 
+        
+          <a class="categories" href="/categories/css/" alt="CSS">
+            CSS
+          </a>
+         
+      
+    </div>
+  </header>
+
+  
+
+  <section><p>Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 <code>hugo server</code> 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.</p>
+<p>설정 화면으로 이동하여</p>
+<p><img src="../assets/20240116_220547_image.png" alt=""></p>
+<p>이미지 경로를 다음과 같이 설정한다.</p>
+<p><img src="../assets/20240116_220535_image.png" alt=""></p>
+<p>위와 같이 설정하면 프로젝트 루트 &gt; content &gt; assets 폴더에 캡처해서 붙여넣기한 이미지 파일이 저장된다.</p>
+<p>하지만 브라우저를 통해 페이지를 확인해 보면 제대로 이미지가 뜨지 않게 된다.</p>
+<p>실제로 이미지가 저장된 경로는 content/assets 이지만 블로그 포스트의 url은 파일이름(포스트이름)이 한번더 들어가기 때문이다.</p>
+<p>http://localhost:1313/posts/symboliclink/</p>
+<p><img src="../assets/20240116_230413_image.png" alt=""></p>
+<p>심볼릭 링크를 통해 content/assets에 파일이 생성되면 content/posts/assets 디렉토리로 파일이 복사되도록 처리해보자.</p>
+<p>파워쉘을 관리자 권한으로 실행한다.</p>
+<p><img src="../assets/20240116_231017_image.png" alt=""></p>
+<p>content/posts 디렉토리로 이동하여 아래의 명령어를 수행한다.</p>
+<p><code>Set-Location -Path .\</code></p>
+<p>같은 폴더에서 다음과 같이 명령어를 수행한다.</p>
+<p><code>New-Item -ItemType SymbolicLink -Path .\assets -Target ..\assets</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>PS D:<span style="color:#f1fa8c">\h</span>ugo<span style="color:#f1fa8c">\l</span>owkey<span style="color:#f1fa8c">\c</span>ontent<span style="color:#f1fa8c">\p</span>osts&gt; Set-Location -Path .<span style="color:#f1fa8c">\
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c"></span>PS D:<span style="color:#f1fa8c">\h</span>ugo<span style="color:#f1fa8c">\l</span>owkey<span style="color:#f1fa8c">\c</span>ontent<span style="color:#f1fa8c">\p</span>osts&gt; New-Item -ItemType SymbolicLink -Path .<span style="color:#f1fa8c">\a</span>ssets -Target ..<span style="color:#f1fa8c">\a</span>ssets
+</span></span><span style="display:flex;"><span>New-Item : NewItemIOError
+</span></span><span style="display:flex;"><span>위치 줄:1 문자:1
+</span></span><span style="display:flex;"><span>+ New-Item -ItemType SymbolicLink -Path .<span style="color:#f1fa8c">\a</span>ssets -Target ..<span style="color:#f1fa8c">\a</span>ssets
+</span></span><span style="display:flex;"><span>+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+</span></span><span style="display:flex;"><span>    + CategoryInfo          : ResourceExists: <span style="color:#ff79c6">(</span>D:<span style="color:#f1fa8c">\h</span>ugo<span style="color:#f1fa8c">\l</span>owkey<span style="color:#f1fa8c">\c</span>ontent<span style="color:#f1fa8c">\p</span>osts<span style="color:#f1fa8c">\a</span>ssets:String<span style="color:#ff79c6">)</span> <span style="color:#ff79c6">[</span>New-Item<span style="color:#ff79c6">]</span>, IOException
+</span></span><span style="display:flex;"><span>    + FullyQualifiedErrorId : NewItemIOError,Microsoft.PowerShell.Commands.NewItemCommand
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PS D:<span style="color:#f1fa8c">\h</span>ugo<span style="color:#f1fa8c">\l</span>owkey<span style="color:#f1fa8c">\c</span>ontent<span style="color:#f1fa8c">\p</span>osts&gt; New-Item -ItemType SymbolicLink -Path .<span style="color:#f1fa8c">\a</span>ssets -Target ..<span style="color:#f1fa8c">\a</span>ssets
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    디렉터리: D:<span style="color:#f1fa8c">\h</span>ugo<span style="color:#f1fa8c">\l</span>owkey<span style="color:#f1fa8c">\c</span>ontent<span style="color:#f1fa8c">\p</span>osts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Mode                 LastWriteTime         Length Name
+</span></span><span style="display:flex;"><span>----                 -------------         ------ ----
+</span></span><span style="display:flex;"><span>d----l      2024-01-16   오후 9:59                assets
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>PS D:<span style="color:#f1fa8c">\h</span>ugo<span style="color:#f1fa8c">\l</span>owkey<span style="color:#f1fa8c">\c</span>ontent<span style="color:#f1fa8c">\p</span>osts&gt;
+</span></span></code></pre></div><p><img src="../assets/20240116_231325_image.png" alt=""></p>
+<p>중간에 에러가 발생한 이유는 posts/assets 디렉토리가 이미 생성되어 있기 때문에다. 탐색기에서 해당 디렉토리를 삭제후 재시도 하면 정상적으로 심볼릭 링크가 생성됨을 확인할 수 있다.</p>
+<p>탐색기에서는 아래와 같이 보인다.</p>
+<p><img src="../assets/20240116_231427_image.png" alt=""></p>
+<p>이제 이미지를 붙여넣기 하면 content/assets 디렉토리에 파일이 저장되면서 동시에 posts/assets 디렉토리에도 파일이 생성되는 것을 확인할 수 있다.</p>
+<p><img src="../assets/20240116_231116_image.png" alt=""></p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+      <div class="pb-14 taxonomy-list tags-list">
+      
+        <a href="/tags/symbolic-link/" alt="Symbolic link">
+          Symbolic link
+        </a>
+      
+        <a href="/tags/powershell/" alt="powershell">
+          powershell
+        </a>
+      
+        <a href="/tags/hugo/" alt="hugo">
+          hugo
+        </a>
+      
+        <a href="/tags/image/" alt="image">
+          image
+        </a>
+      
+        <a href="/tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/" alt="마크업 에디터">
+          마크업 에디터
+        </a>
+      
+      </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2024 —
+  <a href="https://hwantage.github.io/">Hwantage world</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://hwantage.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

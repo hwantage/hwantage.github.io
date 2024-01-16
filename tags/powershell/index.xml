@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>powershell on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/powershell/</link>
+    <description>Recent content in powershell on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Tue, 16 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>심볼릭 링크로 마크다운 에디터로 업로드한 파일을 HUGO에서 바로 확인</title>
+      <link>https://hwantage.github.io/posts/symboliclink/</link>
+      <pubDate>Tue, 16 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/symboliclink/</guid>
+      <description>Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 hugo server 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About me on Hwantage world</title>
+    <link>https://hwantage.github.io/about/</link>
+    <description>Recent content in About me on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Sat, 27 Aug 2022 09:16:45 +0000</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/about/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
