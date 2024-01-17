@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
+<meta name="description" content="SSG(Static Site Generator)를 생성 운영하는 방법에 대한 포스팅입니다. hugo 와 github pages를 이용합니다.">
+<link rel="canonical" href="https://hwantage.github.io/posts/hugo/">
+<link rel="robots" href="/robots.txt" />
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+
+<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.ae63891363b874de0ed4feb69beb0991bbf9fd9132d8abe3321ba8fefc4c13df.css" integrity="sha256-rmOJE2O4dN4O1P62m+sJkbv5/ZEy2KvjMhuo/vxME98=" /></head>
+
+  <body class="max-w-screen-md mx-auto">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="https://hwantage.github.io/">
+    <img
+      srcset="/img/hwan_hu72e61269eeccda4aa4bc95e3d0272f79_310207_80x80_fill_q90_box_smart1_3.png 80w"
+      src="/img/hwan.png"
+      width="317"
+      height="334"
+      alt="Hwantage world"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="https://hwantage.github.io/">
+  <h1 id="site-title">Hwantage world</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/posts/" class="">
+        Blog posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</h2>
+
+    <div class="meta">
+      
+      <time datetime="2024-01-12 13:14:52 &#43;0900 KST" title='Fri, Jan 12, 2024, 1:14 PM KST'>
+        12/01/2024 - Estimated reading time: 4 minutes
+      </time>
+
+       
+       — 
+        
+          <a class="categories" href="/categories/front-end/" alt="Front-end">
+            Front-end
+          </a>
+         
+      
+    </div>
+  </header>
+
+  
+
+  <section><p><strong>Agenda</strong></p>
+<ul>
+<li>SSG 개념</li>
+<li>JAM Stack 개념</li>
+<li>SSG 툴</li>
+<li>Github 계정 생성 및 사용</li>
+<li>Github pages 사용법</li>
+<li><strong>HUGO를 이용한 블로그 생성</strong></li>
+<li>Markdown 사용법</li>
+<li>VSCode Markdown 에디터 활용법</li>
+</ul>
+<h1 id="ssg-개념">SSG 개념</h1>
+<p>정적 사이트 : 단순 html, css, js 로만 구성된 사이트.</p>
+<p>동적 사이트 : 게시판, 대시보드 등 백엔드 데이터 연동 또는 API에 따라 동적으로 구성된 사이트.</p>
+<p>SSG : Static Site Generator 정적 사이트 생성기 = 정적 사이트를 쉽게 만들 수 있도록 도와주는 도구</p>
+<h1 id="jam-stack-개념">JAM Stack 개념</h1>
+<p>JAM(JavaScript, API, Markup Stack): JavaScript, API, HTML이나 CSS 등을 칭하는 Markup으로 이루어진 웹 구성 방법</p>
+<h1 id="ssg-툴">SSG 툴</h1>
+<p><strong>Gatsby</strong></p>
+<p><strong>Jekyll</strong> : github pages 공식 지원</p>
+<p><strong>Hexo</strong></p>
+<p><strong>Hugo</strong></p>
+<p>…</p>
+<p>다양한 툴이 있는데 Hugo가 가장 널리 사용되는 것으로 파악됨.</p>
+<p><img src="../assets/20240117_143305_image.png" alt=""></p>
+<p><a href="https://trends.google.co.kr/trends/explore?q=Hugo,Jekyll,Gatsby,Hexo&amp;hl=ko">https://trends.google.co.kr/trends/explore?q=Hugo,Jekyll,Gatsby,Hexo&amp;hl=ko</a></p>
+<h1 id="github-계정-생성-및-사용">Github 계정 생성 및 사용</h1>
+<p>계정 생성 : <a href="https://github.com/">https://github.com/</a></p>
+<p>PC에 git 설치 <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<p>설치 확인 방법 command 창을 열어 아래의 명령어로 확인</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; git version
+</span></span><span style="display:flex;"><span>git version 2.40.0.windows.1
+</span></span></code></pre></div><h1 id="github-pages-사용법">Github pages 사용법</h1>
+<p>내가 제작한 페이지를 어딘가에 호스팅을 해야 하는데 올릴 서버가 마땅히 없을 때 <code>github</code>에서 제공하는 무료 호스팅 기능을 이용한다.</p>
+<p>Git 계정은 일단 있다고 가정하고 본인의 Git 계정으로 로그인하여 <code>Repositories</code> 탭에서 <code>New</code> 버튼을 클릭한다.</p>
+<p><img src="../assets/20240117_143348_image.png" alt=""></p>
+<p>Repository name 은 반드시 <code>Owner아이디.github.io</code> 로 입력한다.</p>
+<p><img src="../assets/20240117_143404_image.png" alt=""></p>
+<p>Settings &gt; Pages 메뉴에서 main 브랜치 선택 후 Save 버튼 클릭.</p>
+<p>뭔가 아무거나 파일을 올리면 사이트가 활성화 된다.</p>
+<p>아무 것도 올리지 않은 경우 <a href="http://Readme.md">Readme.md</a> 파일 내용이 나타난다.</p>
+<p>index.html 파일을 올리면 index.html 파일의 내용이 나타난다.</p>
+<h1 id="hugo를-이용한-블로그-생성">HUGO를 이용한 블로그 생성</h1>
+<h2 id="hugo-설치">Hugo 설치</h2>
+<p>아래의 Git Repository 에 접속 하여 OS에 맞는 설치 프로그램을 다운로드 한다.</p>
+<p><a href="https://github.com/gohugoio/hugo/releases/tag/v0.121.1">https://github.com/gohugoio/hugo/releases/tag/v0.121.1</a></p>
+<p>아래의 파일을 다운로드 받았다.</p>
+<p><a href="https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_extended_0.121.1_windows-amd64.zip">hugo_extended_0.121.1_windows-amd64.zip</a></p>
+<p>D:\hugo 폴더에 파일 압축을 해제한다.</p>
+<p><img src="../assets/20240117_143502_image.png" alt=""></p>
+<p>Windows 환경설정 Path 에 압축해제된 경로를 등록한다.</p>
+<p><code>제어판 &gt; 시스템 &gt; 설정 &gt; 고급 시스템 설정</code> &gt; 고급 &gt; 환경 변수</p>
+<p><img src="../assets/20240117_143601_image.png" alt=""></p>
+<p>아래와 같이 커멘드 창에서 hugo version 을 쳤을 때 버전정보가 잘 표기된다면 설치 성공.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; hugo version
+</span></span><span style="display:flex;"><span>hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740 windows/amd64 <span style="color:#8be9fd;font-style:italic">BuildDate</span><span style="color:#ff79c6">=</span>2023-12-08T08:47:45Z <span style="color:#8be9fd;font-style:italic">VendorInfo</span><span style="color:#ff79c6">=</span>gohugoio
+</span></span></code></pre></div><h2 id="hugo-프로젝트-만들기">Hugo 프로젝트 만들기</h2>
+<p>D:\hugo 폴더로 이동하여 아래의 명령어로 프로젝트를 생성한다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># hugo new site &lt;프로젝트이름&gt;</span>
+</span></span><span style="display:flex;"><span>&gt; hugo new site hwan77
+</span></span></code></pre></div><p><img src="../assets/20240117_143431_image.png" alt=""></p>
+<p>hwan77 폴더가 생성되었고 우측과 같은 파일들이 설치되어 있다.</p>
+<p>휴고 템플릿 사이트에서 마음에 드는 템플릿을 다운로드 한다. <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+<p>Archie 템플릿을 설치해본다.</p>
+<p><a href="https://github.com/athul/archie">https://github.com/athul/archie</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/&gt; hugo new site archie
+</span></span><span style="display:flex;"><span>/&gt; <span style="color:#8be9fd;font-style:italic">cd</span> archie
+</span></span><span style="display:flex;"><span>/archie&gt; <span style="color:#8be9fd;font-style:italic">cd</span> themes
+</span></span><span style="display:flex;"><span>/archie/themes&gt; git clone https://github.com/athul/archie.git
+</span></span></code></pre></div><p>hugo.toml 파일의 내용을 아래와 같이 수정</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>baseURL <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://hwantage.github.io&#34;</span>
+</span></span><span style="display:flex;"><span>languageCode <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;en-us&#34;</span>
+</span></span><span style="display:flex;"><span>title <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hwantage world&#34;</span>
+</span></span><span style="display:flex;"><span>theme<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;archie&#34;</span>
+</span></span><span style="display:flex;"><span>copyright <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;© hwantage&#34;</span>
+</span></span><span style="display:flex;"><span># Code Highlight
+</span></span><span style="display:flex;"><span>pygmentsstyle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;monokai&#34;</span>
+</span></span><span style="display:flex;"><span>pygmentscodefences <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>pygmentscodefencesguesssyntax <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>disqusShortname <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;hwantage&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>paginate<span style="color:#ff79c6">=</span><span style="color:#bd93f9">10</span> # articles per page
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[params]
+</span></span><span style="display:flex;"><span>	mode<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;toggle&#34;</span> # color<span style="color:#ff79c6">-</span>mode → light,dark,toggle or auto
+</span></span><span style="display:flex;"><span>	useCDN<span style="color:#ff79c6">=</span><span style="color:#ff79c6">false</span> # don&#39;t use CDNs <span style="color:#ff79c6">for</span> fonts and icons, instead serve them locally.
+</span></span><span style="display:flex;"><span>	subtitle <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Hwantage world blog with hugo Archie template&#34;</span>
+</span></span><span style="display:flex;"><span>	mathjax <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span> # enable MathJax support
+</span></span><span style="display:flex;"><span>	katex <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span> # enable KaTeX support
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Social Tags
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[params.social]]
+</span></span><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;GitHub&#34;</span>
+</span></span><span style="display:flex;"><span>icon <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://github.com/hwantage&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#[[params.social]]
+</span></span><span style="display:flex;"><span>#name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Twitter&#34;</span>
+</span></span><span style="display:flex;"><span>#icon <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;twitter&#34;</span>
+</span></span><span style="display:flex;"><span>#url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://twitter.com/athulcajay/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>#[[params.social]]
+</span></span><span style="display:flex;"><span>#name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;GitLab&#34;</span>
+</span></span><span style="display:flex;"><span>#icon <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;gitlab&#34;</span>
+</span></span><span style="display:flex;"><span>#url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;https://gitlab.com/athul/&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># Main menu Items
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[menu.main]]
+</span></span><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Home&#34;</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/&#34;</span>
+</span></span><span style="display:flex;"><span>weight <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[menu.main]]
+</span></span><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;All posts&#34;</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/posts&#34;</span>
+</span></span><span style="display:flex;"><span>weight <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[menu.main]]
+</span></span><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;About&#34;</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/about&#34;</span>
+</span></span><span style="display:flex;"><span>weight <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[[menu.main]]
+</span></span><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Tags&#34;</span>
+</span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/tags&#34;</span>
+</span></span><span style="display:flex;"><span>weight <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span>
+</span></span></code></pre></div><h2 id="hugo-examplesite-코드-복사">Hugo exampleSite 코드 복사</h2>
+<p><code>themes/archie/exampleSite</code> 폴더의 파일들을 <code>/archie/content</code> 폴더로 복사</p>
+<h2 id="hugo-포스트-작성">Hugo 포스트 작성</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/archie&gt; hugo new posts/first.md
+</span></span></code></pre></div><p>위와 같이 하면 content 디렉토리 밑에 posts 디렉토리 하위로 <a href="http://first.md">first.md</a> 파일이 생성된다.</p>
+<p>/content/posts/first.md 파일의 내용을 원하는대로 수정</p>
+<h2 id="hugo-서버-실행">Hugo 서버 실행</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/archie&gt; hugo server -D
+</span></span></code></pre></div><p><code>http://localhost:1313/</code> 로 접속하여 결과 확인</p>
+<h2 id="빌드-및-배포하기">빌드 및 배포하기</h2>
+<h3 id="1-빌드">1. 빌드</h3>
+<p>새 글이 정상적으로 보인다면 이제 빌드를 할 차례입니다.</p>
+<p>블로그 루트 디렉토리로 이동하여 아래 명령으로 빌드합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/archie&gt; hugo -D
+</span></span><span style="display:flex;"><span>Start building sites …
+</span></span><span style="display:flex;"><span>hugo v0.110.0-e32a493b7826d02763c3b79623952e625402b168+extended linux/amd64 <span style="color:#8be9fd;font-style:italic">BuildDate</span><span style="color:#ff79c6">=</span>2023-01-17T12:16:09Z <span style="color:#8be9fd;font-style:italic">VendorInfo</span><span style="color:#ff79c6">=</span>snap:0.110.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                   | EN
+</span></span><span style="display:flex;"><span>-------------------+-----
+</span></span><span style="display:flex;"><span>  Pages            |  <span style="color:#bd93f9">7</span>
+</span></span><span style="display:flex;"><span>  Paginator pages  |  <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>  Non-page files   |  <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>  Static files     | <span style="color:#bd93f9">57</span>
+</span></span><span style="display:flex;"><span>  Processed images |  <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>  Aliases          |  <span style="color:#bd93f9">3</span>
+</span></span><span style="display:flex;"><span>  Sitemaps         |  <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>  Cleaned          |  <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Total in <span style="color:#bd93f9">61</span> ms
+</span></span></code></pre></div><p>빌드가 완료되면 <code>public</code> 디렉토리에 html을 포함한 여러가지 파일들이 생성됩니다. 이제 이 파일들을 github에 푸시하여 배포하면 끝납니다. 푸시한 후에 레포지토리명을 브라우저 주소창에 입력하여 접속하면 배포된 블로그를 확인할 수 있습니다.</p>
+<blockquote>
+<p>푸시하면 배포까지는 1분 가량이 시간이 소요되니 1분 후 다시 시도하면 블로그 화면을 보실 수 있습니다.</p>
+</blockquote>
+<blockquote>
+<p>명령어에서 뒤에 붙는 -D 옵션은 draft 문서도 보여준다는 표시인데, draft란 현재 이 문서가 작업 중인지 아닌지 나타내는 특성으로 front matter에 포함되어있다. 문서의 front matter부분에 draft = true로 되어있으면, hugo server -D로 했을 때에는 이 문서도 포함되어 보여주지만 나중에 빌드할 때 생성되는 html에는 포함되지 않는다. 따라서 문서를 작업할 때 draft = true로 해놓고 localhost로 확인하면서 작업한 다음 나중에 작업을 완료하면 저 부분을 지우면 된다.</p>
+</blockquote>
+<p>참고로 public 폴더의 기존 파일을 모두 삭제하고 빌드롤 수행하려면 &ndash;cleanDestinationDir 옵션을 추가하면 된다.</p>
+<p><code>hugo --cleanDestinationDir</code></p>
+<h3 id="2-배포">2. 배포</h3>
+<p>public 디렉토리의 내용을 github에 업로드</p>
+<p><img src="../assets/20240117_143706_image.png" alt=""></p>
+<p>드래그 드롭으로 싹다 업로드</p>
+<p>잠시 후 확인 <a href="https://hwantage.github.io">https://hwantage.github.io</a></p>
+<h1 id="markdown-사용법">Markdown 사용법</h1>
+<p><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">마크다운(Markdown) 사용법</a></p>
+<h1 id="vscode-markdown-에디터-활용법">VSCode Markdown 에디터 활용법</h1>
+<p>Visual Studio Code 실행하여 Extenstion 설치</p>
+<p><img src="../assets/20240117_143731_image.png" alt=""></p>
+<p>파일 우마우스 클릭 후 Open with markdown editor 클릭</p>
+<p><img src="../assets/20240117_143750_image.png" alt=""></p>
+<p>WYSIWYG방식으로 편집 (What You See Is What You Get)</p>
+<p><img src="../assets/20240117_143807_image.png" alt=""></p>
+<p>또다른 방법은 노션에서 작성 후 Copy &amp; Paste 해도 됨. 단, 노션에서만 제공하는 마크다운 문법 깨질 수 있으니 주의가 필요하다.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+      <div class="pb-14 taxonomy-list tags-list">
+      
+        <a href="/tags/hugo/" alt="hugo">
+          hugo
+        </a>
+      
+        <a href="/tags/github-pages/" alt="github pages">
+          github pages
+        </a>
+      
+        <a href="/tags/ssg/" alt="SSG">
+          SSG
+        </a>
+      
+        <a href="/tags/jam-stack/" alt="JAM Stack">
+          JAM Stack
+        </a>
+      
+      </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2024 —
+  <a href="https://hwantage.github.io/">Hwantage world</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://hwantage.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

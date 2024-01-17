@@ -3,7 +3,7 @@
   <head><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS-Deduplication part 2 (media 쿼리 중복 제거 추가 및 npmjs 배포)</title>
+<title>CSS-Deduplication part 2 (CSS 중복제거 플러그인 제작)</title>
 <meta name="description" content="postcss 커스텀 스크립트를 이용하여 CSS 중복 제거 커스텀 스크립트를 개선하고 이를 npm 패키지로 생성 하는 방법">
 <link rel="canonical" href="https://hwantage.github.io/posts/css-deduplicate-2/">
 <link rel="robots" href="/robots.txt" />
@@ -129,19 +129,19 @@
 
 <article class="flex flex-col gap-10">
   <header class="flex flex-col gap-2">
-    <h2 class="title-large">CSS-Deduplication part 2 (media 쿼리 중복 제거 추가 및 npmjs 배포)</h2>
+    <h2 class="title-large">CSS-Deduplication part 2 (CSS 중복제거 플러그인 제작)</h2>
 
     <div class="meta">
       
       <time datetime="2024-01-15 13:14:52 &#43;0900 KST" title='Mon, Jan 15, 2024, 1:14 PM KST'>
-        15/01/2024 - Estimated reading time: 1 minutes
+        15/01/2024 - Estimated reading time: 3 minutes
       </time>
 
        
        — 
         
-          <a class="categories" href="/categories/css/" alt="CSS">
-            CSS
+          <a class="categories" href="/categories/front-end/" alt="Front-end">
+            Front-end
           </a>
          
       
@@ -150,18 +150,72 @@
 
   
 
-  <section><p>이전 포스팅을 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.</p>
-<p>이번 포스팅에서는 media 쿼리에 대한 처리 로직을 추가하고 postcss 플러그인으로 제작하여 npmjs.org 사이트에 배포하는 작업을 진행하겠습니다.</p>
+  <section><p><a href="https://hwantage.github.io/posts/css-deduplicate/">이전 포스팅</a>을 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.</p>
+<p>이번 포스팅에서는 media 쿼리에 대한 처리 로직을 추가하고 postcss 플러그인으로 제작해 보도록 하겠습니다. <a href="https://hwantage.github.io/posts/npm-plugin/">다음 포스팅</a>을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.</p>
 <h1 id="abstract">Abstract</h1>
 <ol>
 <li>postcss 커스텀 스크립트 개선(media 쿼리 처리 로직 추가)</li>
-<li>npm 패키지로 배포 수행</li>
+<li>npm 패키지로 배포 가능한 플러그인으로 제작</li>
 </ol>
 <h1 id="커스텀-스크립트-개선">커스텀 스크립트 개선</h1>
 <p>중복제거 커스텀 스크립트는 selector 기반으로 작업을 수행하는데 @media 쿼리에 대해서는 중복제거를 수행하지 못하고 있습니다.
 @가 붙은 atrule 에 대해서도 처리가 가능하도록 스크립트를 개선하겠습니다.</p>
 <h1 id="스크립트-개선">스크립트 개선</h1>
-<p>postcss.config.js 파일을 수정합니다.</p>
+<p>postcss.config.js 파일을 아래와 같이 수정합니다.</p>
+<p>postcss 코드 기술 방법에 대해서는 <a href="https://postcss.org/api/">API 문서</a> 의 내용을 참고하여 작성하면 됩니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> postcss <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;postcss&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>module.exports <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>  plugins<span style="color:#ff79c6">:</span> [customMerge({})],
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// custom-clean plugin to keep only the first declaration of each rule
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> customMerge(options) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> {
+</span></span><span style="display:flex;"><span>    postcssPlugin<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;postcss-delete-duplicate-selector&#34;</span>,
+</span></span><span style="display:flex;"><span>    Once(root, { result }) {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">const</span> filteredRules <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Map();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      root.walk((node) =&gt; {
+</span></span><span style="display:flex;"><span>        <span style="color:#6272a4">// Check if the node is a rule and not an at-rule and parent type is root
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#ff79c6">if</span> (node.type <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#34;rule&#34;</span> <span style="color:#ff79c6">&amp;&amp;</span> node.parent.type <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#34;root&#34;</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">const</span> selector <span style="color:#ff79c6">=</span> node.selector;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>filteredRules.has(selector)) {
+</span></span><span style="display:flex;"><span>            filteredRules.set(selector, node);
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        } <span style="color:#ff79c6">else</span> <span style="color:#ff79c6">if</span> (node.type <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#34;atrule&#34;</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">const</span> mediaRule <span style="color:#ff79c6">=</span> postcss.atRule({
+</span></span><span style="display:flex;"><span>            name<span style="color:#ff79c6">:</span> node.name,
+</span></span><span style="display:flex;"><span>            params<span style="color:#ff79c6">:</span> node.params,
+</span></span><span style="display:flex;"><span>          });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          node.nodes.forEach((rule) =&gt; {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">const</span> clonedRule <span style="color:#ff79c6">=</span> rule.clone();
+</span></span><span style="display:flex;"><span>            mediaRule.append(clonedRule);
+</span></span><span style="display:flex;"><span>          });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>          filteredRules.set(mediaRule.toString(), mediaRule);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      root.removeAll();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      filteredRules.forEach((rule, index) =&gt; {
+</span></span><span style="display:flex;"><span>        root.append(rule);
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>npm run build</code> 명령어를 수행하여 atrule 에 대해서도 잘 처리가 되는지 확인합니다.</p>
+<h1 id="플러그인-코드-작성">플러그인 코드 작성</h1>
+<p>동작이 잘 되는것을 확인했으면 이를 플러그인 형태로 제작하도록 하겠습니다. 플러그인의 이름은 postcss-delete-duplicate-selector 로 하겠습니다.</p>
+<p>node_modules 디렉토리 하위에 postcss-delete-duplicate-selector 디렉토리를 생성합니다.</p>
+<p>디렉토리의 전체 구조는 다음과 같습니다.</p>
+<p><code>node_modules/potcss-delete-duplicate-selector/</code></p>
+<p><img src="../assets/20240117_112535_image.png" alt=""></p>
+<p>src 디렉토리에 index.js 파일을 다음과 같이 생성합니다.</p>
+<p><code>node_modules/potcss-delete-duplicate-selector/src/index.js</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#ff79c6">const</span> postcss <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;postcss&#34;</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#ff79c6">const</span> plugin <span style="color:#ff79c6">=</span> (opts <span style="color:#ff79c6">=</span> {}) =&gt; {
@@ -205,8 +259,51 @@
 </span></span><span style="display:flex;"><span>plugin.postcss <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>module.exports <span style="color:#ff79c6">=</span> plugin;
-</span></span></code></pre></div><p><img src="../assets/20240116_215219_image.png" alt="222"></p>
-<p>하하</p>
+</span></span></code></pre></div><p>module.exports 를 이용하여 외부 참조가 가능하도록 코드를 작성해줍니다.</p>
+<p>package.json 파일은 다음과 같이 작성합니다.</p>
+<p><code>node_modules/potcss-delete-duplicate-selector/package.json</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;postcss-delete-duplicate-selector&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;1.0.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;PostCSS plugin delete duplicate css selector in the file&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;main&#34;</span>: <span style="color:#f1fa8c">&#34;src/index.js&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;keywords&#34;</span>: [
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;postcss&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;css&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;postcss-plugin&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;delete&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;duplicate&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;selector&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;Deduplication&#34;</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;author&#34;</span>: <span style="color:#f1fa8c">&#34;hwantage &lt;hwantagexsw2@gmail.com&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;license&#34;</span>: <span style="color:#f1fa8c">&#34;MIT&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;repository&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;git&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;url&#34;</span>: <span style="color:#f1fa8c">&#34;https://github.com/hwantage/postcss-delete-duplicate-selector.git&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;engines&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;node&#34;</span>: <span style="color:#f1fa8c">&#34;&gt;=18.15.0&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;peerDependencies&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;postcss&#34;</span>: <span style="color:#f1fa8c">&#34;^8.4.32&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;devDependencies&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;postcss&#34;</span>: <span style="color:#f1fa8c">&#34;^8.4.32&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>&ldquo;main&rdquo; 항목이 entry 소스 경로가 됩니다. 우리는 src 디렉토리 하위에 코드를 작성했기 때문에 src/index.js 로 작성합니다.</p>
+<p>&ldquo;version&quot;의 경우 1.0.0 부터 작성을 하시면 됩니다.</p>
+<p>프로젝트 루트의 postcss.config.js 파일을 다음과 같이 변경합니다.</p>
+<p><code>/postcss.config.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>module.exports <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>  plugins<span style="color:#ff79c6">:</span> [require(<span style="color:#f1fa8c">&#34;postcss-delete-duplicate-selector&#34;</span>)],
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>기존의 커스텀 함수 코드를 제거하고 node_modules 에 작성된 플러그인을 참조하도록 변경하였습니다.</p>
+<p>npm run build 를 수행하여 node_modules 하위에 생성한 플러그인 코드를 통해 CSS 중복 제거가 잘 수행되는지 확인합니다.</p>
+<p>여기까지 하면 postcss 를 통해 플러그인 생성 준비를 완료했습니다.</p>
+<p>작성된 플러그인을 npm 패키지에 등록하여 오픈소스 생태계에 기여하는 방법에 대해 다음 포스팅에서 설명하겠습니다.</p>
+<p><a href="https://hwantage.github.io/posts/npm-publish/">다음 포스팅 확인하기</a></p>
 </section>
 
   

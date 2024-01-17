@@ -10,11 +10,18 @@
     <lastBuildDate>Tue, 16 Jan 2024 13:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>심볼릭 링크로 마크다운 에디터로 업로드한 파일을 HUGO에서 바로 확인</title>
+      <title>심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인</title>
       <link>https://hwantage.github.io/posts/symboliclink/</link>
       <pubDate>Tue, 16 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/symboliclink/</guid>
       <description>Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 hugo server 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.</description>
+    </item>
+    <item>
+      <title>hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
+      <link>https://hwantage.github.io/posts/hugo/</link>
+      <pubDate>Fri, 12 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/hugo/</guid>
+      <description>Agenda&#xA;SSG 개념 JAM Stack 개념 SSG 툴 Github 계정 생성 및 사용 Github pages 사용법 HUGO를 이용한 블로그 생성 Markdown 사용법 VSCode Markdown 에디터 활용법 SSG 개념 정적 사이트 : 단순 html, css, js 로만 구성된 사이트.</description>
     </item>
   </channel>
 </rss>

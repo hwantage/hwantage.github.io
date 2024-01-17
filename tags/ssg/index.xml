@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSG on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/ssg/</link>
+    <description>Recent content in SSG on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Fri, 12 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/ssg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
+      <link>https://hwantage.github.io/posts/hugo/</link>
+      <pubDate>Fri, 12 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/hugo/</guid>
+      <description>Agenda&#xA;SSG 개념 JAM Stack 개념 SSG 툴 Github 계정 생성 및 사용 Github pages 사용법 HUGO를 이용한 블로그 생성 Markdown 사용법 VSCode Markdown 에디터 활용법 SSG 개념 정적 사이트 : 단순 html, css, js 로만 구성된 사이트.</description>
+    </item>
+  </channel>
+</rss>
