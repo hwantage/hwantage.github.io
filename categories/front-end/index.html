@@ -74,7 +74,7 @@
 
       
 <a class="btn" href="#open-modal">
-  <button class="toggle-theme" aria-label="Toggle Theme" title="Terminal" onclick="showTerminal()">
+  <button class="toggle-theme" aria-label="Toggle Theme" title="Terminal" onclick="initTerminal()">
     <span class="theme-icon2 light"> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.269 27.269" xml:space="preserve" stroke="#ffffff">
@@ -207,15 +207,15 @@
     }
   };
 
-  function hideTerminal() {
+  function disposeTerminal() {
     try {
       terminal.innerHTML = "";
       term.dispose();
     } catch (e) {}
   }
 
-  function showTerminal() {
-    hideTerminal();
+  function initTerminal() {
+    disposeTerminal();
 
     term = new Terminal({
       theme: {
@@ -263,7 +263,9 @@
         break;
       case "exit":
         term.writeln("\r\n\x1b[31m Goodbye!\x1b[0m");
-        hideTerminal();
+        setTimeout(function () {
+          disposeTerminal();
+        }, 2000);
         break;
       default:
         term.writeln("\r\n\x1b[33m Command not found. Type '\x1b[1mhelp\x1b[0m\x1b[33m' for a list of commands.\x1b[0m");
@@ -323,7 +325,7 @@
   function printCommand() {
     term.writeln("\r\n\x1b[32m 명령어 목록: ");
     term.writeln("\x1b[33m\x1b[1m help \x1b[0m: 사용 가능한 명령어 목록을 제공합니다.");
-    term.writeln("\x1b[33m\x1b[1m info \x1b[0m: 프로그램에 대한 정보를 출력합니다.");
+    term.writeln("\x1b[33m\x1b[1m info \x1b[0m: 프로그램 제작자에 대한 정보를 출력합니다.");
     term.writeln("\x1b[33m\x1b[1m post \x1b[0m: 최신 블로그 글 목록을 출력합니다. 선택해서 내용을 확인할 수 있습니다.");
     term.writeln("\x1b[33m\x1b[1m blog \x1b[0m: 블로그로 이동합니다.(새창)");
     term.writeln("\x1b[33m\x1b[1m git \x1b[0m : git 홈으로 이동합니다.(새창)");
@@ -404,6 +406,37 @@
 </div>
 
 <section class="flex flex-col gap-10">
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="https://hwantage.github.io/posts/fake-terminal/">Xterm.js 를 이용한 fake terminal 웹 제작</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2024-01-19 10:29:50 &#43;0900 KST" title='Fri, Jan 19, 2024, 10:29 AM KST'>
+      19/01/2024
+    </time>
+  </span>
+
+  <div class="description">
+    
+      웹 사이트에서 fake terminal 제작하는 방법.
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="https://hwantage.github.io/posts/fake-terminal/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
   
     <article class="flex flex-col gap-1">
   <h1>
@@ -517,37 +550,6 @@
 
   <div class="mt-2">
     <a class="read-more" href="https://hwantage.github.io/posts/npm-publish/">
-      Read more
-      <span class="w-4 h-4 stroke-2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-</svg>
-
-      </span>
-    </a>
-  </div>
-</article>
-
-  
-    <article class="flex flex-col gap-1">
-  <h1>
-    <a href="https://hwantage.github.io/posts/hugo/">hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</a>
-  </h1>
-  
-  <span class="date">
-    <time datetime="2024-01-12 13:14:52 &#43;0900 KST" title='Fri, Jan 12, 2024, 1:14 PM KST'>
-      12/01/2024
-    </time>
-  </span>
-
-  <div class="description">
-    
-      SSG(Static Site Generator)를 생성 운영하는 방법에 대한 포스팅입니다. hugo 와 github pages를 이용합니다.
-    
-  </div>
-
-  <div class="mt-2">
-    <a class="read-more" href="https://hwantage.github.io/posts/hugo/">
       Read more
       <span class="w-4 h-4 stroke-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

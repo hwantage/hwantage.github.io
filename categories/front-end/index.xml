@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Tue, 16 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jan 2024 10:29:50 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/categories/front-end/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Xterm.js 를 이용한 fake terminal 웹 제작</title>
+      <link>https://hwantage.github.io/posts/fake-terminal/</link>
+      <pubDate>Fri, 19 Jan 2024 10:29:50 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/fake-terminal/</guid>
+      <description>Xterm.js 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.&#xA;데모를 확인해보세요. DEMO&#xA;시작하기 먼저, 모듈을 설치해야 합니다.</description>
+    </item>
     <item>
       <title>심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인</title>
       <link>https://hwantage.github.io/posts/symboliclink/</link>

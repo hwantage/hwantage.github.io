@@ -1,26 +1,32 @@
 User-agent: *
 
-Disallow: /categories/front-end/
+Disallow: /tags/fake-terminal/
 
-Disallow: /tags/hugo/
+Disallow: /categories/front-end/
 
 Disallow: /
 
-Disallow: /tags/image/
-
 Disallow: /posts/
+
+Disallow: /tags/
+
+Disallow: /tags/xterm.js/
+
+Disallow: /posts/fake-terminal/
+
+Disallow: /categories/
+
+Disallow: /tags/hugo/
+
+Disallow: /tags/image/
 
 Disallow: /tags/powershell/
 
 Disallow: /tags/symbolic-link/
 
-Disallow: /tags/
-
 Disallow: /tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/
 
 Disallow: /posts/symboliclink/
-
-Disallow: /categories/
 
 Disallow: /tags/css-deduplicate/
 

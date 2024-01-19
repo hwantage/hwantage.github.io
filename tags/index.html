@@ -74,7 +74,7 @@
 
       
 <a class="btn" href="#open-modal">
-  <button class="toggle-theme" aria-label="Toggle Theme" title="Terminal" onclick="showTerminal()">
+  <button class="toggle-theme" aria-label="Toggle Theme" title="Terminal" onclick="initTerminal()">
     <span class="theme-icon2 light"> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.269 27.269" xml:space="preserve" stroke="#ffffff">
@@ -207,15 +207,15 @@
     }
   };
 
-  function hideTerminal() {
+  function disposeTerminal() {
     try {
       terminal.innerHTML = "";
       term.dispose();
     } catch (e) {}
   }
 
-  function showTerminal() {
-    hideTerminal();
+  function initTerminal() {
+    disposeTerminal();
 
     term = new Terminal({
       theme: {
@@ -263,7 +263,9 @@
         break;
       case "exit":
         term.writeln("\r\n\x1b[31m Goodbye!\x1b[0m");
-        hideTerminal();
+        setTimeout(function () {
+          disposeTerminal();
+        }, 2000);
         break;
       default:
         term.writeln("\r\n\x1b[33m Command not found. Type '\x1b[1mhelp\x1b[0m\x1b[33m' for a list of commands.\x1b[0m");
@@ -323,7 +325,7 @@
   function printCommand() {
     term.writeln("\r\n\x1b[32m 명령어 목록: ");
     term.writeln("\x1b[33m\x1b[1m help \x1b[0m: 사용 가능한 명령어 목록을 제공합니다.");
-    term.writeln("\x1b[33m\x1b[1m info \x1b[0m: 프로그램에 대한 정보를 출력합니다.");
+    term.writeln("\x1b[33m\x1b[1m info \x1b[0m: 프로그램 제작자에 대한 정보를 출력합니다.");
     term.writeln("\x1b[33m\x1b[1m post \x1b[0m: 최신 블로그 글 목록을 출력합니다. 선택해서 내용을 확인할 수 있습니다.");
     term.writeln("\x1b[33m\x1b[1m blog \x1b[0m: 블로그로 이동합니다.(새창)");
     term.writeln("\x1b[33m\x1b[1m git \x1b[0m : git 홈으로 이동합니다.(새창)");
@@ -405,6 +407,18 @@
 
 <section class="py-10 flex flex-col gap-10">
   <ul class="taxonomy-list">
+     
+      <li>
+        <a href=" https://hwantage.github.io/tags/fake-terminal/ ">
+          fake terminal (1)
+        </a>
+      </li>
+     
+      <li>
+        <a href=" https://hwantage.github.io/tags/xterm.js/ ">
+          Xterm.js (1)
+        </a>
+      </li>
      
       <li>
         <a href=" https://hwantage.github.io/tags/hugo/ ">
