@@ -7,15 +7,8 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Fri, 19 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jan 2024 13:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>이미지 업로드 테스트</title>
-      <link>https://hwantage.github.io/posts/hugo-copy/</link>
-      <pubDate>Fri, 19 Jan 2024 13:14:52 +0900</pubDate>
-      <guid>https://hwantage.github.io/posts/hugo-copy/</guid>
-      <description>**&#xA;안녕하세요 반갑습니다.&#xA;수고하세요</description>
-    </item>
     <item>
       <title>hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
       <link>https://hwantage.github.io/posts/hugo/</link>

@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Fri, 19 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jan 2024 13:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>이미지 업로드 테스트</title>
-      <link>https://hwantage.github.io/posts/hugo-copy/</link>
-      <pubDate>Fri, 19 Jan 2024 13:14:52 +0900</pubDate>
-      <guid>https://hwantage.github.io/posts/hugo-copy/</guid>
-      <description>**&#xA;안녕하세요 반갑습니다.&#xA;수고하세요</description>
+      <title>HUGO 블로그에 구글 애널리틱스 연결하기</title>
+      <link>https://hwantage.github.io/posts/google-analytics/</link>
+      <pubDate>Sat, 20 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/google-analytics/</guid>
+      <description>HUGO를 통해 블로그를 생성하고 나서 과연 방문객이 얼마나 될지 궁금할 것이다.&#xA;구글 애널리틱스를 이용하여 방문현황을 파악해 보자.</description>
     </item>
     <item>
       <title>심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인</title>

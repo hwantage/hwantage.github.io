@@ -2,21 +2,19 @@ User-agent: *
 
 Disallow: /categories/front-end/
 
-Disallow: /tags/github-pages/
+Disallow: /tags/google-analytics/
 
 Disallow: /tags/hugo/
 
-Disallow: /
+Disallow: /posts/google-analytics/
 
-Disallow: /tags/jam-stack/
+Disallow: /
 
 Disallow: /posts/
 
-Disallow: /tags/ssg/
-
 Disallow: /tags/
 
-Disallow: /posts/hugo-copy/
+Disallow: /tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/
 
 Disallow: /categories/
 
@@ -54,7 +52,11 @@ Disallow: /tags/npm-publish/
 
 Disallow: /tags/postcss-delete-duplicate-selector/
 
+Disallow: /tags/github-pages/
+
 Disallow: /posts/hugo/
+
+Disallow: /tags/jam-stack/
 
 Disallow: /tags/node/
 
@@ -63,6 +65,8 @@ Disallow: /tags/node.js/
 Disallow: /tags/nvm/
 
 Disallow: /posts/nvm/
+
+Disallow: /tags/ssg/
 
 Disallow: /about/
 
