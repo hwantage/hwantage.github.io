@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Fri, 19 Jan 2024 10:29:50 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jan 2024 13:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>이미지 업로드 테스트</title>
+      <link>https://hwantage.github.io/posts/hugo-copy/</link>
+      <pubDate>Fri, 19 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/hugo-copy/</guid>
+      <description>**&#xA;안녕하세요 반갑습니다.&#xA;수고하세요</description>
+    </item>
     <item>
       <title>Xterm.js 를 이용한 fake terminal 웹 제작</title>
       <link>https://hwantage.github.io/posts/fake-terminal/</link>

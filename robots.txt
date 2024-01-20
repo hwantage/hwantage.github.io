@@ -1,22 +1,30 @@
 User-agent: *
 
-Disallow: /tags/fake-terminal/
-
 Disallow: /categories/front-end/
+
+Disallow: /tags/github-pages/
+
+Disallow: /tags/hugo/
 
 Disallow: /
 
+Disallow: /tags/jam-stack/
+
 Disallow: /posts/
 
+Disallow: /tags/ssg/
+
 Disallow: /tags/
+
+Disallow: /posts/hugo-copy/
+
+Disallow: /categories/
+
+Disallow: /tags/fake-terminal/
 
 Disallow: /tags/xterm.js/
 
 Disallow: /posts/fake-terminal/
-
-Disallow: /categories/
-
-Disallow: /tags/hugo/
 
 Disallow: /tags/image/
 
@@ -46,11 +54,7 @@ Disallow: /tags/npm-publish/
 
 Disallow: /tags/postcss-delete-duplicate-selector/
 
-Disallow: /tags/github-pages/
-
 Disallow: /posts/hugo/
-
-Disallow: /tags/jam-stack/
 
 Disallow: /tags/node/
 
@@ -59,8 +63,6 @@ Disallow: /tags/node.js/
 Disallow: /tags/nvm/
 
 Disallow: /posts/nvm/
-
-Disallow: /tags/ssg/
 
 Disallow: /about/
 

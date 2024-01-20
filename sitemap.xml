@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hwantage.github.io/tags/fake-terminal/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
-  </url><url>
     <loc>https://hwantage.github.io/categories/front-end/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/github-pages/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/hugo/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/jam-stack/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/posts/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/ssg/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/tags/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/posts/hugo-copy/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/categories/</loc>
+    <lastmod>2024-01-19T13:14:52+09:00</lastmod>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/fake-terminal/</loc>
     <lastmod>2024-01-19T10:29:50+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/tags/xterm.js/</loc>
@@ -22,12 +40,6 @@
   </url><url>
     <loc>https://hwantage.github.io/posts/fake-terminal/</loc>
     <lastmod>2024-01-19T10:29:50+09:00</lastmod>
-  </url><url>
-    <loc>https://hwantage.github.io/categories/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
-  </url><url>
-    <loc>https://hwantage.github.io/tags/hugo/</loc>
-    <lastmod>2024-01-16T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/tags/image/</loc>
     <lastmod>2024-01-16T13:14:52+09:00</lastmod>
@@ -71,13 +83,7 @@
     <loc>https://hwantage.github.io/tags/postcss-delete-duplicate-selector/</loc>
     <lastmod>2024-01-14T10:32:14+09:00</lastmod>
   </url><url>
-    <loc>https://hwantage.github.io/tags/github-pages/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-  </url><url>
     <loc>https://hwantage.github.io/posts/hugo/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-  </url><url>
-    <loc>https://hwantage.github.io/tags/jam-stack/</loc>
     <lastmod>2024-01-12T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/tags/node/</loc>
@@ -90,9 +96,6 @@
     <lastmod>2024-01-12T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/posts/nvm/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-  </url><url>
-    <loc>https://hwantage.github.io/tags/ssg/</loc>
     <lastmod>2024-01-12T13:14:52+09:00</lastmod>
   </url><url>
     <loc>https://hwantage.github.io/about/</loc>
