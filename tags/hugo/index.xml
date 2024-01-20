@@ -17,6 +17,13 @@
       <description>HUGO를 통해 블로그를 생성하고 나서 과연 방문객이 얼마나 될지 궁금할 것이다.&#xA;구글 애널리틱스를 이용하여 방문현황을 파악해 보자.</description>
     </item>
     <item>
+      <title>HUGO 블로그에 댓글 기능 연동</title>
+      <link>https://hwantage.github.io/posts/utterances/</link>
+      <pubDate>Sat, 20 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/utterances/</guid>
+      <description>HUGO를 통해 블로그 포스트 하단에 댓글 기능을 연동하는 방법을 알아보겠습니다.&#xA;댓글 기능을 연동하는 방법은 대표적인 것이 Disqus 입니다.</description>
+    </item>
+    <item>
       <title>심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인</title>
       <link>https://hwantage.github.io/posts/symboliclink/</link>
       <pubDate>Tue, 16 Jan 2024 13:14:52 +0900</pubDate>

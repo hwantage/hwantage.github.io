@@ -8,13 +8,19 @@ Disallow: /tags/hugo/
 
 Disallow: /posts/google-analytics/
 
+Disallow: /posts/utterances/
+
 Disallow: /
 
 Disallow: /posts/
 
 Disallow: /tags/
 
+Disallow: /tags/utterances/
+
 Disallow: /tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/
+
+Disallow: /tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/
 
 Disallow: /categories/
 
