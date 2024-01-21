@@ -59,7 +59,7 @@
       <description>CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거) 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.</description>
     </item>
     <item>
-      <title>hugo를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
+      <title>HUGO를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
       <link>https://hwantage.github.io/posts/hugo/</link>
       <pubDate>Fri, 12 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/hugo/</guid>
