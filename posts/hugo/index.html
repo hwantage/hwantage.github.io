@@ -421,6 +421,31 @@
   </header>
 
   
+  <aside class="table-of-contents">
+    <h2 class="title-small">Summary</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ssg-개념">SSG 개념</a></li>
+    <li><a href="#jam-stack-개념">JAM Stack 개념</a></li>
+    <li><a href="#ssg-툴">SSG 툴</a></li>
+    <li><a href="#github-계정-생성-및-사용">Github 계정 생성 및 사용</a></li>
+    <li><a href="#github-pages-사용법">Github pages 사용법</a></li>
+    <li><a href="#hugo를-이용한-블로그-생성">HUGO를 이용한 블로그 생성</a>
+      <ul>
+        <li><a href="#hugo-설치">Hugo 설치</a></li>
+        <li><a href="#hugo-프로젝트-만들기">Hugo 프로젝트 만들기</a></li>
+        <li><a href="#hugo-examplesite-코드-복사">Hugo exampleSite 코드 복사</a></li>
+        <li><a href="#hugo-포스트-작성">Hugo 포스트 작성</a></li>
+        <li><a href="#hugo-서버-실행">Hugo 서버 실행</a></li>
+        <li><a href="#빌드-및-배포하기">빌드 및 배포하기</a></li>
+      </ul>
+    </li>
+    <li><a href="#markdown-사용법">Markdown 사용법</a></li>
+    <li><a href="#vscode-markdown-에디터-활용법">VSCode Markdown 에디터 활용법</a></li>
+  </ul>
+</nav>
+  </aside>
+
 
   <section><p><strong>Agenda</strong></p>
 <ul>
@@ -433,13 +458,13 @@
 <li>Markdown 사용법</li>
 <li>VSCode Markdown 에디터 활용법</li>
 </ul>
-<h1 id="ssg-개념">SSG 개념</h1>
+<h2 id="ssg-개념">SSG 개념</h2>
 <p>정적 사이트 : 단순 html, css, js 로만 구성된 사이트.</p>
 <p>동적 사이트 : 게시판, 대시보드 등 백엔드 데이터 연동 또는 API에 따라 동적으로 구성된 사이트.</p>
 <p>SSG : Static Site Generator 정적 사이트 생성기 = 정적 사이트를 쉽게 만들 수 있도록 도와주는 도구</p>
-<h1 id="jam-stack-개념">JAM Stack 개념</h1>
+<h2 id="jam-stack-개념">JAM Stack 개념</h2>
 <p>JAM(JavaScript, API, Markup Stack): JavaScript, API, HTML이나 CSS 등을 칭하는 Markup으로 이루어진 웹 구성 방법</p>
-<h1 id="ssg-툴">SSG 툴</h1>
+<h2 id="ssg-툴">SSG 툴</h2>
 <p><strong>Gatsby</strong></p>
 <p><strong>Jekyll</strong> : github pages 공식 지원</p>
 <p><strong>Hexo</strong></p>
@@ -448,13 +473,13 @@
 <p>다양한 툴이 있는데 Hugo가 가장 널리 사용되는 것으로 파악됨.</p>
 <p><img src="../assets/20240117_143305_image.png" alt=""></p>
 <p><a href="https://trends.google.co.kr/trends/explore?q=Hugo,Jekyll,Gatsby,Hexo&amp;hl=ko">https://trends.google.co.kr/trends/explore?q=Hugo,Jekyll,Gatsby,Hexo&amp;hl=ko</a></p>
-<h1 id="github-계정-생성-및-사용">Github 계정 생성 및 사용</h1>
+<h2 id="github-계정-생성-및-사용">Github 계정 생성 및 사용</h2>
 <p>계정 생성 : <a href="https://github.com/">https://github.com/</a></p>
 <p>PC에 git 설치 <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
 <p>설치 확인 방법 command 창을 열어 아래의 명령어로 확인</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; git version
 </span></span><span style="display:flex;"><span>git version 2.40.0.windows.1
-</span></span></code></pre></div><h1 id="github-pages-사용법">Github pages 사용법</h1>
+</span></span></code></pre></div><h2 id="github-pages-사용법">Github pages 사용법</h2>
 <p>내가 제작한 페이지를 어딘가에 호스팅을 해야 하는데 올릴 서버가 마땅히 없을 때 <code>github</code>에서 제공하는 무료 호스팅 기능을 이용한다.</p>
 <p>Git 계정은 일단 있다고 가정하고 본인의 Git 계정으로 로그인하여 <code>Repositories</code> 탭에서 <code>New</code> 버튼을 클릭한다.</p>
 <p><img src="../assets/20240117_143348_image.png" alt=""></p>
@@ -464,8 +489,8 @@
 <p>뭔가 아무거나 파일을 올리면 사이트가 활성화 된다.</p>
 <p>아무 것도 올리지 않은 경우 <a href="http://Readme.md">Readme.md</a> 파일 내용이 나타난다.</p>
 <p>index.html 파일을 올리면 index.html 파일의 내용이 나타난다.</p>
-<h1 id="hugo를-이용한-블로그-생성">HUGO를 이용한 블로그 생성</h1>
-<h2 id="hugo-설치">Hugo 설치</h2>
+<h2 id="hugo를-이용한-블로그-생성">HUGO를 이용한 블로그 생성</h2>
+<h3 id="hugo-설치">Hugo 설치</h3>
 <p>아래의 Git Repository 에 접속 하여 OS에 맞는 설치 프로그램을 다운로드 한다.</p>
 <p><a href="https://github.com/gohugoio/hugo/releases/tag/v0.121.1">https://github.com/gohugoio/hugo/releases/tag/v0.121.1</a></p>
 <p>아래의 파일을 다운로드 받았다.</p>
@@ -478,7 +503,7 @@
 <p>아래와 같이 커멘드 창에서 hugo version 을 쳤을 때 버전정보가 잘 표기된다면 설치 성공.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; hugo version
 </span></span><span style="display:flex;"><span>hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740 windows/amd64 <span style="color:#8be9fd;font-style:italic">BuildDate</span><span style="color:#ff79c6">=</span>2023-12-08T08:47:45Z <span style="color:#8be9fd;font-style:italic">VendorInfo</span><span style="color:#ff79c6">=</span>gohugoio
-</span></span></code></pre></div><h2 id="hugo-프로젝트-만들기">Hugo 프로젝트 만들기</h2>
+</span></span></code></pre></div><h3 id="hugo-프로젝트-만들기">Hugo 프로젝트 만들기</h3>
 <p>D:\hugo 폴더로 이동하여 아래의 명령어로 프로젝트를 생성한다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># hugo new site &lt;프로젝트이름&gt;</span>
 </span></span><span style="display:flex;"><span>&gt; hugo new site hwan77
@@ -551,17 +576,17 @@
 </span></span><span style="display:flex;"><span>name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;Tags&#34;</span>
 </span></span><span style="display:flex;"><span>url <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;/tags&#34;</span>
 </span></span><span style="display:flex;"><span>weight <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">4</span>
-</span></span></code></pre></div><h2 id="hugo-examplesite-코드-복사">Hugo exampleSite 코드 복사</h2>
+</span></span></code></pre></div><h3 id="hugo-examplesite-코드-복사">Hugo exampleSite 코드 복사</h3>
 <p><code>themes/archie/exampleSite</code> 폴더의 파일들을 <code>/archie/content</code> 폴더로 복사</p>
-<h2 id="hugo-포스트-작성">Hugo 포스트 작성</h2>
+<h3 id="hugo-포스트-작성">Hugo 포스트 작성</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/archie&gt; hugo new posts/first.md
 </span></span></code></pre></div><p>위와 같이 하면 content 디렉토리 밑에 posts 디렉토리 하위로 <a href="http://first.md">first.md</a> 파일이 생성된다.</p>
 <p>/content/posts/first.md 파일의 내용을 원하는대로 수정</p>
-<h2 id="hugo-서버-실행">Hugo 서버 실행</h2>
+<h3 id="hugo-서버-실행">Hugo 서버 실행</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/archie&gt; hugo server -D
 </span></span></code></pre></div><p><code>http://localhost:1313/</code> 로 접속하여 결과 확인</p>
-<h2 id="빌드-및-배포하기">빌드 및 배포하기</h2>
-<h3 id="1-빌드">1. 빌드</h3>
+<h3 id="빌드-및-배포하기">빌드 및 배포하기</h3>
+<h4 id="1-빌드">1. 빌드</h4>
 <p>새 글이 정상적으로 보인다면 이제 빌드를 할 차례입니다.</p>
 <p>블로그 루트 디렉토리로 이동하여 아래 명령으로 빌드합니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/archie&gt; hugo -D
@@ -589,14 +614,14 @@
 </blockquote>
 <p>참고로 public 폴더의 기존 파일을 모두 삭제하고 빌드롤 수행하려면 &ndash;cleanDestinationDir 옵션을 추가하면 된다.</p>
 <p><code>hugo --cleanDestinationDir</code></p>
-<h3 id="2-배포">2. 배포</h3>
+<h4 id="2-배포">2. 배포</h4>
 <p>public 디렉토리의 내용을 github에 업로드</p>
 <p><img src="../assets/20240117_143706_image.png" alt=""></p>
 <p>드래그 드롭으로 싹다 업로드</p>
 <p>잠시 후 확인 <a href="https://hwantage.github.io">https://hwantage.github.io</a></p>
-<h1 id="markdown-사용법">Markdown 사용법</h1>
+<h2 id="markdown-사용법">Markdown 사용법</h2>
 <p><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601">마크다운(Markdown) 사용법</a></p>
-<h1 id="vscode-markdown-에디터-활용법">VSCode Markdown 에디터 활용법</h1>
+<h2 id="vscode-markdown-에디터-활용법">VSCode Markdown 에디터 활용법</h2>
 <p>Visual Studio Code 실행하여 Extenstion 설치</p>
 <p><img src="../assets/20240117_143731_image.png" alt=""></p>
 <p>파일 우마우스 클릭 후 Open with markdown editor 클릭</p>
@@ -607,19 +632,33 @@
 </section>
 
   
-    
+  
+  
+    <a href="https://hwantage.github.io/posts/npm-publish/">다음 글: CSS-Deduplication part 3 (postcss 플러그인을 npmjs.org에 배포)</a>
+  
+  
+  
+    <a href="https://hwantage.github.io/posts/nvm/">이전 글: nvm을 이용한 node.js의 버전 관리 방법</a>
+  
+  
+  
+  
+  
+	
+  
   
 
-    
   
-
-<script src="https://utteranc.es/client.js"
+  
+  <script src="https://utteranc.es/client.js"
         repo="hwantage/hwantage.github.io"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script>
+  </script>  
+
+
 
   <footer>
     

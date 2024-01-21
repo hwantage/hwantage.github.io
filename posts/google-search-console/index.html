@@ -421,9 +421,21 @@
   </header>
 
   
+  <aside class="table-of-contents">
+    <h2 class="title-small">Summary</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#구글-검색-노출-방법">구글 검색 노출 방법</a></li>
+    <li><a href="#hugo-설정">HUGO 설정</a></li>
+    <li><a href="#네이버-등록-방법">네이버 등록 방법</a></li>
+    <li><a href="#daum-에-등록하기">DAUM 에 등록하기</a></li>
+  </ul>
+</nav>
+  </aside>
+
 
   <section><p>검색엔진에 노출이 되도록 블로그를 설정합니다.</p>
-<h1 id="구글-검색-노출-방법">구글 검색 노출 방법</h1>
+<h2 id="구글-검색-노출-방법">구글 검색 노출 방법</h2>
 <p><a href="https://search.google.com/search-console/about?hl=ko">구글 서치 콘솔</a> 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.</p>
 <p>도메인이 있는 경우 왼쪽에 입력을 하면 됩니다. 대부분의 블로그는 우측 항목을 입력하면 됩니다.</p>
 <p><img src="../assets/20240121_131100_image.png" alt=""></p>
@@ -436,7 +448,7 @@
 <p>속성으로 이동하기 해서 새 사이트맵 추가를 합니다. sitemap.xml 을 입력후 제출버튼을 클릭하면됩니다.</p>
 <p><img src="../assets/20240121_131509_image.png" alt=""></p>
 <p>사이트맵을 제출합니다.</p>
-<h1 id="hugo-설정">HUGO 설정</h1>
+<h2 id="hugo-설정">HUGO 설정</h2>
 <p>HUGO 빌드를 수행하면 public 폴더에 sitemap.xml 과 robots.txt 파일을 자동으로 생성합니다.</p>
 <p>hugo.toml 파일에 다음과 같이 설정합니다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>enableRobotsTXT = true
@@ -447,7 +459,7 @@
 </span></span><span style="display:flex;"><span>  changefreq = &#34;weekly&#34;
 </span></span><span style="display:flex;"><span>  filename = &#34;sitemap.xml&#34;
 </span></span><span style="display:flex;"><span>  priority = 0.5
-</span></span></code></pre></div><h1 id="네이버-등록-방법">네이버 등록 방법</h1>
+</span></span></code></pre></div><h2 id="네이버-등록-방법">네이버 등록 방법</h2>
 <p><a href="https://searchadvisor.naver.com/">네이버 Search Advisor</a>에 접속합니다.</p>
 <p>로그인을 하고 <code>웹마스터 도구 사용하기</code> 버튼을 클릭합니다.</p>
 <p><img src="../assets/20240121_134056_image.png" alt=""></p>
@@ -461,25 +473,50 @@
 <p>robots.txt 파일 검증을 합니다. 수집요청 버튼을 클릭하면 됩니다.</p>
 <p><img src="../assets/20240121_134845_image.png" alt=""></p>
 <p>이제 검색 결과에 반영되기를 기다려 보겠습니다.</p>
-<h1 id="daum-에-등록하기">DAUM 에 등록하기</h1>
+<h2 id="daum-에-등록하기">DAUM 에 등록하기</h2>
 <p><a href="https://register.search.daum.net/index.daum">Daum 검색등록 페이지</a>로 이동합니다.</p>
 <p>시키는대로 따라 하면 됩니다. 제일 간단하네요.</p>
 </section>
 
   
-    
+  
+  
+  
+  
+    <a href="https://hwantage.github.io/posts/google-analytics/">이전 글: HUGO 블로그에 구글 애널리틱스 연결하기</a>
+  
+  
+  
+  
+  
+  <h3>See Also</h3>
+  <ul>
+	
+	  <li><a href="/posts/google-analytics/">HUGO 블로그에 구글 애널리틱스 연결하기</a></li>
+	
+	  <li><a href="/posts/utterances/">HUGO 블로그에 댓글 기능 연동</a></li>
+	
+	  <li><a href="/posts/symboliclink/">심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인</a></li>
+	
+	  <li><a href="/posts/hugo/">HUGO를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</a></li>
+	
+  </ul>
+  
+	
+  
   
 
-    
   
-
-<script src="https://utteranc.es/client.js"
+  
+  <script src="https://utteranc.es/client.js"
         repo="hwantage/hwantage.github.io"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script>
+  </script>  
+
+
 
   <footer>
     
