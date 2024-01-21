@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>google search console on Hwantage world</title>
-    <link>https://hwantage.github.io/tags/google-search-console/</link>
-    <description>Recent content in google search console on Hwantage world</description>
+    <title>naver search advisor on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/naver-search-advisor/</link>
+    <description>Recent content in naver search advisor on Hwantage world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Sun, 21 Jan 2024 11:14:52 +0900</lastBuildDate>
-    <atom:link href="https://hwantage.github.io/tags/google-search-console/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hwantage.github.io/tags/naver-search-advisor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기</title>
       <link>https://hwantage.github.io/posts/google-search-console/</link>

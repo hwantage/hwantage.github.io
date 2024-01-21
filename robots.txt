@@ -1,5 +1,7 @@
 User-agent: *
 
+Disallow: /tags/daum/
+
 Disallow: /categories/front-end/
 
 Disallow: /tags/google-search-console/
@@ -10,9 +12,13 @@ Disallow: /posts/google-search-console/
 
 Disallow: /
 
+Disallow: /tags/naver-search-advisor/
+
 Disallow: /posts/
 
 Disallow: /tags/robots.txt/
+
+Disallow: /tags/sitemap.xml/
 
 Disallow: /tags/
 

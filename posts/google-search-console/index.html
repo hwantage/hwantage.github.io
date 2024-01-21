@@ -3,7 +3,7 @@
   <head><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HUGO로 제작한 블로그를 구글 검색, 네이버 검색에 노출시키기</title>
+<title>HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기</title>
 <meta name="description" content="검색엔진에 블로그 게시물을 노출시키는 방법을 정리합니다.">
 <link rel="canonical" href="https://hwantage.github.io/posts/google-search-console/">
 <link rel="robots" href="/robots.txt" />
@@ -401,7 +401,7 @@
 
 <article class="flex flex-col gap-10">
   <header class="flex flex-col gap-2">
-    <h2 class="title-large">HUGO로 제작한 블로그를 구글 검색, 네이버 검색에 노출시키기</h2>
+    <h2 class="title-large">HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기</h2>
 
     <div class="meta">
       
@@ -422,7 +422,7 @@
 
   
 
-  <section><p>구글 검색에 노출이 되도록 블로그를 설정합니다.</p>
+  <section><p>검색엔진에 노출이 되도록 블로그를 설정합니다.</p>
 <h1 id="구글-검색-노출-방법">구글 검색 노출 방법</h1>
 <p><a href="https://search.google.com/search-console/about?hl=ko">구글 서치 콘솔</a> 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.</p>
 <p>도메인이 있는 경우 왼쪽에 입력을 하면 됩니다. 대부분의 블로그는 우측 항목을 입력하면 됩니다.</p>
@@ -450,6 +450,20 @@
 </span></span></code></pre></div><h1 id="네이버-등록-방법">네이버 등록 방법</h1>
 <p><a href="https://searchadvisor.naver.com/">네이버 Search Advisor</a>에 접속합니다.</p>
 <p>로그인을 하고 <code>웹마스터 도구 사용하기</code> 버튼을 클릭합니다.</p>
+<p><img src="../assets/20240121_134056_image.png" alt=""></p>
+<p>블로그 주소를 입력하면 소유주 확인창이 나타납니다.</p>
+<p><img src="../assets/20240121_134130_image.png" alt=""></p>
+<p><code>HTML 확인 파일</code>을 다운로드 받아 블로그 저장소에 업로드 합니다.</p>
+<p>사이트맵 제출 메뉴에서 sitemap.xml 파일을 등록합니다.</p>
+<p><img src="../assets/20240121_134645_image.png" alt=""></p>
+<p>RSS 제출 메뉴에서 RSS 파일을 등록합니다. HUGO 에서 자동으로 index.xml 파일을 생성하므로 아래와 같이 입력합니다.</p>
+<p><img src="../assets/20240121_135125_image.png" alt=""></p>
+<p>robots.txt 파일 검증을 합니다. 수집요청 버튼을 클릭하면 됩니다.</p>
+<p><img src="../assets/20240121_134845_image.png" alt=""></p>
+<p>이제 검색 결과에 반영되기를 기다려 보겠습니다.</p>
+<h1 id="daum-에-등록하기">DAUM 에 등록하기</h1>
+<p><a href="https://register.search.daum.net/index.daum">Daum 검색등록 페이지</a>로 이동합니다.</p>
+<p>시키는대로 따라 하면 됩니다. 제일 간단하네요.</p>
 </section>
 
   
@@ -477,6 +491,18 @@
       
         <a href="/tags/google-search-console/" alt="google search console">
           google search console
+        </a>
+      
+        <a href="/tags/naver-search-advisor/" alt="naver search advisor">
+          naver search advisor
+        </a>
+      
+        <a href="/tags/daum/" alt="daum">
+          daum
+        </a>
+      
+        <a href="/tags/sitemap.xml/" alt="sitemap.xml">
+          sitemap.xml
         </a>
       
         <a href="/tags/robots.txt/" alt="robots.txt">

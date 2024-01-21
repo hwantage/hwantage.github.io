@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hwantage.github.io/tags/daum/</loc>
+    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hwantage.github.io/categories/front-end/</loc>
     <lastmod>2024-01-21T11:14:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -27,12 +32,22 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://hwantage.github.io/tags/naver-search-advisor/</loc>
+    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hwantage.github.io/posts/</loc>
     <lastmod>2024-01-21T11:14:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://hwantage.github.io/tags/robots.txt/</loc>
+    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/sitemap.xml/</loc>
     <lastmod>2024-01-21T11:14:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
