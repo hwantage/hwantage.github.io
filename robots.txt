@@ -2,27 +2,33 @@ User-agent: *
 
 Disallow: /categories/front-end/
 
-Disallow: /tags/google-analytics/
+Disallow: /tags/google-search-console/
 
 Disallow: /tags/hugo/
 
-Disallow: /posts/google-analytics/
-
-Disallow: /posts/utterances/
+Disallow: /posts/google-search-console/
 
 Disallow: /
 
 Disallow: /posts/
 
+Disallow: /tags/robots.txt/
+
 Disallow: /tags/
+
+Disallow: /categories/
+
+Disallow: /tags/google-analytics/
+
+Disallow: /posts/google-analytics/
+
+Disallow: /posts/utterances/
 
 Disallow: /tags/utterances/
 
 Disallow: /tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/
 
 Disallow: /tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/
-
-Disallow: /categories/
 
 Disallow: /tags/fake-terminal/
 

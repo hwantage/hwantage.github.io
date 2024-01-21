@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>google search console on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/google-search-console/</link>
+    <description>Recent content in google search console on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Sun, 21 Jan 2024 11:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/google-search-console/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HUGO로 제작한 블로그를 구글 검색, 네이버 검색에 노출시키기</title>
+      <link>https://hwantage.github.io/posts/google-search-console/</link>
+      <pubDate>Sun, 21 Jan 2024 11:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/google-search-console/</guid>
+      <description>구글 검색에 노출이 되도록 블로그를 설정합니다.&#xA;구글 검색 노출 방법 구글 서치 콘솔 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.</description>
+    </item>
+  </channel>
+</rss>
