@@ -1,95 +1,95 @@
 User-agent: *
 
-Disallow: /tags/daum/
+allow: /tags/daum/
 
-Disallow: /categories/front-end/
+allow: /categories/front-end/
 
-Disallow: /tags/google-search-console/
+allow: /tags/google-search-console/
 
-Disallow: /tags/hugo/
+allow: /tags/hugo/
 
-Disallow: /posts/google-search-console/
+allow: /posts/google-search-console/
 
-Disallow: /
+allow: /
 
-Disallow: /tags/naver-search-advisor/
+allow: /tags/naver-search-advisor/
 
-Disallow: /posts/
+allow: /posts/
 
-Disallow: /tags/robots.txt/
+allow: /tags/robots.txt/
 
-Disallow: /tags/sitemap.xml/
+allow: /tags/sitemap.xml/
 
-Disallow: /tags/
+allow: /tags/
 
-Disallow: /categories/
+allow: /categories/
 
-Disallow: /tags/google-analytics/
+allow: /tags/google-analytics/
 
-Disallow: /posts/google-analytics/
+allow: /posts/google-analytics/
 
-Disallow: /posts/utterances/
+allow: /posts/utterances/
 
-Disallow: /tags/utterances/
+allow: /tags/utterances/
 
-Disallow: /tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/
+allow: /tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/
 
-Disallow: /tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/
+allow: /tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/
 
-Disallow: /tags/fake-terminal/
+allow: /tags/fake-terminal/
 
-Disallow: /tags/xterm.js/
+allow: /tags/xterm.js/
 
-Disallow: /posts/fake-terminal/
+allow: /posts/fake-terminal/
 
-Disallow: /tags/image/
+allow: /tags/image/
 
-Disallow: /tags/powershell/
+allow: /tags/powershell/
 
-Disallow: /tags/symbolic-link/
+allow: /tags/symbolic-link/
 
-Disallow: /tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/
+allow: /tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/
 
-Disallow: /posts/symboliclink/
+allow: /posts/symboliclink/
 
-Disallow: /tags/css-deduplicate/
+allow: /tags/css-deduplicate/
 
-Disallow: /posts/css-deduplicate/
+allow: /posts/css-deduplicate/
 
-Disallow: /tags/file-merge/
+allow: /tags/file-merge/
 
-Disallow: /tags/postcss/
+allow: /tags/postcss/
 
-Disallow: /posts/css-deduplicate-2/
+allow: /posts/css-deduplicate-2/
 
-Disallow: /tags/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B0%B0%ED%8F%AC/
+allow: /tags/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B0%B0%ED%8F%AC/
 
-Disallow: /posts/npm-publish/
+allow: /posts/npm-publish/
 
-Disallow: /tags/npm-publish/
+allow: /tags/npm-publish/
 
-Disallow: /tags/postcss-delete-duplicate-selector/
+allow: /tags/postcss-delete-duplicate-selector/
 
-Disallow: /tags/github-pages/
+allow: /tags/github-pages/
 
-Disallow: /posts/hugo/
+allow: /posts/hugo/
 
-Disallow: /tags/jam-stack/
+allow: /tags/jam-stack/
 
-Disallow: /tags/node/
+allow: /tags/node/
 
-Disallow: /tags/node.js/
+allow: /tags/node.js/
 
-Disallow: /tags/nvm/
+allow: /tags/nvm/
 
-Disallow: /posts/nvm/
+allow: /posts/nvm/
 
-Disallow: /tags/ssg/
+allow: /tags/ssg/
 
-Disallow: /about/
+allow: /about/
 
-Disallow: /categories/css/
+allow: /categories/css/
 
-Disallow: /categories/javascript/
+allow: /categories/javascript/
 
-Disallow: /categories/uncategories/
+allow: /categories/uncategories/
