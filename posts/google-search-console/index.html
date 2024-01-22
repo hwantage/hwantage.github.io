@@ -476,8 +476,21 @@
 </span></span><span style="display:flex;"><span>Disallow: /posts/
 </span></span><span style="display:flex;"><span>...
 </span></span></code></pre></div><p>전부 Disallow 로 되어 있기 때문에 크롤링이 금지된 것입니다. HUGO 에서 robots.txt 파일의 설정을 변경해야 할 것 같습니다.</p>
-<p>HUGO 공식 가이드를 확인해 보니 설정 방법은 다음과 같이 안내되어 있습니다.
-themes/lowkey/layouts/ 디렉토리로 이동하면 robots.txt 파일이 있습니다.</p>
+<p><a href="https://gohugo.io/templates/robots/">HUGO 공식 가이드</a>를 확인해 보니 설정 방법은 다음과 같이 안내되어 있습니다.</p>
+<blockquote>
+<p>robots.txt template lookup order
+You may overwrite the internal template with a custom template. Hugo selects the template using this lookup order:</p>
+<ol>
+<li><code>/layouts/robots.txt</code></li>
+<li><code>/themes/&lt;THEME&gt;/layouts/robots.txt</code></li>
+</ol>
+</blockquote>
+<p>저의 경우 1번의 방법으로 하겠습니다. /layouts/robots.txt 파일을 아래와 같이 생성합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>User-agent: *
+</span></span><span style="display:flex;"><span>Allow: /
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Sitemap: https://hwantage.github.io/sitemap.xml
+</span></span></code></pre></div><p>HUGO 빌드를 수행합니다.</p>
 <h2 id="hugo-설정">HUGO 설정</h2>
 <p>HUGO 빌드를 수행하면 public 폴더에 sitemap.xml 과 robots.txt 파일을 자동으로 생성합니다.</p>
 <p>hugo.toml 파일에 다음과 같이 설정합니다.</p>
