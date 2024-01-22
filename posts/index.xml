@@ -7,8 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Sun, 21 Jan 2024 11:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jan 2024 14:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript find, findIndex, filter</title>
+      <link>https://hwantage.github.io/posts/js-find/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-find/</guid>
+      <description>find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 [undefined](https://developer.</description>
+    </item>
+    <item>
+      <title>Javascript 직렬화(serialization)</title>
+      <link>https://hwantage.github.io/posts/js-serialization/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-serialization/</guid>
+      <description>직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.</description>
+    </item>
+    <item>
+      <title>Javascript 템플릿 리터럴(Template literal)</title>
+      <link>https://hwantage.github.io/posts/js-template-literal/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-template-literal/</guid>
+      <description>ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다.</description>
+    </item>
+    <item>
+      <title>Javascript 함수 선언 방법과 호이스팅</title>
+      <link>https://hwantage.github.io/posts/js-function/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-function/</guid>
+      <description>함수 선언 방법 함수선언문 (Function Declaration) // 일반적인 함수 선언 방법 function add(a, b) { return a + b } 함수표현식 (Function expression) // arrow function으로 함수표현식 선언 방법 const myFunc1 = () =&amp;gt; { } // 매개변수가 없을 경우 const myFunc2 = x =&amp;gt; { } // 매개변수가 한 개인 경우, 소괄호를 생략 가능 const myFunc3 = (x, y) =&amp;gt; { } // 매개변수가 여러 개인 경우, 소괄호를 생략 불가 // Body 전개 방법 const myFunc4 = x =&amp;gt; { return x * 2 } // single line block const myFunc5 = x =&amp;gt; x * 2 // 함수 몸체가 한줄의 구문이라면 중괄호 생략 가능 const myFunc6 = () =&amp;gt; { return { a: 1 }} const myFunc7 = () =&amp;gt; ({ a: 1 }) // 위 표현과 동일.</description>
+    </item>
+    <item>
+      <title>Javascript 비구조화 할당</title>
+      <link>https://hwantage.github.io/posts/js-destructuring-assignment/</link>
+      <pubDate>Mon, 22 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-destructuring-assignment/</guid>
+      <description>정의 비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)</description>
+    </item>
     <item>
       <title>HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기</title>
       <link>https://hwantage.github.io/posts/google-search-console/</link>

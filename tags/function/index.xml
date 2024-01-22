@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Function on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/function/</link>
+    <description>Recent content in Function on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 22 Jan 2024 14:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/function/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript 직렬화(serialization)</title>
+      <link>https://hwantage.github.io/posts/js-serialization/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-serialization/</guid>
+      <description>직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.</description>
+    </item>
+    <item>
+      <title>Javascript 함수 선언 방법과 호이스팅</title>
+      <link>https://hwantage.github.io/posts/js-function/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-function/</guid>
+      <description>함수 선언 방법 함수선언문 (Function Declaration) // 일반적인 함수 선언 방법 function add(a, b) { return a + b } 함수표현식 (Function expression) // arrow function으로 함수표현식 선언 방법 const myFunc1 = () =&amp;gt; { } // 매개변수가 없을 경우 const myFunc2 = x =&amp;gt; { } // 매개변수가 한 개인 경우, 소괄호를 생략 가능 const myFunc3 = (x, y) =&amp;gt; { } // 매개변수가 여러 개인 경우, 소괄호를 생략 불가 // Body 전개 방법 const myFunc4 = x =&amp;gt; { return x * 2 } // single line block const myFunc5 = x =&amp;gt; x * 2 // 함수 몸체가 한줄의 구문이라면 중괄호 생략 가능 const myFunc6 = () =&amp;gt; { return { a: 1 }} const myFunc7 = () =&amp;gt; ({ a: 1 }) // 위 표현과 동일.</description>
+    </item>
+  </channel>
+</rss>

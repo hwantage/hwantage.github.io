@@ -1,5 +1,41 @@
 User-agent: *
 
+Allow: /tags/filter/
+
+Allow: /tags/find/
+
+Allow: /tags/findindex/
+
+Allow: /tags/function/
+
+Allow: /tags/hoisting/
+
+Allow: /
+
+Allow: /categories/javascript/
+
+Allow: /posts/js-find/
+
+Allow: /posts/js-serialization/
+
+Allow: /posts/js-template-literal/
+
+Allow: /posts/js-function/
+
+Allow: /tags/js/
+
+Allow: /posts/
+
+Allow: /tags/
+
+Allow: /tags/template-literal/
+
+Allow: /categories/
+
+Allow: /posts/js-destructuring-assignment/
+
+Allow: /tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/
+
 Allow: /tags/daum/
 
 Allow: /categories/front-end/
@@ -10,19 +46,11 @@ Allow: /tags/hugo/
 
 Allow: /posts/google-search-console/
 
-Allow: /
-
 Allow: /tags/naver-search-advisor/
-
-Allow: /posts/
 
 Allow: /tags/robots.txt/
 
 Allow: /tags/sitemap.xml/
-
-Allow: /tags/
-
-Allow: /categories/
 
 Allow: /tags/google-analytics/
 
@@ -89,8 +117,6 @@ Allow: /tags/ssg/
 Allow: /about/
 
 Allow: /categories/css/
-
-Allow: /categories/javascript/
 
 Allow: /categories/uncategories/
 

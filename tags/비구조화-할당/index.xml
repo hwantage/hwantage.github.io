@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>비구조화 할당 on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/</link>
+    <description>Recent content in 비구조화 할당 on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 22 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript 비구조화 할당</title>
+      <link>https://hwantage.github.io/posts/js-destructuring-assignment/</link>
+      <pubDate>Mon, 22 Jan 2024 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-destructuring-assignment/</guid>
+      <description>정의 비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>filter on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/filter/</link>
+    <description>Recent content in filter on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 22 Jan 2024 14:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/filter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript find, findIndex, filter</title>
+      <link>https://hwantage.github.io/posts/js-find/</link>
+      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-find/</guid>
+      <description>find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 [undefined](https://developer.</description>
+    </item>
+  </channel>
+</rss>
