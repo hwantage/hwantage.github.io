@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/js-find/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-find/</guid>
-      <description>find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 [undefined](https://developer.</description>
+      <description>find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.</description>
     </item>
   </channel>
 </rss>
