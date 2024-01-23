@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hwantage.github.io/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/categories/javascript/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/posts/js-performance-coding/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/js/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/performance/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/posts/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hwantage.github.io/categories/</loc>
+    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hwantage.github.io/tags/filter/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -27,16 +72,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://hwantage.github.io/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://hwantage.github.io/categories/javascript/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://hwantage.github.io/posts/js-find/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -57,27 +92,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://hwantage.github.io/tags/js/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://hwantage.github.io/posts/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://hwantage.github.io/tags/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://hwantage.github.io/tags/template-literal/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://hwantage.github.io/categories/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

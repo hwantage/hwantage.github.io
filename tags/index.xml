@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Mon, 22 Jan 2024 14:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2024 14:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JS</title>
+      <link>https://hwantage.github.io/tags/js/</link>
+      <pubDate>Tue, 23 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>https://hwantage.github.io/tags/performance/</link>
+      <pubDate>Tue, 23 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>성능</title>
+      <link>https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/</link>
+      <pubDate>Tue, 23 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/</guid>
+      <description></description>
+    </item>
     <item>
       <title>filter</title>
       <link>https://hwantage.github.io/tags/filter/</link>
@@ -42,13 +63,6 @@
       <link>https://hwantage.github.io/tags/hoisting/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/tags/hoisting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>JS</title>
-      <link>https://hwantage.github.io/tags/js/</link>
-      <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
-      <guid>https://hwantage.github.io/tags/js/</guid>
       <description></description>
     </item>
     <item>

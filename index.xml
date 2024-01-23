@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Mon, 22 Jan 2024 14:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jan 2024 14:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript 성능 향상 코딩 팁</title>
+      <link>https://hwantage.github.io/posts/js-performance-coding/</link>
+      <pubDate>Tue, 23 Jan 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/js-performance-coding/</guid>
+      <description>자바스크립트 성능 측정 방법 console.time console.time(0); // 여러가지 로직 수행 console.timeEnd(0); console.time(&amp;#39;t1&amp;#39;); // 다양한 로직 수행 console.</description>
+    </item>
     <item>
       <title>Javascript find, findIndex, filter</title>
       <link>https://hwantage.github.io/posts/js-find/</link>
