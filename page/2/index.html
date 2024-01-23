@@ -13,7 +13,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
 
-<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.dc4488ac4eea535849c3d9eafd7d7a7f0e5c6240c047a81d477b6c977c863718.css" integrity="sha256-3ESIrE7qU1hJw9nq/X16fw5cYkDAR6gdR3tsl3yGNxg=" /><div id="hwmenu">
+<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.b0485d5040f21ac801a803572989eb4d6cf8015347b4c7d65eb85422e620e19a.css" integrity="sha256-sEhdUEDyGsgBqANXKYnrTWz4AVNHtMfWXrhUIuYg4Zo=" /><div id="hwmenu">
   <div class="hamburger">
     <div class="line"></div>
     <div class="line"></div>
@@ -124,7 +124,6 @@
     display: none;
   }
 } 
-출처: https:
 </style>
 
 <script>
@@ -196,13 +195,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
         curveX = easeOutExpo(xitteration, curveX, targetX - curveX, 100);
         curveY = easeOutExpo(yitteration, curveY, y - curveY, 100);
-
+		
+		curveX = Math.min(curveX, 40);
 		curveY = Math.min(curveY, height);
 
         var anchorDistance = 200;
         var curviness = anchorDistance - 40;
-
-        var newCurve2 = "M60," + height + "H0V0h60v" + (curveY - anchorDistance) + "c0," + curviness + "," + curveX + "," + curviness + "," + curveX + "," + anchorDistance + "S60," + (curveY) + ",60," + (curveY + (anchorDistance * 2)) + "V" + height + "z";
+		
+		var newCurve2 = "M60," + height + "H0V0h60v" + (curveY - anchorDistance) + "c0," + curviness + "," + curveX + "," + curviness + "," + curveX + "," + anchorDistance + "S60," + (curveY) + ",60," + (curveY + (anchorDistance * 2)) + "V" + height + "z";
 
         blobPath.setAttribute('d', newCurve2);
 
@@ -215,6 +215,136 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.requestAnimationFrame(svgCurve);
 
+});
+</script><div class="terminal-content hideTerm hidden">
+  <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
+  <div id="terminal" class="terminal-item"></div>
+  <div class="terminal-item term-info"><br/></div>
+  <div class="terminal-item term-info"><a href="https://hwantage.github.io/posts/fake-terminal/">🔗 Xterm.js 를 이용한 fake terminal 웹 제작 방법 포스트 확인</a></div>
+  <div class="terminal-item term-info"><a href="https://github.com/hwantage/fake-terminal.git">🔗 소스 다운로드</a></div>
+</div>
+<style>
+.close-terminal {display:inline-block;*display:inline;cursor:pointer;}
+.close-terminal:after {display: inline-block;content: "\00d7"; font-size:35pt;color:#F9B339;}
+.term-info {
+	color:#919191;
+}
+.terminal-content {
+  position: fixed;
+  top: -100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.9);
+  display: block;
+  height: 100%;
+  z-index: 9;
+}
+
+.terminal-item {
+  margin: 20px auto;
+  width:800px;
+}
+
+@keyframes showTerm {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@-webkit-keyframes showTerm {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@-moz-keyframes showTerm {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@-o-keyframes showTerm {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.showTerm {
+  -webkit-animation: showTerm 1s ease forwards;
+  -moz-animation: showTerm 1s ease forwards;
+  -o-animation: showTerm 1s ease forwards;
+  animation: showTerm 1s ease forwards;
+}
+
+@keyframes hideTerm {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@-webkit-keyframes hideTerm {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@-moz-keyframes hideTerm {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+@-o-keyframes hideTerm {
+  from {
+    top: 0;
+  }
+  to {
+    top: -100%;
+  }
+}
+
+.hideTerm {
+  -webkit-animation: hideTerm 1s ease forwards;
+  -moz-animation: hideTerm 1s ease forwards;
+  -o-animation: hideTerm 1s ease forwards;
+  animation: hideTerm 1s ease forwards;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+<script>
+window.addEventListener('load', function() {
+  var btnClose = document.querySelector('.close-terminal');
+  btnClose.addEventListener('click', function() {
+    var termContent = document.querySelector('.terminal-content');
+    termContent.classList.toggle('showTerm');
+    termContent.classList.toggle('hideTerm');
+    termContent.classList.remove('hidden');
+  });
 });
 </script></head>
 
@@ -309,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
 </svg> </span>
 </button>
-<div id="terminal"></div>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const theme = localStorage.getItem("theme");
@@ -425,6 +555,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function initTerminal() {
+  
+	var termContent = document.querySelector('.terminal-content');
+    termContent.classList.toggle('showTerm');
+    termContent.classList.toggle('hideTerm');
+    termContent.classList.remove('hidden');
+	
     disposeTerminal();
 
     term = new Terminal({
