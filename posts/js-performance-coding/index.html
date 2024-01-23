@@ -851,20 +851,20 @@ window.addEventListener('load', function() {
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4">// for 문을 수행하는 동안 위 5단계를 계속 반복
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// =&gt; 아래와 같이 향상
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">**</span><span style="color:#8be9fd;font-style:italic">let</span> len <span style="color:#ff79c6">=</span> person.home.length<span style="color:#ff79c6">**</span>;	<span style="color:#6272a4">// length 1회 접근
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">**</span>len<span style="color:#ff79c6">**</span>; i<span style="color:#ff79c6">++</span>){
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> len <span style="color:#ff79c6">=</span> person.home.length;	<span style="color:#6272a4">// length 1회 접근
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> len; i<span style="color:#ff79c6">++</span>){
 </span></span><span style="display:flex;"><span>	console.log(person.home[i]);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// =&gt; 아래와 같이 향상
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#ff79c6">**</span><span style="color:#8be9fd;font-style:italic">let</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, len<span style="color:#ff79c6">=</span>person.home.length<span style="color:#ff79c6">**</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">**</span>len<span style="color:#ff79c6">**</span>; i<span style="color:#ff79c6">++</span>){ <span style="color:#6272a4">// 전역으로 선언하지 않아 메모리 절감
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, len<span style="color:#ff79c6">=</span>person.home.length; i <span style="color:#ff79c6">&lt;</span> len; i<span style="color:#ff79c6">++</span>){ <span style="color:#6272a4">// 전역으로 선언하지 않아 메모리 절감
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>	console.log(person.home[i]);
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// =&gt; 아래와 같이 향상
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">**</span><span style="color:#8be9fd;font-style:italic">let</span> list <span style="color:#ff79c6">=</span> person.home<span style="color:#ff79c6">**</span>;  <span style="color:#6272a4">// list에 person 객체의 home 속성을 미리 할당.
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#ff79c6">**</span><span style="color:#8be9fd;font-style:italic">let</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, len <span style="color:#ff79c6">=</span> list.length<span style="color:#ff79c6">**</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#ff79c6">**</span>len<span style="color:#ff79c6">**</span> ; i<span style="color:#ff79c6">++</span>){
-</span></span><span style="display:flex;"><span>	console.log(<span style="color:#ff79c6">**</span>list[i]<span style="color:#ff79c6">**</span>);  <span style="color:#6272a4">// 반복할 때 마다 person 객체의 home 속성에 접근할 필요 없음.
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> list <span style="color:#ff79c6">=</span> person.home;  <span style="color:#6272a4">// list에 person 객체의 home 속성을 미리 할당.
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>, len <span style="color:#ff79c6">=</span> list.length; i <span style="color:#ff79c6">&lt;</span> len ; i<span style="color:#ff79c6">++</span>){
+</span></span><span style="display:flex;"><span>	console.log(list[i]);  <span style="color:#6272a4">// 반복할 때 마다 person 객체의 home 속성에 접근할 필요 없음.
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// =&gt; chatGPT 솔루션
@@ -878,9 +878,9 @@ window.addEventListener('load', function() {
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// 정규 표현식은 컴파일 이후 처리가 필요. 100회의 반복적인 컴파일을 수행하게 된다.
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
 </span></span><span style="display:flex;"><span><span style="color:#6272a4">// =&gt; 아래와 같이 향상
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">**</span><span style="color:#8be9fd;font-style:italic">let</span> reg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">/^\d{3}-\d{3,4}-\d{4}$/</span>;<span style="color:#ff79c6">**</span> <span style="color:#6272a4">// 1회만 컴파일
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> reg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">/^\d{3}-\d{3,4}-\d{4}$/</span>; <span style="color:#6272a4">// 1회만 컴파일
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> <span style="color:#bd93f9">100</span>; i<span style="color:#ff79c6">++</span>) {     
-</span></span><span style="display:flex;"><span>	str[i].replace(<span style="color:#ff79c6">**</span>reg<span style="color:#ff79c6">**</span>, <span style="color:#f1fa8c">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>	str[i].replace(reg, <span style="color:#f1fa8c">&#34;&#34;</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="조건-비교-연산-성능-향상">조건 비교 연산 성능 향상</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">let</span> value <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>;
@@ -911,12 +911,12 @@ window.addEventListener('load', function() {
 </span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">style</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text/css&#34;</span>&gt;  
 </span></span><span style="display:flex;"><span>		...
 </span></span><span style="display:flex;"><span>		<span style="color:#6272a4">// link 태그를 만나면 CSS파일을 서버에 요청한 후 응답받아 CSS파싱을 시작.
-</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>		<span style="color:#ff79c6">**</span><span style="color:#6272a4">// style 태그는 상단에 선언하여 DOM 렌더링이 다시 이루어지지 않도록 하는 것이 좋다.**
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>		<span style="color:#6272a4">// style 태그는 상단에 선언하여 DOM 렌더링이 다시 이루어지지 않도록 하는 것이 좋다.
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>		&lt;/<span style="color:#ff79c6">style</span>&gt;
 </span></span><span style="display:flex;"><span>	&lt;/<span style="color:#ff79c6">head</span>&gt;
 </span></span><span style="display:flex;"><span>	&lt;<span style="color:#ff79c6">body</span>&gt;
 </span></span><span style="display:flex;"><span>		...
-</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text/javascript&#34;</span>&gt;  <span style="color:#ff79c6">**</span><span style="color:#6272a4">// 가급적 최하단에 script 선언**
+</span></span><span style="display:flex;"><span>		&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;text/javascript&#34;</span>&gt;  <span style="color:#6272a4">// 가급적 최하단에 script 선언
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>			...   
 </span></span><span style="display:flex;"><span>			<span style="color:#6272a4">// script 태그를 만나면 DOM 파싱을 중단하고 script 엔진에 제어권을 넘긴다.
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>			<span style="color:#6272a4">// DOM이 완성되지 않은 상태에서 DOM Api를 통해 DOM을 조작하면 에러가 발생할 수 있음.
