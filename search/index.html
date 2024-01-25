@@ -22,11 +22,12 @@
   <div class="menu-inner">
     <ul>
 	  <li><img src="/hwan_yellow.png" width="200" height="200" alt="Hwantage world"></li>
-      <li><a href="https://hwantage.github.io">HOME</a></li>
-	  <li><a href="https://hwantage.github.io/about/">ABOUT ME</a></li>
-      <li><a href="https://hwantage.github.io/posts/">BLOG POSTS</li>
-      <li><a href="https://hwantage.github.io/categories/">CATEGORIES</li>
-      <li><a href="https://hwantage.github.io/tags">TAGS</li>
+      <li><a href="/">HOME</a></li>
+	  <li><a href="/about/">ABOUT ME</a></li>
+      <li><a href="/posts/">BLOG POSTS</li>
+      <li><a href="/categories/">CATEGORIES</li>
+      <li><a href="/tags">TAGS</li>
+	  <li><a href="/search">SEARCH</li>
 	  <li class="terminal"><a href="#" onclick="initTerminal()"><b>TERMINAL MODE</b></a></li>
 	  <li><a href="#" onclick="toggleTheme()">CHANGE THEME</a></li>
       <li><a href="https://github.com/hwantage">GIT REPO</a></li>
@@ -402,11 +403,17 @@ window.addEventListener('load', function() {
       </a>
     </li>
     
+    <li>
+      <a href="/search" class=" active ">
+        Search
+      </a>
+    </li>
+    
   </ul>
 </nav>
 
 	<form action="/search/" style="margin-top:-20px;">
-        <div class="search-bar"><i class="fas fa-search"></i><input id="search-query" name="q" placeholder="search phrase" style="font-size: 22px;border: 0;border-radius: 15px;outline: none;padding-left: 10px;background-color: rgb(233, 233, 233);"/></div>
+        <div class="search-bar"><input type="search" id="search-query" name="q" placeholder="search phrase" style="color:black;border: 0;border-radius: 15px;outline: none;padding-left: 10px;background-color: rgb(233, 233, 233);padding-right:8px; height:33px;"/></div>
     </form>
   </div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JB0QM0P0XF"></script>
@@ -791,11 +798,11 @@ window.addEventListener('load', function() {
  
  
  
- <script type="text/javascript" src="/js/fuse.min.js?1706168803"></script>
+ <script type="text/javascript" src="/js/hansearch.min.js?1706190705"></script>
  
- <script type="text/javascript" src="/js/mark.min.js?1706168803"></script>
+ <script type="text/javascript" src="/js/mark.min.js?1706190705"></script>
  
- <script type="text/javascript" src="/js/search.min.js?1706168803"></script>
+ <script type="text/javascript" src="/js/search.min.js?1706190705"></script>
  
 
     </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
