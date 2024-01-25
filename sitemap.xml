@@ -311,6 +311,10 @@
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>https://hwantage.github.io/search/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://hwantage.github.io/categories/uncategories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

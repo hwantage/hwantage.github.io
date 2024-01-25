@@ -13,7 +13,7 @@
 
 
 
-<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.b0485d5040f21ac801a803572989eb4d6cf8015347b4c7d65eb85422e620e19a.css" integrity="sha256-sEhdUEDyGsgBqANXKYnrTWz4AVNHtMfWXrhUIuYg4Zo=" />
+<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.372b1e0957dd20f70e2ffffd50df8546c8d95ae68740b122ed012d81fc59008c.css" integrity="sha256-NyseCVfdIPcOL//9UN+FRsjZWuaHQLEi7QEtgfxZAIw=" />
     
     <link href="/css/copy-code-button.min.css" rel="stylesheet">
 <div id="hwmenu">
@@ -408,6 +408,9 @@ window.addEventListener('load', function() {
   </ul>
 </nav>
 
+	<form action="/search/" style="margin-top:-20px;">
+        <div class="search-bar"><i class="fas fa-search"></i><input id="search-query" name="q" placeholder="search phrase" style="font-size: 22px;border: 0;border-radius: 15px;outline: none;padding-left: 10px;background-color: rgb(233, 233, 233);"/></div>
+    </form>
   </div>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JB0QM0P0XF"></script>
 <script>
@@ -842,7 +845,7 @@ window.addEventListener('load', function() {
 </span></span><span style="display:flex;"><span>	console.log(msg);  
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>func2의 경우 호이스팅 되어 문제 없으나 msg 변수는 선언이 되지 않아 에러 발생한다.</p>
-<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/473977a5-1a3b-41d7-a1ae-21db49bb08ee/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240124_091540_image.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span>console.log(name); <span style="color:#6272a4">// undefined
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;hwan77&#39;</span>;
 </span></span><span style="display:flex;"><span>
@@ -870,12 +873,10 @@ window.addEventListener('load', function() {
 <blockquote>
 <ol>
 <li>함수 실행시에는 전역(window) 객체를 가리킨다.</li>
-</ol>
-</blockquote>
-<ol start="2">
 <li>메소드 실행시에는 메소드를 소유하고 있는 객체를 가리킨다.</li>
 <li>생성자 실행시에는 새롭게 만들어진 객체를 가리킨다.</li>
 </ol>
+</blockquote>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#6272a4">// this example
 </span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> myInfo<span style="color:#ff79c6">=</span>{
 </span></span><span style="display:flex;"><span>   name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;hwan77&#34;</span>,
