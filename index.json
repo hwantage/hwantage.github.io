@@ -1,12 +1,84 @@
 [
  
  {
+ "permalink": "https://hwantage.github.io/categories/front-end/",
+ "title": "Front-end",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "categories"
+ },
+ {
+ "permalink": "https://hwantage.github.io/tags/github-pages/",
+ "title": "github pages",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "tags"
+ },
+ {
+ "permalink": "https://hwantage.github.io/tags/hugo/",
+ "title": "hugo",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "tags"
+ },
+ {
+ "permalink": "https://hwantage.github.io/posts/hugo-deploy-automation/",
+ "title": "HUGO 사이트 배포를 위한 배치 파일 생성",
+ "tags": ["hugo", "github pages", "SSG", "배치"],
+ "description": "Hugo 로 만든 블로그를 github 에 간편하게 commit 처리 할 수 있는 배치 파일을 생성합니다.",
+ "contents": "Agenda\n블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.\nHUGO를 이용한 블로그 생성\n",
+ "type": "posts"
+ },
+ {
  "permalink": "https://hwantage.github.io/",
  "title": "Hwantage world",
  "tags": [],
  "description": "",
  "contents": "",
  "type": "page"
+ },
+ {
+ "permalink": "https://hwantage.github.io/posts/",
+ "title": "Post",
+ "tags": [],
+ "description": "",
+ "contents": "블로그 포스트를 확인하세요.\n",
+ "type": "posts"
+ },
+ {
+ "permalink": "https://hwantage.github.io/tags/ssg/",
+ "title": "SSG",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "tags"
+ },
+ {
+ "permalink": "https://hwantage.github.io/tags/",
+ "title": "Tags",
+ "tags": [],
+ "description": "",
+ "contents": "Our Tags Collection\n",
+ "type": "taxonomies"
+ },
+ {
+ "permalink": "https://hwantage.github.io/tags/%EB%B0%B0%EC%B9%98/",
+ "title": "배치",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "tags"
+ },
+ {
+ "permalink": "https://hwantage.github.io/categories/",
+ "title": "카테고리",
+ "tags": [],
+ "description": "",
+ "contents": "Our Categories Collection\n",
+ "type": "taxonomies"
  },
  {
  "permalink": "https://hwantage.github.io/categories/javascript/",
@@ -41,36 +113,12 @@
  "type": "tags"
  },
  {
- "permalink": "https://hwantage.github.io/posts/",
- "title": "Post",
- "tags": [],
- "description": "",
- "contents": "블로그 포스트를 확인하세요.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/",
- "title": "Tags",
- "tags": [],
- "description": "",
- "contents": "Our Tags Collection\n",
- "type": "taxonomies"
- },
- {
  "permalink": "https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/",
  "title": "성능",
  "tags": [],
  "description": "",
  "contents": "",
  "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/categories/",
- "title": "카테고리",
- "tags": [],
- "description": "",
- "contents": "Our Categories Collection\n",
- "type": "taxonomies"
  },
  {
  "permalink": "https://hwantage.github.io/tags/filter/",
@@ -177,24 +225,8 @@
  "type": "tags"
  },
  {
- "permalink": "https://hwantage.github.io/categories/front-end/",
- "title": "Front-end",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "categories"
- },
- {
  "permalink": "https://hwantage.github.io/tags/google-search-console/",
  "title": "google search console",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/hugo/",
- "title": "hugo",
  "tags": [],
  "description": "",
  "contents": "",
@@ -417,14 +449,6 @@
  "type": "tags"
  },
  {
- "permalink": "https://hwantage.github.io/tags/github-pages/",
- "title": "github pages",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
  "permalink": "https://hwantage.github.io/posts/hugo/",
  "title": "HUGO를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법",
  "tags": ["hugo", "github pages", "SSG", "JAM Stack"],
@@ -471,14 +495,6 @@
  "description": "NVM(Node Version Manager)를 이용한 node  버전 관리 방법",
  "contents": "새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.\nD:\\redmanager\\views\u0026gt;npm run start \u0026gt; tuto@0.1.0 start \u0026gt; set PORT=1024 \u0026amp;\u0026amp; react-scripts start Starting the development server... Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\\redmanager\\views\\node_modules\\webpack\\lib\\util\\createHash.js:90:53) at NormalModule._initBuildHash (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:401:16) at handleParseError (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:449:10) at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:481:5 at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:342:12 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:373:3 at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:214:10) at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:221:10) at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:236:3 at runSyncOrAsync (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:130:11) at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:232:2) at Array.\u0026lt;anonymous\u0026gt; (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:205:4) at Storage.finished (D:\\redmanager\\views\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:55:16) at D:\\redmanager\\views\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:91:9 Browserslist: caniuse-lite is outdated. Please run: npx browserslist@latest --update-db Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating D:\\redmanager\\views\\node_modules\\react-scripts\\scripts\\start.js:19 throw err; ^ Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\\redmanager\\views\\node_modules\\webpack\\lib\\util\\createHash.js:90:53) at NormalModule._initBuildHash (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:401:16) at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:433:10 at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:308:13 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18 at context.callback (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13) at D:\\redmanager\\views\\node_modules\\babel-loader\\lib\\index.js:51:103 at process.processTicksAndRejections (node:internal/process/task_queues:95:5) { opensslErrorStack: [ \u0026#39;error:03000086:digital envelope routines::initialization error\u0026#39; ], library: \u0026#39;digital envelope routines\u0026#39;, reason: \u0026#39;unsupported\u0026#39;, code: \u0026#39;ERR_OSSL_EVP_UNSUPPORTED\u0026#39; } Node.js v18.15.0 확인해 보니 최신버전의 node 가 설치 되어 발생하는 문제였다.\n다시 삭제하고 재설치 해야 하나 싶었는데 nvm 으로 node의 버전을 손쉽게 관리 할 수 있었다.\n협업을 할 때, 또는 다양한 프로젝트를 동시에 진행해야 할 때 다양한 라이브러리 / 프레임워크 / 개발툴의 버전 호환 문제를 겪을 수 있다.\n그때마다 Node.js를 재설치 및 삭제하는 방법으로는 한계가 있고 불편할 뿐더러 시간도 아깝다.\n이런 상황에서 Node.js 버전을 상황에 따라 변경해 가면서 사용하게끔 도와주는 것이 NVM이다.\nNVM 은 Node Version Manager 의 약자로써 Node.js의 도구이며, 상황에 따라 버전을 변경해 가면서 사용할 수 있도록 도와준다.\n터미널에서 명령어로 매우 간단하게 노드 버젼을 스위칭할 수 있다.\nnvm-windows는 MIT 라이센스의 오픈 소스로 Go로 작성되었다.\n아래 링크에서 nvm-setup.exe 5.22 MBNov 13, 2022 로 설치를 진행해 보았다.\nhttps://github.com/coreybutler/nvm-windows/releases\nnvm-windows는 Node.js v4+에서 지원되기 때문에 기본적인 Node.js는 설치가 되어 있어야 한다.\n컴퓨터에 다양한 버전의 Node.js 를 설치할 수 있게 해준다. use 커맨드를 이용해 사용할 Node 버전으로 간단하게 스위칭할수 있게 해준다. 디폴트 버전을 설정하거나 / 설치한 버전들의 전체 리스트를 확인하거나 / 필요 없는 버전을 삭제하는 등등\u0026hellip; 소위 버전 관리가 쉬워진다. node -v # 노드 버전 확인 nvm list # 설치된 노드 버전 리스트 확인 nvm install lts # 최신 lts 버전 설치 nvm install 14.17.4 # 특정 버전 node 설치 nvm use 14.17.4 # 14.17.4 버전으로 스위칭 아래는 실제로 수행했던 cmd 창 갈무리.\nD:\\redmanager\\views\u0026gt;nvm install 14.17.4 Downloading node.js version 14.17.4 (64-bit)... Complete Creating C:\\Users\\User\\AppData\\Roaming\\nvm\\temp Downloading npm version 6.14.14... Complete Installing npm v6.14.14... Installation complete. If you want to use this version, type nvm use 14.17.4 D:\\redmanager\\views\u0026gt;nvm list * 18.15.0 (Currently using 64-bit executable) 14.17.4 D:\\redmanager\\views\u0026gt;nvm use 14.17.4 Now using node v14.17.4 (64-bit) D:\\redmanager\\views\u0026gt;nvm list 18.15.0 * 14.17.4 (Currently using 64-bit executable) 더 자세한 내용은 git 링크에서 확인하십시오.\n",
  "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/ssg/",
- "title": "SSG",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
  },
  {
  "permalink": "https://hwantage.github.io/about/",
