@@ -6,7 +6,7 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HUGO 사이트 배포를 위한 배치 파일 생성</title>
-<meta name="description" content="Hugo 로 만든 블로그를 github 에 간편하게 commit 처리 할 수 있는 배치 파일을 생성합니다.">
+<meta name="description" content="블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.">
 <link rel="canonical" href="https://hwantage.github.io/posts/hugo-deploy-automation/">
 <link rel="robots" href="/robots.txt" />
 
@@ -149,7 +149,7 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/hwmenu.min.js?1706358445"></script><div class="terminal-content hideTerm hidden">
+<script type="text/javascript" src="/js/hwmenu.min.js?1706361167"></script><div class="terminal-content hideTerm hidden">
   <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
   <div id="terminal" class="terminal-item"></div>
   <div class="terminal-item term-info"><br/></div>
@@ -158,7 +158,7 @@
 </div>
 
 
-<link rel="stylesheet" href="/css/hwterminal.min.css?1706358445" />
+<link rel="stylesheet" href="/css/hwterminal.min.css?1706361167" />
 <script>
  
 window.addEventListener('load', function() {
@@ -328,9 +328,9 @@ window.addEventListener('load', function() {
   }
 </script>
 
-<link rel="stylesheet" href="/css/xterm.min.css?1706358445" />
+<link rel="stylesheet" href="/css/xterm.min.css?1706361167" />
 
-<script type="text/javascript" src="/js/hwterminal.js?1706358445"></script>
+<script type="text/javascript" src="/js/hwterminal.js?1706361167"></script>
 
     </div>
   
@@ -343,7 +343,7 @@ window.addEventListener('load', function() {
     <div class="meta">
       
       <time datetime="2024-01-27 13:14:52 &#43;0900 KST" title='Sat, Jan 27, 2024, 1:14 PM KST'>
-        27/01/2024 - Estimated reading time: 1 minutes
+        2024-01-27 - Estimated reading time: 1 minutes
       </time>
 
        
@@ -413,6 +413,9 @@ window.addEventListener('load', function() {
 </li>
 </ul>
 <p>배치 파일의 내용은 각자의 상황의 맞게 변경해서 활용하시면 편리하게 블로그 배포를 진행하실 수 있을겁니다.</p>
+<h2 id="배치-파일-실행">배치 파일 실행</h2>
+<p>프로젝트 루트에서 <code>commit</code> 명령어를 실행하세요.</p>
+<p><img src="../assets/commit.gif" alt=""></p>
 </section>
 
   
@@ -475,6 +478,14 @@ window.addEventListener('load', function() {
       
         <a href="/tags/%EB%B0%B0%EC%B9%98/" alt="배치">
           배치
+        </a>
+      
+        <a href="/tags/auto-deploy/" alt="auto deploy">
+          auto deploy
+        </a>
+      
+        <a href="/tags/commit/" alt="commit">
+          commit
         </a>
       
       </div>

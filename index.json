@@ -1,6 +1,22 @@
 [
  
  {
+ "permalink": "https://hwantage.github.io/tags/auto-deploy/",
+ "title": "auto deploy",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "tags"
+ },
+ {
+ "permalink": "https://hwantage.github.io/tags/commit/",
+ "title": "commit",
+ "tags": [],
+ "description": "",
+ "contents": "",
+ "type": "tags"
+ },
+ {
  "permalink": "https://hwantage.github.io/categories/front-end/",
  "title": "Front-end",
  "tags": [],
@@ -27,9 +43,9 @@
  {
  "permalink": "https://hwantage.github.io/posts/hugo-deploy-automation/",
  "title": "HUGO 사이트 배포를 위한 배치 파일 생성",
- "tags": ["hugo", "github pages", "SSG", "배치"],
- "description": "Hugo 로 만든 블로그를 github 에 간편하게 commit 처리 할 수 있는 배치 파일을 생성합니다.",
- "contents": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.\n배치 파일 생성 hugo 블로그 프로젝트 루트에 commit.bat 파일을 생성합니다.\nhugo --cleanDestinationDir @echo off set /p commit_message=Enter your commit message: cd ./public git add . git commit -m \u0026#34;%commit_message%\u0026#34; git push origin main cd .. 소스 설명\nhugo --cleanDestinationDir hugo 명령어로 빌드를 하면 public 폴더에 최종 파일이 빌드되어 생성되는데 hugo는 새로운 파일에 대해서 추가만 합니다. 쓰고 지우는 과정에서 구조가 바뀔 수 있는데 추가만 하므로 사용하지 않는 파일들이 쌓일 수가 있습니다. \u0026ndash;cleanDestinationDir 옵션으로 public 폴더를 완전히 청소후 빌드를 수행합니다. set /p commit_message=Enter your commit message: 커밋 메시지 입력을 받도록 설정합니다. 입력한 커밋 메시지는 commit_message 변수에 세팅됩니다. cd ./public public 폴더로 이동합니다. git add . public 폴더의 모든 파일을 add 합니다. git commit -m \u0026quot;%commit_message%\u0026quot; 작성된 커밋 메시지로 commit 을 수행합니다. git push origin main push 처리합니다. cd .. 원래 있던 폴더로 이동후 종료합니다. 배치 파일의 내용은 각자의 상황의 맞게 변경해서 활용하시면 편리하게 블로그 배포를 진행하실 수 있을겁니다.\n",
+ "tags": ["hugo", "github pages", "SSG", "배치", "auto deploy", "commit"],
+ "description": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.",
+ "contents": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.\n배치 파일 생성 hugo 블로그 프로젝트 루트에 commit.bat 파일을 생성합니다.\nhugo --cleanDestinationDir @echo off set /p commit_message=Enter your commit message: cd ./public git add . git commit -m \u0026#34;%commit_message%\u0026#34; git push origin main cd .. 소스 설명\nhugo --cleanDestinationDir hugo 명령어로 빌드를 하면 public 폴더에 최종 파일이 빌드되어 생성되는데 hugo는 새로운 파일에 대해서 추가만 합니다. 쓰고 지우는 과정에서 구조가 바뀔 수 있는데 추가만 하므로 사용하지 않는 파일들이 쌓일 수가 있습니다. \u0026ndash;cleanDestinationDir 옵션으로 public 폴더를 완전히 청소후 빌드를 수행합니다. set /p commit_message=Enter your commit message: 커밋 메시지 입력을 받도록 설정합니다. 입력한 커밋 메시지는 commit_message 변수에 세팅됩니다. cd ./public public 폴더로 이동합니다. git add . public 폴더의 모든 파일을 add 합니다. git commit -m \u0026quot;%commit_message%\u0026quot; 작성된 커밋 메시지로 commit 을 수행합니다. git push origin main push 처리합니다. cd .. 원래 있던 폴더로 이동후 종료합니다. 배치 파일의 내용은 각자의 상황의 맞게 변경해서 활용하시면 편리하게 블로그 배포를 진행하실 수 있을겁니다.\n배치 파일 실행 프로젝트 루트에서 commit 명령어를 실행하세요.\n",
  "type": "posts"
  },
  {
@@ -92,7 +108,7 @@
  "permalink": "https://hwantage.github.io/posts/js-performance-coding/",
  "title": "Javascript 성능 향상 코딩 팁",
  "tags": ["JS", "Performance", "성능"],
- "description": "Javascript 코디 작성시 성능을 최적화 하는 방법",
+ "description": "Javascript 코드 작성시 성능을 최적화 하는 방법",
  "contents": "자바스크립트 성능 측정 방법 console.time console.time(0); // 여러가지 로직 수행 console.timeEnd(0); console.time(\u0026#39;t1\u0026#39;); // 다양한 로직 수행 console.timeEnd(\u0026#39;t1\u0026#39;); 0: 7468.280029296875 ms performance.now var t1 = performance.now(); // 여러가지 로직 수행 var t2 = performance.now(); console.log(\u0026#34;소요 시간: \u0026#34; + (t2 - t1) + \u0026#39;ms\u0026#39;) 소요 시간: 5976.399999976158ms console.time 이 더 사용하기 쉬우나 비표준이므로 디버깅 용도로만 사용할 것. 프로덕션 환경에서는 사용하지 않는 것이 좋다.\nperformance.now 는 사용하기는 번거롭지만 표준이며, one thousandth of a millisecond 의 정확도를 가지고 있어 정밀한 측정이 가능하다.\n성능 향상을 위한 코딩 변수 선언을 한번에 하는 방법 // 한번에 여러개의 변수를 할당할 수 있다. const a = 1, b = 2, c = 3; Loop 성능 향상 방법 const person = { home : [ { addr:\u0026#39;서울\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;대전\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;대구\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;부산\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;파리\u0026#39;, country : \u0026#39;fr\u0026#39;} ] } for (let i=0; i \u0026lt; person.home.length; i++){ console.log(person.home[i]); } // 위 코드는 아래와 같은 단계를 거침 // 1) i값 탐색 // 2) person 객체 탐색 // 3) home 속성 탐색 // 4) home 속성의 인덱스 탐색 // 5) length 프로퍼티 검색 // for 문을 수행하는 동안 위 5단계를 계속 반복 // =\u0026gt; 아래와 같이 향상 let len = person.home.length;\t// length 1회 접근 for (let i=0; i \u0026lt; len; i++){ console.log(person.home[i]); } // =\u0026gt; 아래와 같이 향상 for (let i=0, len=person.home.length; i \u0026lt; len; i++){ // 전역으로 선언하지 않아 메모리 절감 console.log(person.home[i]); } // =\u0026gt; 아래와 같이 향상 let list = person.home; // list에 person 객체의 home 속성을 미리 할당. for (let i=0, len = list.length; i \u0026lt; len ; i++){ console.log(list[i]); // 반복할 때 마다 person 객체의 home 속성에 접근할 필요 없음. } // =\u0026gt; chatGPT 솔루션 person.home.forEach(item =\u0026gt; { console.log(item); }); 정규표현식 Loop 성능 향상 for (let i = 0; i \u0026lt; 100; i++) { str[i].replace(/^\\d{3}-\\d{3,4}-\\d{4}$/, \u0026#34;\u0026#34;); } // 정규 표현식은 컴파일 이후 처리가 필요. 100회의 반복적인 컴파일을 수행하게 된다. // =\u0026gt; 아래와 같이 향상 let reg = /^\\d{3}-\\d{3,4}-\\d{4}$/; // 1회만 컴파일 for (let i = 0; i \u0026lt; 100; i++) { str[i].replace(reg, \u0026#34;\u0026#34;); } 조건 비교 연산 성능 향상 let value = 3; if (value === 1) { ... } else if (value === 2) { ... } else if (value === 3) { // 맨 위부터 순차적으로 비교 ... } // =\u0026gt; 아래와 같이 향상 switch (value) { case 1 : ... case 2 : ... case 3 : // 3으로 바로 진입 ... } 스크립트 선언을 통한 성능 향상 // 브라우저의 렌더링 엔진은 HTML문서를 한줄 한줄 순차적으로 파싱하며 DOM을 생성 \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt; // 여기까지 파싱했고... \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;style.css\u0026#34;/\u0026gt; \u0026lt;style type=\u0026#34;text/css\u0026#34;\u0026gt; ... // link 태그를 만나면 CSS파일을 서버에 요청한 후 응답받아 CSS파싱을 시작. // style 태그는 상단에 선언하여 DOM 렌더링이 다시 이루어지지 않도록 하는 것이 좋다. \u0026lt;/style\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; ... \u0026lt;script type=\u0026#34;text/javascript\u0026#34;\u0026gt; // 가급적 최하단에 script 선언 ... // script 태그를 만나면 DOM 파싱을 중단하고 script 엔진에 제어권을 넘긴다. // DOM이 완성되지 않은 상태에서 DOM Api를 통해 DOM을 조작하면 에러가 발생할 수 있음. // 자바스크립트의 로딩/파싱/실행으로 인해 페이지의 로딩 시간이 길어질 수 있다. // 스크립트 처리가 지연되는 경우 사용자는 빈 화면 또는 미완성된 화면을 볼 수 있다. \u0026lt;/script\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 정리하면 아래와 같다.\n브라우저 렌더링은 HTML 파서, CSS 파서, Javascript 엔진이 처리한다.\nHTML파서가 한줄 한줄 파싱 link 또는 style 태그를 만나면 CSS파서가 파싱 1, 2 는 병렬적으로 처리된다. 1, 2 는 머지 되어 Painting 이 이루어 진다. 스크립트가 실행되는 동안 문서의 파싱은 중단된다. 스크립트가 외부에 있는 경우 우선 네트워크로부터 자원을 가져와야 하는데 이 또한 실시간으로 처리되고 자원을 받을 때까지 파싱은 중단된다. 결론적으로 사용자에게 빠르게 화면을 보여주기 위해서 파싱 중단을 야기하는 Script 태그는 하단에 배치하는것이 바람직하다.\nReflow 를 최소화 DOM의 변경으로 다시 렌더 트리를 재생성 하는 과정을 Reflow, 재생성된 렌더 트리를 다시 그리는걸 Repaint(or Redraw) 라고 한다.\nvar target = document.getElementById(\u0026#39;container\u0026#39;); for (var i = 0 ; i \u0026lt; 1000; i++){ var div = document.createElement(\u0026#39;div\u0026#39;); div.innerText = i; target.appendChild(div); // 1000번의 reflow 발생 } // =\u0026gt; 아래와 같이 향상 var fragment = document.createDocumentFragment(); for (var i = 0 ; i \u0026lt; 1000; i++){ var div = document.createElement(\u0026#39;div\u0026#39;); div.innerText = i; flagment.appendChild(div); } var target = document.getElementById(\u0026#39;container\u0026#39;); target.appendChild(flagment); // 1번의 reflow 발생 ",
  "type": "posts"
  },
