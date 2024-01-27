@@ -146,7 +146,7 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/hwmenu.min.js?1706354411"></script><div class="terminal-content hideTerm hidden">
+<script type="text/javascript" src="/js/hwmenu.min.js?1706356702"></script><div class="terminal-content hideTerm hidden">
   <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
   <div id="terminal" class="terminal-item"></div>
   <div class="terminal-item term-info"><br/></div>
@@ -155,7 +155,7 @@
 </div>
 
 
-<link rel="stylesheet" href="/css/hwterminal.min.css?1706354411" />
+<link rel="stylesheet" href="/css/hwterminal.min.css?1706356702" />
 <script>
  
 window.addEventListener('load', function() {
@@ -325,57 +325,65 @@ window.addEventListener('load', function() {
   }
 </script>
 
-<link rel="stylesheet" href="/css/xterm.min.css?1706354411" />
+<link rel="stylesheet" href="/css/xterm.min.css?1706356702" />
 
-<script type="text/javascript" src="/js/hwterminal.js?1706354411"></script>
+<script type="text/javascript" src="/js/hwterminal.js?1706356702"></script>
 
     </div>
   
     <main id="content"> 
 <div class="inner">
-     <article class="post-full post page no-image">
-         <header class="post-full-header">
-             <h1 class="post-full-title">Search Result</h1>
-         </header>
-         <section class="post-full-content" id="search-results">
+    <article class="post-full post page no-image">
+        <header class="post-full-header">
+            <h1 class="post-full-title">Search Result</h1>
+        </header>
+        <section class="post-full-content" id="search-results">
 
-         </section>
-     </article>
+        </section>
+    </article>
+</div>
 
- </div>
+<template id="search-result-template">
+    <div class="search_summary">
+        <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
+        <p><em class="search_snippet"></em></p>
+        <small>
+            <table>
+                <tr class="search_iftags">
+                    <td><strong>Tags</strong></td>
+                    <td class="search_tags"></td>
+                </tr>
+                <tr class="search_ifcategories">
+                    <td><strong>Categories</strong></td>
+                    <td class="search_categories"></td>
+                </tr>
+            </table>
+        </small>
+    </div>
+</template>
  
- <template id="search-result-template">
-     <div class="search_summary">
-         <h2 class="post-title no-text-decoration"><a class="search_link search_title" href=""></a></h2>
-         <p><em class="search_snippet"></em></p>
-         <small>
-             <table>
-                 <tr class="search_iftags">
-                     <td><strong>Tags</strong></td>
-                     <td class="search_tags"></td>
-                 </tr>
-                 <tr class="search_ifcategories">
-                     <td><strong>Categories</strong></td>
-                     <td class="search_categories"></td>
-                 </tr>
-             </table>
-         </small>
-     </div>
- </template>
- 
- 
- <script type="text/javascript" src="/js/mark.min.js?1706354411"></script>
- 
- <script type="text/javascript" src="/js/hansearch.min.js?1706354411"></script>
- 
- <script type="text/javascript" src="/js/search.min.js?1706354411"></script>
- <script type="text/javascript">
-  
- document.getElementById("search-query").addEventListener("keyup", function (event) {
-   const userInput = event.target.value;
-   hangleSearch(userInput);
- });
-   
+
+<script type="text/javascript" src="/js/mark.min.js?1706356702"></script>
+
+<script type="text/javascript" src="/js/hansearch.min.js?1706356702"></script>
+
+<script type="text/javascript" src="/js/search.min.js?1706356702"></script>
+<script type="text/javascript">
+     
+    document.getElementById("search-query").addEventListener("keyup", function (event) {
+        const userInput = event.target.value;
+        console.log("userInput", userInput);
+        if (userInput.trim() != "")
+        {
+            hangleSearch(userInput);
+        }
+        else
+        {
+            document.getElementById("search-results").innerHTML =
+            '<br/><p class="no-results">Please enter a word or phrase above</p><p class="no-results">한글 초성 검색을 지원합니다. <br/><br/>ㄱ글 => 구글, 가글, 고글 등이 검색 결과에 나타납니다.</p>';
+        }
+    });
+      
 </script>
 
     </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
