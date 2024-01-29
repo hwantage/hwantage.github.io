@@ -149,7 +149,7 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/hwmenu.min.js?1706361445"></script><div class="terminal-content hideTerm hidden">
+<script type="text/javascript" src="/js/hwmenu.min.js?1706514643"></script><div class="terminal-content hideTerm hidden">
   <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
   <div id="terminal" class="terminal-item"></div>
   <div class="terminal-item term-info"><br/></div>
@@ -158,7 +158,7 @@
 </div>
 
 
-<link rel="stylesheet" href="/css/hwterminal.min.css?1706361445" />
+<link rel="stylesheet" href="/css/hwterminal.min.css?1706514643" />
 <script>
  
 window.addEventListener('load', function() {
@@ -328,9 +328,9 @@ window.addEventListener('load', function() {
   }
 </script>
 
-<link rel="stylesheet" href="/css/xterm.min.css?1706361445" />
+<link rel="stylesheet" href="/css/xterm.min.css?1706514643" />
 
-<script type="text/javascript" src="/js/hwterminal.js?1706361445"></script>
+<script type="text/javascript" src="/js/hwterminal.js?1706514643"></script>
 
     </div>
   
@@ -358,22 +358,37 @@ window.addEventListener('load', function() {
   </header>
 
   
+  <aside class="table-of-contents">
+    <h2 class="title-small">Summary</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#npm-가입"><strong>NPM 가입</strong></a></li>
+    <li><a href="#패키지-만들기"><strong>패키지 만들기</strong></a></li>
+    <li><a href="#패키지-배포">패키지 배포</a></li>
+    <li><a href="#패키지-업데이트">패키지 업데이트</a></li>
+    <li><a href="#패키지-삭제">패키지 삭제</a></li>
+    <li><a href="#패키지-홍보">패키지 홍보</a></li>
+  </ul>
+</nav>
+  </aside>
+
 
   <section><p><a href="https://hwantage.github.io/posts/css-deduplicate/">CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거)</a> 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.</p>
 <p><a href="https://hwantage.github.io/posts/css-deduplicate-2/">CSS-Deduplication part2(CSS 중복제거 플러그인 제작)</a> 포스트를 통해 postcss 플러그인으로 제작해 보았습니다.</p>
 <p>이번 포스팅을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.</p>
-<h1 id="abstract">Abstract</h1>
+<h2 id="abstract">Abstract</h2>
 <ol>
 <li>postcss 플러그인 배포</li>
 <li>postcss 플러그인 삭제 및 관리 및 홍보</li>
 </ol>
 <p><code>npm</code> 모듈 혹은 <code>npm</code> 패키지를 생성하여 실제로 NPM Registry에 업로드까지 하여 오픈소스로서 NPM 생태계에 기여하는 방법.</p>
-<h1 id="npm-가입"><strong>NPM 가입</strong></h1>
+<h2 id="npm-가입"><strong>NPM 가입</strong></h2>
 <p><code>NPM Registry</code> 가입은 <a href="https://www.npmjs.com/">NPM 공식 페이지</a>에서 가입할 수 있다.</p>
-<h1 id="패키지-만들기"><strong>패키지 만들기</strong></h1>
+<h2 id="패키지-만들기"><strong>패키지 만들기</strong></h2>
 <p>우선 git repository에 소스코드를 업로드 합니다.</p>
 <p>full source 경로 : <a href="https://github.com/hwantage/postcss-delete-duplicate-selector">https://github.com/hwantage/postcss-delete-duplicate-selector</a></p>
-<h1 id="패키지-배포">패키지 배포</h1>
+<h2 id="패키지-배포">패키지 배포</h2>
 <p>terminal 창에서 다음 명령어를 수행하여 로그인을 수행합니다.</p>
 <p><code>&gt; npm login</code></p>
 <p>로그인이 정상인지 확인합니다. 자신의 아이디가 출력되면 정상입니다.</p>
@@ -416,12 +431,13 @@ window.addEventListener('load', function() {
 </span></span></code></pre></div><p><a href="https://www.npmjs.com/">https://www.npmjs.com/</a> 에서 확인. 플러그인 이름이 suggestion에 뜨는지 확인해보고 정상적으로 등록되었는지 확인.</p>
 <p><img src="../assets/20240117_134733_image.png" alt=""></p>
 <p><a href="https://www.npmjs.com/package/postcss-delete-duplicate-selector">npm: postcss-delete-duplicate-selector</a></p>
-<h1 id="패키지-업데이트">패키지 업데이트</h1>
+<h2 id="패키지-업데이트">패키지 업데이트</h2>
 <p><code>npm version [patch | minor | major]</code></p>
 <p><code>npm version patch</code> 를 수행하면 package.json 파일내의 version 항목의 버전이 &ldquo;1.0.1&rdquo; 과 같이 마지막 번호가 1 증가한다.</p>
 <p><code>npm version minor</code> 를 수행하면 &ldquo;1.1.0&rdquo; 과 같이 중간 번호가 증가한다.</p>
 <p><code>npm version major</code> 를 수행하면 &ldquo;2.0.0&rdquo; 과 같이 맨 앞의 번호가 증가한다.</p>
-<p>이후 npm publish 명령어를 통해 다시 배포를 수행하면 패키지 정보가 업데이트 된다.</p>
+<p>이후 npm publish 명령어를 통해 다시 배포를 수행하면 패키지 정보가 업데이트 된다.
+사실 위 명령어를 사용하지 않아도 package.json의 버전 정보를 직접 수정해도 무방하다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; npm version patch
 </span></span><span style="display:flex;"><span>v1.0.1
 </span></span><span style="display:flex;"><span>
@@ -443,10 +459,10 @@ window.addEventListener('load', function() {
 </span></span><span style="display:flex;"><span>npm notice package size:  2.0 kB
 </span></span><span style="display:flex;"><span>npm notice unpacked size: 4.5 kB
 </span></span><span style="display:flex;"><span>npm notice shasum:        6b77abd3659d37eb4b6362a706478cbd9bb2d9a5
-</span></span></code></pre></div><h1 id="패키지-삭제">패키지 삭제</h1>
+</span></span></code></pre></div><h2 id="패키지-삭제">패키지 삭제</h2>
 <p>패키지를 삭제하면 24시간 내에는 동일한 이름으로 패키지 등록이 불가하다.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; npm unpublish postcss-delete-duplicate-selector
-</span></span></code></pre></div><h1 id="패키지-홍보">패키지 홍보</h1>
+</span></span></code></pre></div><h2 id="패키지-홍보">패키지 홍보</h2>
 <p>아래의 사이트의 가이드에 따라 플러그인을 등록 신청해보도록 하자.</p>
 <p><a href="https://github.com/himynameisdave/postcss-plugins">https://github.com/himynameisdave/postcss-plugins</a></p>
 <p><a href="https://awesomejs.dev/">https://awesomejs.dev/</a></p>
