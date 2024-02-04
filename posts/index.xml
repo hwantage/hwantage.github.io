@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post on Hwantage world</title>
+    <title>Posts on Hwantage world</title>
     <link>https://hwantage.github.io/posts/</link>
-    <description>Recent content in Post on Hwantage world</description>
+    <description>Recent content in Posts on Hwantage world</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>

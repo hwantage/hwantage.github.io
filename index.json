@@ -1,548 +1,210 @@
 [
- 
- {
- "permalink": "https://hwantage.github.io/tags/auto-deploy/",
- "title": "auto deploy",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/commit/",
- "title": "commit",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/categories/front-end/",
- "title": "Front-end",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "categories"
- },
- {
- "permalink": "https://hwantage.github.io/tags/github-pages/",
- "title": "github pages",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/hugo/",
- "title": "hugo",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/hugo-deploy-automation/",
- "title": "HUGO 사이트 배포를 위한 배치 파일 생성",
- "tags": ["hugo", "github pages", "SSG", "배치", "auto deploy", "commit"],
- "description": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.",
- "contents": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.\n배치 파일 생성 hugo 블로그 프로젝트 루트에 commit.bat 파일을 생성합니다.\nhugo --cleanDestinationDir @echo off set /p commit_message=Enter your commit message: cd ./public git add . git commit -m \u0026#34;%commit_message%\u0026#34; git push origin main cd .. 소스 설명\nhugo --cleanDestinationDir hugo 명령어로 빌드를 하면 public 폴더에 최종 파일이 빌드되어 생성되는데 hugo는 새로운 파일에 대해서 추가만 합니다. 쓰고 지우는 과정에서 구조가 바뀔 수 있는데 추가만 하므로 사용하지 않는 파일들이 쌓일 수가 있습니다. \u0026ndash;cleanDestinationDir 옵션으로 public 폴더를 완전히 청소후 빌드를 수행합니다. set /p commit_message=Enter your commit message: 커밋 메시지 입력을 받도록 설정합니다. 입력한 커밋 메시지는 commit_message 변수에 세팅됩니다. cd ./public public 폴더로 이동합니다. git add . public 폴더의 모든 파일을 add 합니다. git commit -m \u0026quot;%commit_message%\u0026quot; 작성된 커밋 메시지로 commit 을 수행합니다. git push origin main push 처리합니다. cd .. 원래 있던 폴더로 이동후 종료합니다. 배치 파일의 내용은 각자의 상황의 맞게 변경해서 활용하시면 편리하게 블로그 배포를 진행하실 수 있을겁니다.\n배치 파일 실행 프로젝트 루트에서 commit 명령어를 실행하세요.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/",
- "title": "Hwantage world",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "page"
- },
- {
- "permalink": "https://hwantage.github.io/posts/",
- "title": "Post",
- "tags": [],
- "description": "",
- "contents": "블로그 포스트를 확인하세요.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/ssg/",
- "title": "SSG",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/",
- "title": "Tags",
- "tags": [],
- "description": "",
- "contents": "Our Tags Collection\n",
- "type": "taxonomies"
- },
- {
- "permalink": "https://hwantage.github.io/tags/%EB%B0%B0%EC%B9%98/",
- "title": "배치",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/categories/",
- "title": "카테고리",
- "tags": [],
- "description": "",
- "contents": "Our Categories Collection\n",
- "type": "taxonomies"
- },
- {
- "permalink": "https://hwantage.github.io/categories/javascript/",
- "title": "JavaScript",
- "tags": [],
- "description": "",
- "contents": "Description\n",
- "type": "categories"
- },
- {
- "permalink": "https://hwantage.github.io/posts/js-performance-coding/",
- "title": "Javascript 성능 향상 코딩 팁",
- "tags": ["JS", "Performance", "성능"],
- "description": "Javascript 코드 작성시 성능을 최적화 하는 방법",
- "contents": "자바스크립트 성능 측정 방법 console.time console.time(0); // 여러가지 로직 수행 console.timeEnd(0); console.time(\u0026#39;t1\u0026#39;); // 다양한 로직 수행 console.timeEnd(\u0026#39;t1\u0026#39;); 0: 7468.280029296875 ms performance.now var t1 = performance.now(); // 여러가지 로직 수행 var t2 = performance.now(); console.log(\u0026#34;소요 시간: \u0026#34; + (t2 - t1) + \u0026#39;ms\u0026#39;) 소요 시간: 5976.399999976158ms console.time 이 더 사용하기 쉬우나 비표준이므로 디버깅 용도로만 사용할 것. 프로덕션 환경에서는 사용하지 않는 것이 좋다.\nperformance.now 는 사용하기는 번거롭지만 표준이며, one thousandth of a millisecond 의 정확도를 가지고 있어 정밀한 측정이 가능하다.\n성능 향상을 위한 코딩 변수 선언을 한번에 하는 방법 // 한번에 여러개의 변수를 할당할 수 있다. const a = 1, b = 2, c = 3; Loop 성능 향상 방법 const person = { home : [ { addr:\u0026#39;서울\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;대전\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;대구\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;부산\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;파리\u0026#39;, country : \u0026#39;fr\u0026#39;} ] } for (let i=0; i \u0026lt; person.home.length; i++){ console.log(person.home[i]); } // 위 코드는 아래와 같은 단계를 거침 // 1) i값 탐색 // 2) person 객체 탐색 // 3) home 속성 탐색 // 4) home 속성의 인덱스 탐색 // 5) length 프로퍼티 검색 // for 문을 수행하는 동안 위 5단계를 계속 반복 // =\u0026gt; 아래와 같이 향상 let len = person.home.length;\t// length 1회 접근 for (let i=0; i \u0026lt; len; i++){ console.log(person.home[i]); } // =\u0026gt; 아래와 같이 향상 for (let i=0, len=person.home.length; i \u0026lt; len; i++){ // 전역으로 선언하지 않아 메모리 절감 console.log(person.home[i]); } // =\u0026gt; 아래와 같이 향상 let list = person.home; // list에 person 객체의 home 속성을 미리 할당. for (let i=0, len = list.length; i \u0026lt; len ; i++){ console.log(list[i]); // 반복할 때 마다 person 객체의 home 속성에 접근할 필요 없음. } // =\u0026gt; chatGPT 솔루션 person.home.forEach(item =\u0026gt; { console.log(item); }); 정규표현식 Loop 성능 향상 for (let i = 0; i \u0026lt; 100; i++) { str[i].replace(/^\\d{3}-\\d{3,4}-\\d{4}$/, \u0026#34;\u0026#34;); } // 정규 표현식은 컴파일 이후 처리가 필요. 100회의 반복적인 컴파일을 수행하게 된다. // =\u0026gt; 아래와 같이 향상 let reg = /^\\d{3}-\\d{3,4}-\\d{4}$/; // 1회만 컴파일 for (let i = 0; i \u0026lt; 100; i++) { str[i].replace(reg, \u0026#34;\u0026#34;); } 조건 비교 연산 성능 향상 let value = 3; if (value === 1) { ... } else if (value === 2) { ... } else if (value === 3) { // 맨 위부터 순차적으로 비교 ... } // =\u0026gt; 아래와 같이 향상 switch (value) { case 1 : ... case 2 : ... case 3 : // 3으로 바로 진입 ... } 스크립트 선언을 통한 성능 향상 // 브라우저의 렌더링 엔진은 HTML문서를 한줄 한줄 순차적으로 파싱하며 DOM을 생성 \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt; // 여기까지 파싱했고... \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;style.css\u0026#34;/\u0026gt; \u0026lt;style type=\u0026#34;text/css\u0026#34;\u0026gt; ... // link 태그를 만나면 CSS파일을 서버에 요청한 후 응답받아 CSS파싱을 시작. // style 태그는 상단에 선언하여 DOM 렌더링이 다시 이루어지지 않도록 하는 것이 좋다. \u0026lt;/style\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; ... \u0026lt;script type=\u0026#34;text/javascript\u0026#34;\u0026gt; // 가급적 최하단에 script 선언 ... // script 태그를 만나면 DOM 파싱을 중단하고 script 엔진에 제어권을 넘긴다. // DOM이 완성되지 않은 상태에서 DOM Api를 통해 DOM을 조작하면 에러가 발생할 수 있음. // 자바스크립트의 로딩/파싱/실행으로 인해 페이지의 로딩 시간이 길어질 수 있다. // 스크립트 처리가 지연되는 경우 사용자는 빈 화면 또는 미완성된 화면을 볼 수 있다. \u0026lt;/script\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 정리하면 아래와 같다.\n브라우저 렌더링은 HTML 파서, CSS 파서, Javascript 엔진이 처리한다.\nHTML파서가 한줄 한줄 파싱 link 또는 style 태그를 만나면 CSS파서가 파싱 1, 2 는 병렬적으로 처리된다. 1, 2 는 머지 되어 Painting 이 이루어 진다. 스크립트가 실행되는 동안 문서의 파싱은 중단된다. 스크립트가 외부에 있는 경우 우선 네트워크로부터 자원을 가져와야 하는데 이 또한 실시간으로 처리되고 자원을 받을 때까지 파싱은 중단된다. 결론적으로 사용자에게 빠르게 화면을 보여주기 위해서 파싱 중단을 야기하는 Script 태그는 하단에 배치하는것이 바람직하다.\nReflow 를 최소화 DOM의 변경으로 다시 렌더 트리를 재생성 하는 과정을 Reflow, 재생성된 렌더 트리를 다시 그리는걸 Repaint(or Redraw) 라고 한다.\nvar target = document.getElementById(\u0026#39;container\u0026#39;); for (var i = 0 ; i \u0026lt; 1000; i++){ var div = document.createElement(\u0026#39;div\u0026#39;); div.innerText = i; target.appendChild(div); // 1000번의 reflow 발생 } // =\u0026gt; 아래와 같이 향상 var fragment = document.createDocumentFragment(); for (var i = 0 ; i \u0026lt; 1000; i++){ var div = document.createElement(\u0026#39;div\u0026#39;); div.innerText = i; flagment.appendChild(div); } var target = document.getElementById(\u0026#39;container\u0026#39;); target.appendChild(flagment); // 1번의 reflow 발생 ",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/js/",
- "title": "JS",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/performance/",
- "title": "Performance",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/",
- "title": "성능",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/filter/",
- "title": "filter",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/find/",
- "title": "find",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/findindex/",
- "title": "findIndex",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/function/",
- "title": "Function",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/hoisting/",
- "title": "Hoisting",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/js-find/",
- "title": "Javascript find, findIndex, filter",
- "tags": ["JS", "find", "findIndex", "filter"],
- "description": "Javascript 객체 탐색시 자주 사용하는 find, findIndex, filter 문법을 정리합니다.",
- "contents": "find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.\nconst array1 = [5, 12, 8, 130, 44]; const found = array1.find(element =\u0026gt; element \u0026gt; 13); console.log(found); // 44 findIndex findIndex() 메서드는 주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.\nconst array1 = [5, 12, 8, 130, 44]; const index1 = array1.findIndex((element) =\u0026gt; element \u0026gt; 10) console.log(index1); // 1 // findIndex 는 콜백으로 3개의 인수를 반환 // element // 배열에서 처리중인 현재 요소. // index // 배열에서 처리중인 현재 요소의 인덱스. // array // findIndex 함수가 호출된 배열 자체. const index2 = array1.findIndex((element, index, array) =\u0026gt; { console.log(element, index, array); return element===8; }) //5 0 (5) [5, 12, 8, 130, 44] //12 1 (5) [5, 12, 8, 130, 44] //8 2 (5) [5, 12, 8, 130, 44] console.log(index2); // 2 filter filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다. 만족하는 결과가 없는 경우 빈 배열 [] 을 반환합니다.\nconst numbers = [1, 2, 3, 4, 5]; const result = numbers.filter(element =\u0026gt; element \u0026gt; 3); console.log(result); // [4, 5] const people = [ {\u0026#34;name\u0026#34; : \u0026#34;김정환\u0026#34;, \u0026#34;age\u0026#34; : 18}, {\u0026#34;name\u0026#34; : \u0026#34;홍길동\u0026#34;, \u0026#34;age\u0026#34; : 17}, {\u0026#34;name\u0026#34; : \u0026#34;강감찬\u0026#34;, \u0026#34;age\u0026#34; : 16}, {\u0026#34;name\u0026#34; : \u0026#34;이순신\u0026#34;, \u0026#34;age\u0026#34; : 15}, {\u0026#34;name\u0026#34; : \u0026#34;아이유\u0026#34;, \u0026#34;age\u0026#34; : 14} ] const oldPeople = people.filter(element =\u0026gt; element.age \u0026gt; 15); console.log(oldPeople); //(3) [{…}, {…}, {…}] //0: {name: \u0026#39;김정환\u0026#39;, age: 18} //1: {name: \u0026#39;홍길동\u0026#39;, age: 17} //2: {name: \u0026#39;강감찬\u0026#39;, age: 16} const youngPeople = people.filter(element =\u0026gt; element.age \u0026lt; 14); console.log(youngPeople); // [] ",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/posts/js-serialization/",
- "title": "Javascript 직렬화(serialization)",
- "tags": ["JS", "Function", "Hoisting"],
- "description": "직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.",
- "contents": "직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.\n위키의 정의는 아래와 같다.\n직렬화 (直列化) 또는 시리얼라이제이션(serialization)은 컴퓨터 과학의 데이터 스토리지 문맥에서 데이터 구조나 오브젝트 상태를 동일하거나 다른 컴퓨터 환경에 저장(이를테면 파일이나 메모리 버퍼에서, 또는 네트워크 연결 링크 간 전송)하고 나중에 재구성할 수 있는 포맷으로 변환하는 과정이다.\nWhy? 아래와 같이 해보면 alert창에는 [object Object] 라고 나오게 된다.\nvar hello = {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;}; alert(hello) // [object Object] 네트워크로 전송을 할 때도 동일하게 [object Object] 로 전달되기 때문에 직렬화를 통해 문자열로 변경이 필요한 것이다.\nHow? JSON.stringify() var hello = {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;}; var stringHello = JSON.stringify(hello); alert(stringHello) // {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;} console.log(typeof hello); // object console.log(typeof stringHello); // string 역직렬화(deserialization) JSON.parse() var hello = {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;}; var stringHello = JSON.stringify(hello); // serialization var objectHello = JSON.parse(stringHello); // deserialization alert(objectHello) // [object Object] console.log(typeof hello); // object console.log(typeof stringHello); // string console.log(typeof objectHello); // object ",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/posts/js-template-literal/",
- "title": "Javascript 템플릿 리터럴(Template literal)",
- "tags": ["JS", "Template literal"],
- "description": "ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다. 템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다. 문자열 인터폴레이션은 ${}으로 표현식을 감싸 사용합니다.",
- "contents": " ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다. 템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다. 문자열 인터폴레이션은 ${}으로 표현식을 감싸 사용합니다.\nTemplate Literal 적용전\nfunction printStr(str) { console.log(\u0026#39;String is \u0026#39; + str + \u0026#39; !\u0026#39;) } Template Literal 적용\nfunction printStr(str) { console.log(`String is ${str} !`) } ",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/posts/js-function/",
- "title": "Javascript 함수 선언 방법과 호이스팅",
- "tags": ["JS", "Function", "Hoisting"],
- "description": "Javascript 함수선언문 (Function Declaration)과 함수표현식 (Function expression)의 차이점을 알아보고 호이스팅(hoisting)에 대해 알아본다.",
- "contents": "함수 선언 방법 함수선언문 (Function Declaration) // 일반적인 함수 선언 방법 function add(a, b) { return a + b } 함수표현식 (Function expression) // arrow function으로 함수표현식 선언 방법 const myFunc1 = () =\u0026gt; { } // 매개변수가 없을 경우 const myFunc2 = x =\u0026gt; { } // 매개변수가 한 개인 경우, 소괄호를 생략 가능 const myFunc3 = (x, y) =\u0026gt; { } // 매개변수가 여러 개인 경우, 소괄호를 생략 불가 // Body 전개 방법 const myFunc4 = x =\u0026gt; { return x * 2 } // single line block const myFunc5 = x =\u0026gt; x * 2 // 함수 몸체가 한줄의 구문이라면 중괄호 생략 가능 const myFunc6 = () =\u0026gt; { return { a: 1 }} const myFunc7 = () =\u0026gt; ({ a: 1 }) // 위 표현과 동일. 객체 반환시는 소괄호를 사용. 호이스팅(hoisting) 예제 부터 보면\nhoistFunc(); function hoistFunc(){ console.log(\u0026#39;함수 선언이 아래에 있지만 문제 없어요\u0026#39;) } 자바스크립트는 실행되기 전에 필요한 함수와 변수들을 모두 모아서 유효 범위의 최상단에 선언한다. 이를 호이스팅이라고 한다. hoisting\n[명사] 끌어 올리기, 들어올려 나르기.\n호이스팅 되는 놈 : 함수선언문, var (단, 선언만 끌어 올려지고 값은 끌어올려지지 않음)\n호이스팅 안되는 놈 : 함수표현식, let, const\n왜 안해줌?\n파서가 안해줌.\n개발 실수도 줄여주고 나쁘지 않은 방향. 되는 놈은 하위 호환 유지를 위해 여전히 지원하는것 뿐.\nfunc1(message); // 함수 func1과 message가 선언되기 전에 함수를 호출 하였지만 호이스팅됨. function func1(message){ console.log(\u0026#39;your message is \u0026#39; + message); // your message is undefined } var message = \u0026#39;안녕\u0026#39;; // 안녕 이라는 값은 호이스팅되지 않아 undefined로 출력된다. func1 선언과 message 변수 선언이 호이스팅 되어 에러 없이 동작한다. 단, 값이 호이스팅 되지 않아 undefined 로 처리 된다.\n// 변수를 선언하지 않는 경우 func2(msg); // Uncaught ReferenceError 발생 function func2(msg){ console.log(msg); } func2의 경우 호이스팅 되어 문제 없으나 msg 변수는 선언이 되지 않아 에러 발생한다.\nconsole.log(name); // undefined var name = \u0026#39;hwan77\u0026#39;; // 위의 코드는 실제로 실행될 때 아래와 같이 처리됨. var name; console.log(name); // undefined name = \u0026#39;hwan77\u0026#39;; function과 arrow function 의 차이점(3가지가 없는 놈) 1) 이름이 없다. Arrow function은 익명 함수라는 점.\n//일반 function function myFunc(){ console.log(\u0026#34;hwan77\u0026#34;) } //arrow function () =\u0026gt; { console.log(\u0026#34;Nameless ㅠㅠ\u0026#34;) } //참조해서 다른곳에서 쓰려면? const myFunc = () =\u0026gt; {} 2) this가 없다. Arrow function은 자신의 this가 없다.\narrow function은 외부에 있던 this를 그대로 내부로 가져와서 사용한다.\n자바스크립트에서 this는 그 용법이 특이하다. 요약하자면 es5에서의 this는 이렇다.\n함수 실행시에는 전역(window) 객체를 가리킨다. 메소드 실행시에는 메소드를 소유하고 있는 객체를 가리킨다. 생성자 실행시에는 새롭게 만들어진 객체를 가리킨다. // this example let myInfo={ name: \u0026#34;hwan77\u0026#34;, print: function(){ console.log(this, this.name); } }; myInfo.print(); // {name: \u0026#39;hwan77\u0026#39;, print: ƒ} \u0026#39;hwan77\u0026#39; let myInfo={ name: \u0026#34;hwan77\u0026#34;, print: () =\u0026gt; { console.log(this, this.name); } }; myInfo.print(); // window \u0026#39;\u0026#39; const o = { name: \u0026#39;Kim\u0026#39;, speak: function () { function getName() { return `${this.name}`; } // 여기서의 this는 window 객체이다. 함수 실행시에는 전역(window) 객체를 가리킨다 return `My name is ${getName()}`; } }; o.speak(); // \u0026#34;My name is \u0026#34; const o = { name: \u0026#39;Kim\u0026#39;, speak: function() { const getName = () =\u0026gt; { return `${this.name}`; } // 여기에서의 this는 o라는 객체 return `My name is ${getName()}`; } }; o.speak(); // \u0026#34;My name is Kim\u0026#34; // arrow function은 맥락 상 위의 코드부터 보고 결합 3) arguments가 없다. Arrow function은 arguments가 없다.\n// 일반 function function func1() { console.log(arguments[0]); // 1 console.log(arguments[1]); // 2 console.log(arguments[2]); // undefined } func1(1, 2); // Arrow function const myFunc2 = () =\u0026gt; { console.log(arguments); // error } myFunc2(1, 2); 위 코드를 실행시켜보면\n그래서 Arrow function의 경우 arguments를 추가 시켜주기 위해서는 전개 연산자를 활용해 arguments를 직접 명시해주어야 한다!\n// 전개연산자 사용 const myFunc2 = (...arguments) =\u0026gt; { console.log(arguments); // [1, 2, 3, 4] } myFunc2(1, 2, 3, 4); ",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/template-literal/",
- "title": "Template literal",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/js-destructuring-assignment/",
- "title": "Javascript 비구조화 할당",
- "tags": ["JS", "비구조화 할당"],
- "description": "비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)",
- "contents": "정의 비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)\n즉 배열 또는 복잡한 구조의 Json 안에 있는 값을 편하게 꺼내 쓸 수 있는 방법.\n배열 기본 문법 const [a1, a2, ...a3over] = [1, 2, 3, 4, 5]; console.log(a1); // 1 console.log(a2); // 2 console.log(a3over); // [3, 4, 5] 좌항이 호출될 변수명 집합, 우항이 할당할 값\n좌항의 전개 연산자(\u0026hellip;)은 항상 우측 끝에 있어야 한다.\nconst [a1, ...a3over, a3] = [1, 2, 3, 4, 5]; // error 객체 기본 문법 중요 const { a1, a2, ...a3over } = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; console.log(a1); // 10 console.log(a2); // 20 console.log(a3over); // { a3: 30, a4: 40 } 우항의 key 값이 좌항의 변수명과 매칭, 따라서 순서는 상관없음.\n좌항의 전개 연산자(\u0026hellip;)은 항상 우측 끝에 있어야 한다.\nconst { a2, a4, ...a_rest } = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; // 순서 상관 없음 console.log(a2); // 20 console.log(a4); // 40 console.log(a_rest); // { a1 : 10, a3 : 30 }; const { a2, ...a_rest, a4 } = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; // error 깊은 구조의 객체 할당 const object = { id : \u0026#39;hwan77\u0026#39;, information: { name: \u0026#39;김정환\u0026#39;, languages: [\u0026#39;korean\u0026#39;, \u0026#39;english\u0026#39;, \u0026#39;chinese\u0026#39;] }, age : 18 }; const {name, languages} = object.information; const {id, age} = object; console.log(name); // 김정환 console.log(languages); // [\u0026#39;korean\u0026#39;, \u0026#39;english\u0026#39;, \u0026#39;chinese\u0026#39;] console.log(id); // hwan77 console.log(age); // 18 이름 변경 및 기본값 할당 const object = { id : \u0026#39;hwan77\u0026#39;, information: { name: \u0026#39;김정환\u0026#39;, languages: [\u0026#39;korean\u0026#39;, \u0026#39;english\u0026#39;, \u0026#39;chinese\u0026#39;] }, age : 18 }; const {id : userID, address : addr = \u0026#39;homeless\u0026#39; } = object; // object 내의 id 키를 userID 로 이름 변경 // object 내의 adress 키를 addr로 이름 변경 및 객체에 값이 없는 경우 homeless 기본값 세팅 console.log(id); // error (id is not defined) console.log(userID); // hwan77 console.log(address); // error (address is not defined) console.log(addr); // homeless 배열, 객체 Deep Copy shallow copy(얕은 복사) // shallow copy let array1 = [1, 2, 3, 4, 5]; let array2 = array1; array1[0] = \u0026#39;one\u0026#39;; console.log(array1); // [\u0026#39;one\u0026#39;, 2, 3, 4, 5] console.log(array2); // [\u0026#39;one\u0026#39;, 2, 3, 4, 5] 같은 값에 대한 참조만 복사 하여 같은 메모리를 가리킨다.\ndeep copy(깊은 복사) let array1 = [1, 2, 3, 4, 5]; let array2 = [...array1]; array1[0] = \u0026#39;one\u0026#39;; console.log(array1); // [\u0026#39;one\u0026#39;, 2, 3, 4, 5] console.log(array2); // [1, 2, 3, 4, 5] 완전히 새로운 객체로 할당됨\ndeep copy \u0026amp; 값 변경 \u0026amp; 값 추가 const a = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; // deep copy + 값 변경 const aCopy = { ...a, a3 : \u0026#39;삼십\u0026#39; }; console.log(aCopy); // {a1: 10, a2: 20, a3: \u0026#39;삼십\u0026#39;, a4: 40} const aCopy2 = { a3 : \u0026#39;삼십\u0026#39;, ...a }; // 순서를 바꾸면? console.log(aCopy2); // {a1: 10, a2: 20, a3: 30, a4: 40} // deep copy + 새로운 값 할당 const aCopy3 = { aFirst : 0, ...a }; console.log(aCopy3); // {aFirst: 0, a1: 10, a2: 20, a3: 30, a4: 40} const aCopy4 = { ...a, aLast : 999 }; // 순서를 바꾸면? console.log(aCopy4); // {a1: 10, a2: 20, a3: 30, a4: 40, aLast: 999} ",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/",
- "title": "비구조화 할당",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/daum/",
- "title": "daum",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/google-search-console/",
- "title": "google search console",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/google-search-console/",
- "title": "HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기",
- "tags": ["hugo", "google search console", "naver search advisor", "daum", "sitemap.xml", "robots.txt"],
- "description": "검색엔진에 블로그 게시물을 노출시키는 방법을 정리합니다.",
- "contents": "검색엔진에 노출이 되도록 블로그를 설정합니다.\n구글 검색 노출 방법 구글 서치 콘솔 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.\n도메인이 있는 경우 왼쪽에 입력을 하면 됩니다. 대부분의 블로그는 우측 항목을 입력하면 됩니다.\n계속을 누르면 소유권 확인 페이지가 나타납니다. 파일을 다운로드 해서 블로그 루트에 업로드를 해야합니다.\n파일 업로드 이전에 확인 버튼을 누르면 아래와 같은 메시지가 출력됩니다.\n업로드 후 다시 확인하도록 합니다.\n속성으로 이동하기 해서 새 사이트맵 추가를 합니다. sitemap.xml 을 입력후 제출버튼을 클릭하면됩니다.\n사이트맵을 제출합니다.\n그런데 여기서 문제가 발생했네요. 상태에 가져올 수 없음 이라고 뜨고 있습니다.\nURL 검사 메뉴에서 포스트 주소를 입력하고 색인 생성 요청을 해보겠습니다.\n색인이 생성되어 있지 않다고 나오는데, 색인 생성 요청을 눌러보겠습니다.\nrobots.txt에 의해 차된되어 등록할 수 없다고 확인되네요.\n실제로 robots.txt 파일을 확인해보니 아래와 같이 되어 있습니다.\nUser-agent: * Disallow: /tags/daum/ Disallow: /categories/front-end/ Disallow: /tags/google-search-console/ Disallow: /tags/hugo/ Disallow: /posts/google-search-console/ Disallow: / Disallow: /tags/naver-search-advisor/ Disallow: /posts/ ... 전부 Disallow 로 되어 있기 때문에 크롤링이 금지된 것입니다. HUGO 에서 robots.txt 파일의 설정을 변경해야 할 것 같습니다.\nHUGO 공식 가이드를 확인해 보니 설정 방법은 다음과 같이 안내되어 있습니다.\nrobots.txt template lookup order You may overwrite the internal template with a custom template. Hugo selects the template using this lookup order:\n/layouts/robots.txt /themes/\u0026lt;THEME\u0026gt;/layouts/robots.txt 저의 경우 1번의 방법으로 하겠습니다. /layouts/robots.txt 파일을 아래와 같이 생성합니다.\nUser-agent: * Allow: / Sitemap: https://hwantage.github.io/sitemap.xml HUGO 빌드를 수행합니다.\nHUGO 설정 HUGO 빌드를 수행하면 public 폴더에 sitemap.xml 과 robots.txt 파일을 자동으로 생성합니다.\nhugo.toml 파일에 다음과 같이 설정합니다.\nenableRobotsTXT = true # sitemap 생성 [sitemap] # always, hourly daily, weekly, monthly, yearly, never changefreq = \u0026#34;weekly\u0026#34; filename = \u0026#34;sitemap.xml\u0026#34; priority = 0.5 네이버 등록 방법 네이버 Search Advisor에 접속합니다.\n로그인을 하고 웹마스터 도구 사용하기 버튼을 클릭합니다.\n블로그 주소를 입력하면 소유주 확인창이 나타납니다.\nHTML 확인 파일을 다운로드 받아 블로그 저장소에 업로드 합니다.\n사이트맵 제출 메뉴에서 sitemap.xml 파일을 등록합니다.\nRSS 제출 메뉴에서 RSS 파일을 등록합니다. HUGO 에서 자동으로 index.xml 파일을 생성하므로 아래와 같이 입력합니다.\nrobots.txt 파일 검증을 합니다. 수집요청 버튼을 클릭하면 됩니다.\n이제 검색 결과에 반영되기를 기다려 보겠습니다.\nDAUM 에 등록하기 Daum 검색등록 페이지로 이동합니다.\n시키는대로 따라 하면 됩니다. 제일 간단하네요.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/naver-search-advisor/",
- "title": "naver search advisor",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/robots.txt/",
- "title": "robots.txt",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/sitemap.xml/",
- "title": "sitemap.xml",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/google-analytics/",
- "title": "google analytics",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/google-analytics/",
- "title": "HUGO 블로그에 구글 애널리틱스 연결하기",
- "tags": ["hugo", "google analytics", "구글 애널리틱스"],
- "description": "구글 애널리틱스 계정을 생성하고 블로그에 방문하는 사용자 정보를 확인하기",
- "contents": "HUGO를 통해 블로그를 생성하고 나서 과연 방문객이 얼마나 될지 궁금할 것이다.\n구글 애널리틱스를 이용하여 방문현황을 파악해 보자.\n구글 애널리틱스 계정 생성하기 그글 애널리틱스 홈으로 이동하여 지금 시작하기를 클릭합니다.\nhttps://marketingplatform.google.com/about/analytics/\n당연하게도 구글 계정이 존재해야 합니다.\n왼쪽 하단의 관리 메뉴를 클릭한 후 +만들기 에서 계정을 선택하여 계정을 생성합니다. 이 계정은 구글 계정이 아니고 추적하고자 하는 사이트별로 생성하는 계정이라 생각하면 됩니다. 블로그를 여러개 운영중이라면 여러개의 계정을 생성하면 됩니다.\n아래의 단계별 정보를 모두 입력하면 계정생성이 완료됩니다.\n비지니스 정보 등 애매한 부분은 적당히 입력하고 넘어갑니다.\n홈에서 아래와 같이 0이라는 숫자만 확인할 수 있을겁니다. \u0026ldquo;태그 지정 도움말 얻기\u0026rdquo; 버튼을 눌러 추적 코드를 확인하고 블로그에 적용해야 합니다.\n계정 생성이 완료되면 직접설치 태그를 확인할 수 있습니다.\nHUGO 탬플릿에 코드 적용 하기 휴고 템플릿에 따라 적용 방법은 상이할 수 있습니다.\n나의 경우에는 아래의 경로의 파일을 직접 수정하는 방법으로 처리했습니다. header 폴더의 경우 항상 포함되는 파일이기 때문에 index.html 파일에 구글 애널리틱스 코드가 적용된 google_analytics.html 파일을 인크루드 하도록 했습니다.\ngoogle_analytics.html 파일 내용 (구글 추적 코드를 그대로 붙여넣었습니다)\n\u0026lt;!-- Google tag (gtag.js) --\u0026gt; \u0026lt;script async src=\u0026#34;https://www.googletagmanager.com/gtag/js?id=G-JB0QM0P0XF\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag(\u0026#34;js\u0026#34;, new Date()); gtag(\u0026#34;config\u0026#34;, \u0026#34;G-JB0QM0P0XF\u0026#34;); \u0026lt;/script\u0026gt; index.html 파일 내용\n\u0026lt;header class=\u0026#34;flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12\u0026#34;\u0026gt; {{ partial \u0026#34;header/avatar\u0026#34; . }} \u0026lt;div class=\u0026#34;flex flex-col gap-5\u0026#34;\u0026gt;{{ partial \u0026#34;header/title\u0026#34; . }} {{ partial \u0026#34;header/nav\u0026#34; . }}\u0026lt;/div\u0026gt; {{- if not .Site.IsServer -}} {{ partial \u0026#34;header/google_analytics\u0026#34; . }} {{- end -}} \u0026lt;/header\u0026gt; {{- if not .Site.IsServer -}} 이 코드는 hugo server 명령어를 통해 로컬에서 실행된 경우에는 구글 추적을 하지 않기 위해 localhost 조건을 체크합니다. 없어도 무관합니다.\n{{ partial \u0026quot;header/google_analytics\u0026quot; . }} 이 코드에서 google_analytics.html 파일을 불러오게 됩니다.\n정상 동작하는지 확인하기 위해서는 github 에 배포 한 후 접속을 해보면 됩니다.\nhttps://hwantage.github.io\n구글 애널리틱스 홈으로 이동해보면 카운트가 1이 되어있다면 정상 동작하는 겁니다.\n이상입니다.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/posts/utterances/",
- "title": "HUGO 블로그에 댓글 기능 연동",
- "tags": ["hugo", "utterances", "댓글 기능"],
- "description": "utterances 서비스를 이용해 HUGO 블로그에 댓글 기능 달기",
- "contents": "HUGO를 통해 블로그 포스트 하단에 댓글 기능을 연동하는 방법을 알아보겠습니다.\n댓글 기능을 연동하는 방법은 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.\n하지만 최근에는 Github Application 방식으로 친화적이며 편리하며 접근성이 강력한 Utterances 를 많이 이용합니다.\n작동방식은 Github의 이슈 검색 API를 사용해서 각 글에 해당하는 이슈가 생성되고(최초 댓글 작성 시), 댓글들은 해당 글로 생성된 이슈에 대한 댓글로 추가되는 방식이기 때문에 Github와 찰떡 이라 할 수 있습니다.\n적용하는 방법 또한 매우 간단하여 적용한는데 어려움이 없었습니다.\nUtterance 설치? 설치랄 것이 없는게 그냥 사이트에서 버튼 클릭하면 끝이다. 로컬에 뭔가 설치하는 것이 아님.\n우선 아래의 url로 접속하여 중간에 있는 configuration 아래의 utterances app 항목을 클릭합니다.\nhttps://utteranc.es/\n아래와 같은 화면에서 install 버튼을 클릭합니다.\n이후 등장하는 화면에서 블로그를 운영중인 repository를 선택하세요.\nSelected 1 repository 아래의 url을 잘 기억해야 합니다.\n저의 경우 hwantage/hwantage.github.io 입니다.\nInstall을 눌러 완료 합니다.\n다시 https://utteranc.es/ 사이트에서 Configuration 항목 하위의 input 상자에 적절한 값을 입력하면 스크립트가 생성됩니다.\nHUGO 에 댓글 기능 적용하기 위에서 생성된 스크립트를 HUGO 템플릿의 적당한 파일에 붙여넣기 하면 모든게 완료된다.\n나의 경우 아래 위치의 index.html에 붙여넣기를 했다.\nindex.html 파일 내용:\n{{ if .IsPage }} \u0026lt;!-- giscus --\u0026gt; {{ if .Site.Params.giscus.enable }} {{ partial \u0026#34;single/comments/giscus\u0026#34; . }} {{ end }} \u0026lt;!-- disqus --\u0026gt; {{ if .Site.Params.disqusShortname }} {{ partial \u0026#34;single/comments/disqus\u0026#34; . }} {{ end }} {{ end }} \u0026lt;script src=\u0026#34;https://utteranc.es/client.js\u0026#34; repo=\u0026#34;hwantage/hwantage.github.io\u0026#34; issue-term=\u0026#34;pathname\u0026#34; theme=\u0026#34;github-light\u0026#34; crossorigin=\u0026#34;anonymous\u0026#34; async\u0026gt; \u0026lt;/script\u0026gt; 맨 아래에 스크립트를 붙여 넣었다.\n완료!\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/utterances/",
- "title": "utterances",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/",
- "title": "구글 애널리틱스",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/",
- "title": "댓글 기능",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/fake-terminal/",
- "title": "fake terminal",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/xterm.js/",
- "title": "Xterm.js",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/fake-terminal/",
- "title": "Xterm.js 를 이용한 fake terminal 웹 제작",
- "tags": ["Xterm.js", "fake terminal"],
- "description": "웹 사이트에서 fake terminal 제작하는 방법.",
- "contents": "\nXterm.js 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.\n데모를 확인해보세요. DEMO\n시작하기 먼저, 모듈을 설치해야 합니다. npm을 통해서만 제공 되므로 다음을 실행하여 xterm.js를 해당 모듈을 종속성으로 추가해야 합니다.\nnpm install xterm 루트에 index.html 파일을 만들고 다음과 같이 코딩합니다.\n/index.html:\n\u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;node_modules/xterm/css/xterm.css\u0026#34; /\u0026gt; \u0026lt;script src=\u0026#34;node_modules/xterm/lib/xterm.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;div id=\u0026#34;terminal\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; \u0026lt;script\u0026gt; var term = new Terminal(); term.open(document.getElementById(\u0026#34;terminal\u0026#34;)); term.write(\u0026#34;Hello from \\x1B[1;3;31mxterm.js\\x1B[0m $ \u0026#34;); \u0026lt;/script\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 브라우저를 통해 index.html 파일을 실행하면 다음과 같은 결과를 확인할 수 있습니다.\n아직까지는 아무런 동작을 하지 않습니다. 키보드 이벤트를 추가하고 제어 코드를 작성해야 합니다.\n코드 작성 방법 xterm 의 공식 문서에서 사용가능한 Method 를 확인하고 원하는 기능을 구현합니다.\n기본적으로 모든 키보드와 출력 메시지를 javascript 로 하나 하나 구현하여 xterm 모듈을 통해 출력하도록 처리하면 됩니다.\n본 프로젝트에서 사용한 method의 목록은 다음과 같습니다.\nopen : 원하는 html 객체에 터미널을 생성합니다. write : 텍스트를 출력합니다. writeln : 텍스트를 라인단위로 출력합니다. onKey : 키보드 입력 이벤트를 처리합니다. focus : 터미널 커서를 포인트 합니다. dispose : 터미널을 dispose 합니다. 스타일링 ANSI Escape 코드를 이용하여 글자색, 전경색 등을 스타일링 할 수 있습니다. ANSI 이스케이프 코드 는 터미널을 제어하는데 사용되는 표준입니다.\n16진수 값으로 \\x1B 또는 8진수 값으로 \\033 인 Escape문자로 시작하고 아래의 코드표를 참고하면 됩니다.\nANSI color code color code 기능 [0m 모든 색과 스타일 초기화 [1m 굵게(bold) / 밝게 [3m 이탤릭체(italic) [4m 밑줄(underline) [7m 반전(글자색/배경색을 거꾸로) [9m 가로줄 치기 [22m 굵게(bold) 제거 [23m 이탤릭체(italic)제거 [24m 밑줄(underline)제거 [27m 반전 제거 [29m 가로줄 제거 [30m 글자색: 검정 [31m 글자색: 빨강 [32m 글자색: 초록 [33m 글자색: 노랑 [34m 글자색: 파랑 [35m 글자색: 마젠트(분홍) [36m 글자색: 시안(청록) [37m 글자색: 백색 [39m 글자색으로 기본값으로 [40m 바탕색: 흑색 [41m 바탕색: 적색 [42m 바탕색: 녹색 [43m 바탕색: 황색 [44m 바탕색: 청색 [45m 바탕색: 분홍색 [46m 바탕색: 청록색 [47m 바탕색: 흰색 [49m 바탕색을 기본값으로 사용법 및 사용 예 Repo git : https://github.com/hwantage/fake-terminal.git\ndemo : https://hwantage.github.io/fake-terminal/demo/\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/image/",
- "title": "image",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/powershell/",
- "title": "powershell",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/symbolic-link/",
- "title": "Symbolic link",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/",
- "title": "마크업 에디터",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/symboliclink/",
- "title": "심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인",
- "tags": ["Symbolic link", "powershell", "hugo", "image", "마크업 에디터"],
- "description": "마크업 에디터를 통해 이미지를 붙여넣기 하면 링크 경로가 맞지 않아 심볼릭 링크를 생성하여 이미지가 정상적으로 뜨도록 설정해보자.",
- "contents": "Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 hugo server 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.\n설정 화면으로 이동하여\n이미지 경로를 다음과 같이 설정한다.\n위와 같이 설정하면 문서가 존재하는 posts의 하위 디렉토리인 content 의 assets 디렉토리에 붙여넣기한 이미지 파일이 저장된다.\n하지만 브라우저를 통해 페이지를 확인해 보면 제대로 이미지가 뜨지 않게 된다.\n실제로 이미지가 저장된 경로는 content/assets 이지만 블로그 포스트의 url은 파일이름(포스트이름)이 한번더 들어가기 때문이다.\nhttp://localhost:1313/posts/symboliclink/\n실제로는 content/assets 디렉토리에 파일이 있다. 마크업 소스상에 ../assets/이미지파일명 형태로 입력되어 있기 때문에 url상에서의 이미지 파일 위치는 /posts/assets 이어야 한다.\n심볼릭 링크를 통해 content/assets에 파일이 생성되면 content/posts/assets 디렉토리로 파일이 복사되도록 처리해보자.\n파워쉘을 관리자 권한으로 실행한다.\ncontent/posts 디렉토리로 이동하여 아래의 명령어를 수행한다.\nSet-Location -Path .\\\n이어서 같은 폴더에서 다음과 같이 명령어를 수행한다.\nNew-Item -ItemType SymbolicLink -Path .\\assets -Target ..\\assets\n중간에 에러가 발생한 이유는 posts/assets 디렉토리가 이미 생성되어 있기 때문에다. 탐색기에서 해당 디렉토리를 삭제후 재시도 하면 정상적으로 심볼릭 링크가 생성됨을 확인할 수 있다.\n탐색기에서는 아래와 같이 보인다. (참고로 심볼릭 링크를 삭제하려면 해당 디렉토리를 탐색기에서 삭제하면 된다)\n이제 이미지를 붙여넣기 하면 content/assets 디렉토리에 파일이 저장되면서 동시에 content/posts/assets 디렉토리에도 파일이 생성되는 것을 확인할 수 있다.\n참고로 windows cmd.exe 에서 mklink 명령어를 통해 심볼릭 링크를 생성하는 방법이 있지만 해당 방법으로 링크 생성 후 hugo 서버를 수행하면 에러가 발생한다.\n참고 url : https://mikefrobbins.com/2023/02/08/rendering-images-in-markdown-preview-of-hugo-site/\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/css-deduplicate/",
- "title": "CSS deduplicate",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/css-deduplicate/",
- "title": "CSS-Deduplication part1 (postcss 커스텀 스크립트를 이용한 CSS 중복 제거)",
- "tags": ["PostCSS", "CSS deduplicate", "file merge"],
- "description": "두 개의 CSS 파일을 하나의 파일로 병합하고, 중복을 제거합니다. 이후 최적화를 위한 압축을 수행합니다.",
- "contents": "본 포스팅을 통해 postcss 를 이용하는 방법에 대해 배울 수 있습니다. 또한 원하는 플러그인이 없는 경우 custom 플러그인을 작성하는 방법을 학습할 수 있습니다.\nAbstract 두 개의 파일을 하나의 파일로 병합. CSS 파일내에 중복된 속성에 대해 상위에 선언된 속성만 남기고 동일 속성명에 대해서는 삭제를 수행. CSS 압축 수행. 두 개의 파일을 하나의 파일로 병합 두개 또는 세개의 파일을 하나의 파일로 병합하는 방법은 다음과 같다.\n# linux \u0026gt; cat a.css b.css c.css \u0026gt; input.css # windows \u0026gt; type a.css b.css c.css \u0026gt; input.css 프로젝트 초기화 npm 프로젝트를 초기화 합니다.\n\u0026gt; npm init -y # -y 옵션을 사용하면 불필요한 질문을 skip 합니다. PostCSS 플러그인 설치 공식문서에 다음과 같이 postcss를 설명하고 있다.\n이름에서도 알 수 있듯이 CSS 후처리를 js 플러그인을 기반으로 다양한 변환 작업 수행을 도와준다.\n아래의 명령어를 통해 PostCSS 와 PostCSS-CLI 를 설치해보자.\n\u0026gt; npm i -D postcss postcss-cli # -D 옵션 : --save-dev의 축약형으로 devDependency로 설치 node 의 버전은 18.15.0 으로 진행 \u0026gt; node -v v18.15.0 \u0026gt; nvm list 18.15.0 (Currently using 64-bit executable) 14.17.4 # 💡 14.17.4 버전에서는 postcss-cli 가 동작하지 않는다. 아래의 명령어로 버전 변경. \u0026gt; nvm use 18.15.0 package.json 파일 내용\n{ \u0026#34;name\u0026#34;: \u0026#34;postcss2\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;, \u0026#34;build\u0026#34;: \u0026#34;postcss input.css --output dist/output.css\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;, \u0026#34;devDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34;, \u0026#34;postcss-cli\u0026#34;: \u0026#34;^11.0.0\u0026#34; } } input.css 파일의 내용에서 중복제거하여 dist/output.css 로 떨구도록 설정하였다.\ninput.css 파일 내용\nh1 { margin: 0 auto; padding-left: 10px; } h1 { margin: 10 10 10 10; } h1 { color: red; } .test { color: red; } .hello { background-color: blue; } .foo { width: 100px; height: 100px; } .foo { height: 100px; width: 100px; } .test { margin: 0 auto; padding-left: 10px; } input.css 파일내용 중 중복된 h1 선언의 경우 맨 위에것만 남기도록 처리할 것이다. (모든 중복 선택자 제거)\npostcss 플러그인 사용을 위한 환경설정 파일인 postcss.config.js 파일을 프로젝트 루트에 생성한다.\npostcss.config.js 파일 내용\nconst postcss = require(\u0026#34;postcss\u0026#34;); module.exports = { plugins: [customMerge({})], }; // custom-clean plugin to keep only the first declaration of each rule function customMerge(options) { return postcss.plugin(\u0026#34;custom-clean\u0026#34;, () =\u0026gt; { return (root, result) =\u0026gt; { const visitedRules = new Map(); root.walkRules((rule) =\u0026gt; { const selector = rule.selector; if (!visitedRules.has(selector)) { visitedRules.set(selector, rule); } }); root.removeAll(); visitedRules.forEach((rule) =\u0026gt; { root.append(rule); }); }; }); } 빌드 수행\n\u0026gt; npm run build postcss2@1.0.0 build postcss input.css --output dist/output.css custom-clean: postcss.plugin was deprecated. Migration guide: https://evilmartians.com/chronicles/postcss-8-plugin-migration dist/output.css 파일 결과\nh1 { margin: 0 auto; padding-left: 10px; } .test { color: red; } .hello { background-color: blue; } .foo { width: 100px; height: 100px; } 여기까지 하면 CSS 중복을 제거 하는 작업이 완료되었다.\npostcss-clean을 이용한 CSS 압축 postcss-clean 설치\n\u0026gt; npm i -D postcss-clean package.json 파일 내용\n{ \u0026#34;name\u0026#34;: \u0026#34;postcss2\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;, \u0026#34;build\u0026#34;: \u0026#34;postcss input.css --output dist/output.css\u0026#34;, \u0026#34;build:min\u0026#34;: \u0026#34;postcss dist/output.css --use postcss-clean -o dist/output.min.css\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;, \u0026#34;devDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34;, \u0026#34;postcss-cli\u0026#34;: \u0026#34;^11.0.0\u0026#34;, \u0026#34;postcss-clean\u0026#34;: \u0026#34;^1.2.2\u0026#34; } } 💡 build:min 스크립트를 추가했다. 다른설정은 불필요.\n바로 빌드 수행\n\u0026gt; npm run build:min output.min.css 파일 결과 내용\nh1{margin:0 auto;padding-left:10px}.test{color:red}.hello{background-color:#00f}.foo{width:100px;height:100px}h1,h2{margin:10 10 10 10}.hwan77{color:red} /_# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiUzQ2lucHV0JTIwY3NzJTIwMSUzRSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxHQUFHLGFBQWEsQ0FBQyxpQkFBaUIsQ0FBQyxNQUFNLFNBQVMsQ0FBQyxPQUFPLHFCQUFxQixDQUFDLEtBQUssV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLGtCQUFrQixDQUFDLFFBQVEsU0FBUyIsImZpbGUiOiJvdXRwdXQubWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxe21hcmdpbjowIGF1dG87cGFkZGluZy1sZWZ0OjEwcHh9LnRlc3R7Y29sb3I6cmVkfS5oZWxsb3tiYWNrZ3JvdW5kLWNvbG9yOiMwMGZ9LmZvb3t3aWR0aDoxMDBweDtoZWlnaHQ6MTAwcHh9aDEsaDJ7bWFyZ2luOjEwIDEwIDEwIDEwfS5od2FuNzd7Y29sb3I6cmVkfSJdfQ== _/ build 스크립트에서 postcss ... 와 같이 설정하는 경우 postcss.config.js 파일의 내용을 기반으로 스크립트를 수행한다.\npostcss --use postcss-clean 과 같이 플러그인의 이름을 직접 지정하는 경우 postcss.config.js 파일을 참고하지 않고 바로 postcss-cli를 통해서 플러그인을 실행할 수 있다.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/file-merge/",
- "title": "file merge",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/postcss/",
- "title": "PostCSS",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/css-deduplicate-2/",
- "title": "CSS-Deduplication part 2 (CSS 중복제거 플러그인 제작)",
- "tags": ["PostCSS", "CSS deduplicate", "npm 패키지 배포"],
- "description": "postcss 커스텀 스크립트를 이용하여 CSS 중복 제거 커스텀 스크립트를 개선하고 이를 npm 패키지로 생성 하는 방법",
- "contents": "이전 포스팅을 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.\n이번 포스팅에서는 media 쿼리에 대한 처리 로직을 추가하고 postcss 플러그인으로 제작해 보도록 하겠습니다. 다음 포스팅을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.\nAbstract postcss 커스텀 스크립트 개선(media 쿼리 처리 로직 추가) npm 패키지로 배포 가능한 플러그인으로 제작 커스텀 스크립트 개선 중복제거 커스텀 스크립트는 selector 기반으로 작업을 수행하는데 @media 쿼리에 대해서는 중복제거를 수행하지 못하고 있습니다. @가 붙은 atrule 에 대해서도 처리가 가능하도록 스크립트를 개선하겠습니다.\n스크립트 개선 postcss.config.js 파일을 아래와 같이 수정합니다.\npostcss 코드 기술 방법에 대해서는 API 문서 의 내용을 참고하여 작성하면 됩니다.\nconst postcss = require(\u0026#34;postcss\u0026#34;); module.exports = { plugins: [customMerge({})], }; // custom-clean plugin to keep only the first declaration of each rule function customMerge(options) { return { postcssPlugin: \u0026#34;postcss-delete-duplicate-selector\u0026#34;, Once(root, { result }) { const filteredRules = new Map(); root.walk((node) =\u0026gt; { // Check if the node is a rule and not an at-rule and parent type is root if (node.type === \u0026#34;rule\u0026#34; \u0026amp;\u0026amp; node.parent.type === \u0026#34;root\u0026#34;) { const selector = node.selector; if (!filteredRules.has(selector)) { filteredRules.set(selector, node); } } else if (node.type === \u0026#34;atrule\u0026#34;) { const mediaRule = postcss.atRule({ name: node.name, params: node.params, }); node.nodes.forEach((rule) =\u0026gt; { const clonedRule = rule.clone(); mediaRule.append(clonedRule); }); filteredRules.set(mediaRule.toString(), mediaRule); } }); root.removeAll(); filteredRules.forEach((rule, index) =\u0026gt; { root.append(rule); }); }, }; } npm run build 명령어를 수행하여 atrule 에 대해서도 잘 처리가 되는지 확인합니다.\n플러그인 코드 작성 동작이 잘 되는것을 확인했으면 이를 플러그인 형태로 제작하도록 하겠습니다. 플러그인의 이름은 postcss-delete-duplicate-selector 로 하겠습니다.\nnode_modules 디렉토리 하위에 postcss-delete-duplicate-selector 디렉토리를 생성합니다.\n디렉토리의 전체 구조는 다음과 같습니다.\nnode_modules/potcss-delete-duplicate-selector/\nsrc 디렉토리에 index.js 파일을 다음과 같이 생성합니다.\nnode_modules/potcss-delete-duplicate-selector/src/index.js\nconst postcss = require(\u0026#34;postcss\u0026#34;); const plugin = (opts = {}) =\u0026gt; { return { postcssPlugin: \u0026#34;postcss-delete-duplicate-selector\u0026#34;, Once(root, { result }) { const filteredRules = new Map(); root.walk((node) =\u0026gt; { // Check if the node is a rule and not an at-rule and parent type is root if (node.type === \u0026#34;rule\u0026#34; \u0026amp;\u0026amp; node.parent.type === \u0026#34;root\u0026#34;) { const selector = node.selector; if (!filteredRules.has(selector)) { filteredRules.set(selector, node); } } else if (node.type === \u0026#34;atrule\u0026#34;) { const mediaRule = postcss.atRule({ name: node.name, params: node.params, }); node.nodes.forEach((rule) =\u0026gt; { const clonedRule = rule.clone(); mediaRule.append(clonedRule); }); filteredRules.set(mediaRule.toString(), mediaRule); } }); root.removeAll(); filteredRules.forEach((rule, index) =\u0026gt; { root.append(rule); }); }, }; }; plugin.postcss = true; module.exports = plugin; module.exports 를 이용하여 외부 참조가 가능하도록 코드를 작성해줍니다.\npackage.json 파일은 다음과 같이 작성합니다.\nnode_modules/potcss-delete-duplicate-selector/package.json\n{ \u0026#34;name\u0026#34;: \u0026#34;postcss-delete-duplicate-selector\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;PostCSS plugin delete duplicate css selector in the file\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;src/index.js\u0026#34;, \u0026#34;keywords\u0026#34;: [ \u0026#34;postcss\u0026#34;, \u0026#34;css\u0026#34;, \u0026#34;postcss-plugin\u0026#34;, \u0026#34;delete\u0026#34;, \u0026#34;duplicate\u0026#34;, \u0026#34;selector\u0026#34;, \u0026#34;Deduplication\u0026#34; ], \u0026#34;author\u0026#34;: \u0026#34;hwantage \u0026lt;hwantagexsw2@gmail.com\u0026gt;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;MIT\u0026#34;, \u0026#34;repository\u0026#34;: { \u0026#34;type\u0026#34;: \u0026#34;git\u0026#34;, \u0026#34;url\u0026#34;: \u0026#34;https://github.com/hwantage/postcss-delete-duplicate-selector.git\u0026#34; }, \u0026#34;engines\u0026#34;: { \u0026#34;node\u0026#34;: \u0026#34;\u0026gt;=18.15.0\u0026#34; }, \u0026#34;peerDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34; }, \u0026#34;devDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34; } } \u0026ldquo;main\u0026rdquo; 항목이 entry 소스 경로가 됩니다. 우리는 src 디렉토리 하위에 코드를 작성했기 때문에 src/index.js 로 작성합니다.\n\u0026ldquo;version\u0026quot;의 경우 1.0.0 부터 작성을 하시면 됩니다.\n프로젝트 루트의 postcss.config.js 파일을 다음과 같이 변경합니다.\n/postcss.config.js\nmodule.exports = { plugins: [require(\u0026#34;postcss-delete-duplicate-selector\u0026#34;)], }; 기존의 커스텀 함수 코드를 제거하고 node_modules 에 작성된 플러그인을 참조하도록 변경하였습니다.\nnpm run build 를 수행하여 node_modules 하위에 생성한 플러그인 코드를 통해 CSS 중복 제거가 잘 수행되는지 확인합니다.\n여기까지 하면 postcss 를 통해 플러그인 생성 준비를 완료했습니다.\n작성된 플러그인을 npm 패키지에 등록하여 오픈소스 생태계에 기여하는 방법에 대해 다음 포스팅에서 설명하겠습니다.\n다음 포스팅 확인하기\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B0%B0%ED%8F%AC/",
- "title": "npm 패키지 배포",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/npm-publish/",
- "title": "CSS-Deduplication part 3 (postcss 플러그인을 npmjs.org에 배포)",
- "tags": ["PostCSS", "CSS deduplicate", "npm 패키지 배포", "postcss-delete-duplicate-selector", "npm publish"],
- "description": "postcss 플러그인을 npmjs에 배포하기",
- "contents": "CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거) 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.\nCSS-Deduplication part2(CSS 중복제거 플러그인 제작) 포스트를 통해 postcss 플러그인으로 제작해 보았습니다.\n이번 포스팅을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.\nAbstract postcss 플러그인 배포 postcss 플러그인 삭제 및 관리 및 홍보 npm 모듈 혹은 npm 패키지를 생성하여 실제로 NPM Registry에 업로드까지 하여 오픈소스로서 NPM 생태계에 기여하는 방법.\nNPM 가입 NPM Registry 가입은 NPM 공식 페이지에서 가입할 수 있다.\n패키지 만들기 우선 git repository에 소스코드를 업로드 합니다.\nfull source 경로 : https://github.com/hwantage/postcss-delete-duplicate-selector\n패키지 배포 terminal 창에서 다음 명령어를 수행하여 로그인을 수행합니다.\n\u0026gt; npm login\n로그인이 정상인지 확인합니다. 자신의 아이디가 출력되면 정상입니다.\n\u0026gt; npm whoami\n작성된 코드를 npm repository에 퍼블리싱합니다.\n\u0026gt; npm publish\nD:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; npm login npm notice Log in on https://registry.npmjs.org/ Login at: https://www.npmjs.com/login?next=/login/cli/3b565c98-89df-4bb2-a90c-cc7319a19319 Press ENTER to open in the browser... Logged in on https://registry.npmjs.org/. D:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; npm whoami hwantage D:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; npm publish npm notice npm notice package: postcss-delete-duplicate-selector@1.0.0 npm notice === Tarball Contents === npm notice 1.1kB LICENSE npm notice 1.5kB README.md npm notice 614B package.json npm notice 536B src/index.js npm notice === Tarball Details === npm notice name: postcss-delete-duplicate-selector npm notice version: 1.0.0 npm notice filename: postcss-delete-duplicate-selector-1.0.0.tgz npm notice package size: 1.8 kB npm notice unpacked size: 3.7 kB npm notice shasum: b452a9e365ba9e0023512a334d21867fc055f3dc npm notice integrity: sha512-7raaTngpoMog1[...]wSP0qjnDPnICQ== npm notice total files: 4 npm notice npm notice Publishing to https://registry.npmjs.org/ with tag latest and default access + postcss-delete-duplicate-selector@1.0.0 D:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; https://www.npmjs.com/ 에서 확인. 플러그인 이름이 suggestion에 뜨는지 확인해보고 정상적으로 등록되었는지 확인.\nnpm: postcss-delete-duplicate-selector\n패키지 업데이트 npm version [patch | minor | major]\nnpm version patch 를 수행하면 package.json 파일내의 version 항목의 버전이 \u0026ldquo;1.0.1\u0026rdquo; 과 같이 마지막 번호가 1 증가한다.\nnpm version minor 를 수행하면 \u0026ldquo;1.1.0\u0026rdquo; 과 같이 중간 번호가 증가한다.\nnpm version major 를 수행하면 \u0026ldquo;2.0.0\u0026rdquo; 과 같이 맨 앞의 번호가 증가한다.\n이후 npm publish 명령어를 통해 다시 배포를 수행하면 패키지 정보가 업데이트 된다. 사실 위 명령어를 사용하지 않아도 package.json의 버전 정보를 직접 수정해도 무방하다.\n\u0026gt; npm version patch v1.0.1 # 위 명령어 수행 후 package.json 파일을 확인해 보면 버전 정보가 변경되어 있을 것이다. # npm publish 명령어로 배포를 수행하자. \u0026gt; npm publish npm notice npm notice package: postcss-delete-duplicate-selector@1.0.1 npm notice === Tarball Contents === npm notice 1.1kB LICENSE npm notice 2.2kB README.md npm notice 617B package.json npm notice 536B src/index.js npm notice === Tarball Details === npm notice name: postcss-delete-duplicate-selector npm notice version: 1.0.1 npm notice filename: postcss-delete-duplicate-selector-1.0.1.tgz npm notice package size: 2.0 kB npm notice unpacked size: 4.5 kB npm notice shasum: 6b77abd3659d37eb4b6362a706478cbd9bb2d9a5 패키지 삭제 패키지를 삭제하면 24시간 내에는 동일한 이름으로 패키지 등록이 불가하다.\n\u0026gt; npm unpublish postcss-delete-duplicate-selector 패키지 홍보 아래의 사이트의 가이드에 따라 플러그인을 등록 신청해보도록 하자.\nhttps://github.com/himynameisdave/postcss-plugins\nhttps://awesomejs.dev/\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/npm-publish/",
- "title": "npm publish",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/postcss-delete-duplicate-selector/",
- "title": "postcss-delete-duplicate-selector",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/hugo/",
- "title": "HUGO를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법",
- "tags": ["hugo", "github pages", "SSG", "JAM Stack"],
- "description": "SSG(Static Site Generator)를 생성 운영하는 방법에 대한 포스팅입니다. hugo 와 github pages를 이용합니다.",
- "contents": "Agenda\nSSG 개념 JAM Stack 개념 SSG 툴 Github 계정 생성 및 사용 Github pages 사용법 HUGO를 이용한 블로그 생성 Markdown 사용법 VSCode Markdown 에디터 활용법 SSG 개념 정적 사이트 : 단순 html, css, js 로만 구성된 사이트.\n동적 사이트 : 게시판, 대시보드 등 백엔드 데이터 연동 또는 API에 따라 동적으로 구성된 사이트.\nSSG : Static Site Generator 정적 사이트 생성기 = 정적 사이트를 쉽게 만들 수 있도록 도와주는 도구\nJAM Stack 개념 JAM(JavaScript, API, Markup Stack): JavaScript, API, HTML이나 CSS 등을 칭하는 Markup으로 이루어진 웹 구성 방법\nSSG 툴 Gatsby\nJekyll : github pages 공식 지원\nHexo\nHugo\n…\n다양한 툴이 있는데 Hugo가 가장 널리 사용되는 것으로 파악됨.\nhttps://trends.google.co.kr/trends/explore?q=Hugo,Jekyll,Gatsby,Hexo\u0026amp;hl=ko\nGithub 계정 생성 및 사용 계정 생성 : https://github.com/\nPC에 git 설치 https://git-scm.com/download/win\n설치 확인 방법 command 창을 열어 아래의 명령어로 확인\n\u0026gt; git version git version 2.40.0.windows.1 Github pages 사용법 내가 제작한 페이지를 어딘가에 호스팅을 해야 하는데 올릴 서버가 마땅히 없을 때 github에서 제공하는 무료 호스팅 기능을 이용한다.\nGit 계정은 일단 있다고 가정하고 본인의 Git 계정으로 로그인하여 Repositories 탭에서 New 버튼을 클릭한다.\nRepository name 은 반드시 Owner아이디.github.io 로 입력한다.\nSettings \u0026gt; Pages 메뉴에서 main 브랜치 선택 후 Save 버튼 클릭.\n뭔가 아무거나 파일을 올리면 사이트가 활성화 된다.\n아무 것도 올리지 않은 경우 Readme.md 파일 내용이 나타난다.\nindex.html 파일을 올리면 index.html 파일의 내용이 나타난다.\nHUGO를 이용한 블로그 생성 Hugo 설치 아래의 Git Repository 에 접속 하여 OS에 맞는 설치 프로그램을 다운로드 한다.\nhttps://github.com/gohugoio/hugo/releases/tag/v0.121.1\n아래의 파일을 다운로드 받았다.\nhugo_extended_0.121.1_windows-amd64.zip\nD:\\hugo 폴더에 파일 압축을 해제한다.\nWindows 환경설정 Path 에 압축해제된 경로를 등록한다.\n제어판 \u0026gt; 시스템 \u0026gt; 설정 \u0026gt; 고급 시스템 설정 \u0026gt; 고급 \u0026gt; 환경 변수\n아래와 같이 커멘드 창에서 hugo version 을 쳤을 때 버전정보가 잘 표기된다면 설치 성공.\n\u0026gt; hugo version hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740 windows/amd64 BuildDate=2023-12-08T08:47:45Z VendorInfo=gohugoio Hugo 프로젝트 만들기 D:\\hugo 폴더로 이동하여 아래의 명령어로 프로젝트를 생성한다.\n# hugo new site \u0026lt;프로젝트이름\u0026gt; \u0026gt; hugo new site hwan77 hwan77 폴더가 생성되었고 우측과 같은 파일들이 설치되어 있다.\n휴고 템플릿 사이트에서 마음에 드는 템플릿을 다운로드 한다. https://themes.gohugo.io/\nArchie 템플릿을 설치해본다.\nhttps://github.com/athul/archie\n/\u0026gt; hugo new site archie /\u0026gt; cd archie /archie\u0026gt; cd themes /archie/themes\u0026gt; git clone https://github.com/athul/archie.git hugo.toml 파일의 내용을 아래와 같이 수정\nbaseURL = \u0026#34;https://hwantage.github.io\u0026#34; languageCode = \u0026#34;en-us\u0026#34; title = \u0026#34;Hwantage world\u0026#34; theme=\u0026#34;archie\u0026#34; copyright = \u0026#34;© hwantage\u0026#34; # Code Highlight pygmentsstyle = \u0026#34;monokai\u0026#34; pygmentscodefences = true pygmentscodefencesguesssyntax = true disqusShortname = \u0026#34;hwantage\u0026#34; paginate=10 # articles per page [params] mode=\u0026#34;toggle\u0026#34; # color-mode → light,dark,toggle or auto useCDN=false # don\u0026#39;t use CDNs for fonts and icons, instead serve them locally. subtitle = \u0026#34;Hwantage world blog with hugo Archie template\u0026#34; mathjax = true # enable MathJax support katex = true # enable KaTeX support # Social Tags [[params.social]] name = \u0026#34;GitHub\u0026#34; icon = \u0026#34;github\u0026#34; url = \u0026#34;https://github.com/hwantage\u0026#34; #[[params.social]] #name = \u0026#34;Twitter\u0026#34; #icon = \u0026#34;twitter\u0026#34; #url = \u0026#34;https://twitter.com/athulcajay/\u0026#34; #[[params.social]] #name = \u0026#34;GitLab\u0026#34; #icon = \u0026#34;gitlab\u0026#34; #url = \u0026#34;https://gitlab.com/athul/\u0026#34; # Main menu Items [[menu.main]] name = \u0026#34;Home\u0026#34; url = \u0026#34;/\u0026#34; weight = 1 [[menu.main]] name = \u0026#34;All posts\u0026#34; url = \u0026#34;/posts\u0026#34; weight = 2 [[menu.main]] name = \u0026#34;About\u0026#34; url = \u0026#34;/about\u0026#34; weight = 3 [[menu.main]] name = \u0026#34;Tags\u0026#34; url = \u0026#34;/tags\u0026#34; weight = 4 Hugo exampleSite 코드 복사 themes/archie/exampleSite 폴더의 파일들을 /archie/content 폴더로 복사\nHugo 포스트 작성 /archie\u0026gt; hugo new posts/first.md 위와 같이 하면 content 디렉토리 밑에 posts 디렉토리 하위로 first.md 파일이 생성된다.\n/content/posts/first.md 파일의 내용을 원하는대로 수정\nHugo 서버 실행 /archie\u0026gt; hugo server -D http://localhost:1313/ 로 접속하여 결과 확인\n빌드 및 배포하기 1. 빌드 새 글이 정상적으로 보인다면 이제 빌드를 할 차례입니다.\n블로그 루트 디렉토리로 이동하여 아래 명령으로 빌드합니다.\n/archie\u0026gt; hugo -D Start building sites … hugo v0.110.0-e32a493b7826d02763c3b79623952e625402b168+extended linux/amd64 BuildDate=2023-01-17T12:16:09Z VendorInfo=snap:0.110.0 | EN -------------------+----- Pages | 7 Paginator pages | 0 Non-page files | 0 Static files | 57 Processed images | 0 Aliases | 3 Sitemaps | 1 Cleaned | 0 Total in 61 ms 빌드가 완료되면 public 디렉토리에 html을 포함한 여러가지 파일들이 생성됩니다. 이제 이 파일들을 github에 푸시하여 배포하면 끝납니다. 푸시한 후에 레포지토리명을 브라우저 주소창에 입력하여 접속하면 배포된 블로그를 확인할 수 있습니다.\n푸시하면 배포까지는 1분 가량이 시간이 소요되니 1분 후 다시 시도하면 블로그 화면을 보실 수 있습니다.\n명령어에서 뒤에 붙는 -D 옵션은 draft 문서도 보여준다는 표시인데, draft란 현재 이 문서가 작업 중인지 아닌지 나타내는 특성으로 front matter에 포함되어있다. 문서의 front matter부분에 draft = true로 되어있으면, hugo server -D로 했을 때에는 이 문서도 포함되어 보여주지만 나중에 빌드할 때 생성되는 html에는 포함되지 않는다. 따라서 문서를 작업할 때 draft = true로 해놓고 localhost로 확인하면서 작업한 다음 나중에 작업을 완료하면 저 부분을 지우면 된다.\n참고로 public 폴더의 기존 파일을 모두 삭제하고 빌드롤 수행하려면 \u0026ndash;cleanDestinationDir 옵션을 추가하면 된다.\nhugo --cleanDestinationDir\n2. 배포 public 디렉토리의 내용을 github에 업로드\n드래그 드롭으로 싹다 업로드\n잠시 후 확인 https://hwantage.github.io\nMarkdown 사용법 마크다운(Markdown) 사용법\nVSCode Markdown 에디터 활용법 Visual Studio Code 실행하여 Extension 설치\n파일 우마우스 클릭 후 Open with markdown editor 클릭\nWYSIWYG방식으로 편집 (What You See Is What You Get)\n또다른 방법은 노션에서 작성 후 Copy \u0026amp; Paste 해도 됨. 단, 노션에서만 제공하는 마크다운 문법 깨질 수 있으니 주의가 필요하다.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/tags/jam-stack/",
- "title": "JAM Stack",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/node/",
- "title": "node",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/node.js/",
- "title": "node.js",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/tags/nvm/",
- "title": "nvm",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "tags"
- },
- {
- "permalink": "https://hwantage.github.io/posts/nvm/",
- "title": "nvm을 이용한 node.js의 버전 관리 방법",
- "tags": ["node", "node.js", "nvm"],
- "description": "NVM(Node Version Manager)를 이용한 node  버전 관리 방법",
- "contents": "새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.\nD:\\redmanager\\views\u0026gt;npm run start \u0026gt; tuto@0.1.0 start \u0026gt; set PORT=1024 \u0026amp;\u0026amp; react-scripts start Starting the development server... Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\\redmanager\\views\\node_modules\\webpack\\lib\\util\\createHash.js:90:53) at NormalModule._initBuildHash (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:401:16) at handleParseError (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:449:10) at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:481:5 at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:342:12 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:373:3 at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:214:10) at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:221:10) at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:236:3 at runSyncOrAsync (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:130:11) at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:232:2) at Array.\u0026lt;anonymous\u0026gt; (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:205:4) at Storage.finished (D:\\redmanager\\views\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:55:16) at D:\\redmanager\\views\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:91:9 Browserslist: caniuse-lite is outdated. Please run: npx browserslist@latest --update-db Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating D:\\redmanager\\views\\node_modules\\react-scripts\\scripts\\start.js:19 throw err; ^ Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\\redmanager\\views\\node_modules\\webpack\\lib\\util\\createHash.js:90:53) at NormalModule._initBuildHash (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:401:16) at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:433:10 at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:308:13 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18 at context.callback (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13) at D:\\redmanager\\views\\node_modules\\babel-loader\\lib\\index.js:51:103 at process.processTicksAndRejections (node:internal/process/task_queues:95:5) { opensslErrorStack: [ \u0026#39;error:03000086:digital envelope routines::initialization error\u0026#39; ], library: \u0026#39;digital envelope routines\u0026#39;, reason: \u0026#39;unsupported\u0026#39;, code: \u0026#39;ERR_OSSL_EVP_UNSUPPORTED\u0026#39; } Node.js v18.15.0 확인해 보니 최신버전의 node 가 설치 되어 발생하는 문제였다.\n다시 삭제하고 재설치 해야 하나 싶었는데 nvm 으로 node의 버전을 손쉽게 관리 할 수 있었다.\n협업을 할 때, 또는 다양한 프로젝트를 동시에 진행해야 할 때 다양한 라이브러리 / 프레임워크 / 개발툴의 버전 호환 문제를 겪을 수 있다.\n그때마다 Node.js를 재설치 및 삭제하는 방법으로는 한계가 있고 불편할 뿐더러 시간도 아깝다.\n이런 상황에서 Node.js 버전을 상황에 따라 변경해 가면서 사용하게끔 도와주는 것이 NVM이다.\nNVM 은 Node Version Manager 의 약자로써 Node.js의 도구이며, 상황에 따라 버전을 변경해 가면서 사용할 수 있도록 도와준다.\n터미널에서 명령어로 매우 간단하게 노드 버젼을 스위칭할 수 있다.\nnvm-windows는 MIT 라이센스의 오픈 소스로 Go로 작성되었다.\n아래 링크에서 nvm-setup.exe 5.22 MBNov 13, 2022 로 설치를 진행해 보았다.\nhttps://github.com/coreybutler/nvm-windows/releases\nnvm-windows는 Node.js v4+에서 지원되기 때문에 기본적인 Node.js는 설치가 되어 있어야 한다.\n컴퓨터에 다양한 버전의 Node.js 를 설치할 수 있게 해준다. use 커맨드를 이용해 사용할 Node 버전으로 간단하게 스위칭할수 있게 해준다. 디폴트 버전을 설정하거나 / 설치한 버전들의 전체 리스트를 확인하거나 / 필요 없는 버전을 삭제하는 등등\u0026hellip; 소위 버전 관리가 쉬워진다. node -v # 노드 버전 확인 nvm list # 설치된 노드 버전 리스트 확인 nvm install lts # 최신 lts 버전 설치 nvm install 14.17.4 # 특정 버전 node 설치 nvm use 14.17.4 # 14.17.4 버전으로 스위칭 아래는 실제로 수행했던 cmd 창 갈무리.\nD:\\redmanager\\views\u0026gt;nvm install 14.17.4 Downloading node.js version 14.17.4 (64-bit)... Complete Creating C:\\Users\\User\\AppData\\Roaming\\nvm\\temp Downloading npm version 6.14.14... Complete Installing npm v6.14.14... Installation complete. If you want to use this version, type nvm use 14.17.4 D:\\redmanager\\views\u0026gt;nvm list * 18.15.0 (Currently using 64-bit executable) 14.17.4 D:\\redmanager\\views\u0026gt;nvm use 14.17.4 Now using node v14.17.4 (64-bit) D:\\redmanager\\views\u0026gt;nvm list 18.15.0 * 14.17.4 (Currently using 64-bit executable) 더 자세한 내용은 git 링크에서 확인하십시오.\n",
- "type": "posts"
- },
- {
- "permalink": "https://hwantage.github.io/about/",
- "title": "About me",
- "tags": [],
- "description": "프론트엔드 개발자 hwantage 입니다. 블로그에 오신것을 환영합니다.",
- "contents": "프론트엔드 개발자 hwantage 입니다. 블로그에 오신것을 환영합니다.\nSkills export default () =\u0026gt; ({ name: \u0026#34;jung hwan\u0026#34; | \u0026#34;Kim\u0026#34;, email: \u0026#34;hwantagexsw2@gmail.com\u0026#34;, blog: \u0026#34;https://hwantage.github.io\u0026#34;, git: \u0026#34;https://github.com/hwantage\u0026#34;, keywords: [\u0026#34;Web Dev\u0026#34;, \u0026#34;Front-end\u0026#34;, \u0026#34;Back-end\u0026#34;, \u0026#34;UX\u0026#34;, \u0026#34;Team manager\u0026#34;], technologies: { languages: [ \u0026#34;C\u0026#34;, \u0026#34;Visual Basic\u0026#34;, \u0026#34;Python\u0026#34;, \u0026#34;Java\u0026#34;, \u0026#34;C#\u0026#34;, \u0026#34;JavaScript\u0026#34;, \u0026#34;TypeScript\u0026#34;, \u0026#34;Go\u0026#34;, \u0026#34;Bash\u0026#34;, \u0026#34;SQL\u0026#34;, \u0026#34;HTML\u0026#34;, \u0026#34;CSS\u0026#34;, \u0026#34;PHP\u0026#34;, \u0026#34;ASP\u0026#34;, \u0026#34;ASP.NET\u0026#34;, \u0026#34;JSP\u0026#34;, ], web: [ \u0026#34;React\u0026#34;, \u0026#34;Vue.js\u0026#34;, \u0026#34;Express.js\u0026#34;, \u0026#34;Node.js\u0026#34;, \u0026#34;jQuery\u0026#34;, \u0026#34;WebPack\u0026#34;, \u0026#34;Babel\u0026#34;, \u0026#34;Axios\u0026#34;, \u0026#34;Bootstrap\u0026#34;, \u0026#34;Materialize CSS\u0026#34;, \u0026#34;WordPress\u0026#34;, \u0026#34;Spring MVC\u0026#34;, \u0026#34;ASP.NET Core\u0026#34;, \u0026#34;ASP.NET MVC\u0026#34;, ], databases: [ \u0026#34;PostgreSQL\u0026#34;, \u0026#34;MariaDB/MySQL\u0026#34;, \u0026#34;PL/SQL\u0026#34;, \u0026#34;MongoDB\u0026#34;, \u0026#34;Cloud Firestore\u0026#34;, \u0026#34;SQLite\u0026#34;, \u0026#34;ORACLE\u0026#34;, \u0026#34;MySQL\u0026#34;, \u0026#34;MS Access\u0026#34;, ], applications: [\u0026#34;Adobe CC\u0026#34;, \u0026#34;Microsoft Office\u0026#34;], mathematicsAndStatistics: [\u0026#34;R\u0026#34;], machineLearning: [\u0026#34;Tensorflow\u0026#34;], toolchains: [\u0026#34;NPM\u0026#34;, \u0026#34;Yarn\u0026#34;, \u0026#34;Docker\u0026#34;, \u0026#34;Kubernetes\u0026#34;], devOps: [\u0026#34;Git\u0026#34;, \u0026#34;Jenkins CI\u0026#34;, \u0026#34;Redmine\u0026#34;, \u0026#34;Nexus\u0026#34;, \u0026#34;Gitlab CI\u0026#34;, \u0026#34;SVN\u0026#34;], cloudOps: [\u0026#34;AWS\u0026#34;, \u0026#34;Azure\u0026#34;, \u0026#34;Firebase\u0026#34;], operatingSystems: [\u0026#34;GNU/Linux\u0026#34;, \u0026#34;BSD\u0026#34;, \u0026#34;Unix\u0026#34;, \u0026#34;Windows\u0026#34;], architectures: [\u0026#34;Serverless\u0026#34;, \u0026#34;Microservices\u0026#34;, \u0026#34;Monolithic\u0026#34;], mobile: [\u0026#34;Android\u0026#34;, \u0026#34;Flutter\u0026#34;, \u0026#34;Firebase\u0026#34;], editors: [\u0026#34;VSCode\u0026#34;, \u0026#34;ViM\u0026#34;, \u0026#34;Visual Studio.Net\u0026#34;, \u0026#34;Nodepad\u0026#34;], }, Education: [ \u0026#34;Dong-buk high school\u0026#34;, \u0026#34;KunKuk University Bachelor of Science\u0026#34;, \u0026#34;Yonsei University Master of Science\u0026#34;, ], }); ",
- "type": "about"
- },
- {
- "permalink": "https://hwantage.github.io/categories/css/",
- "title": "CSS",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "categories"
- },
- {
- "permalink": "https://hwantage.github.io/search/",
- "title": "Search Result",
- "tags": [],
- "description": "",
- "contents": "",
- "type": "taxonomies"
- },
- {
- "permalink": "https://hwantage.github.io/categories/uncategories/",
- "title": "Uncategories",
- "tags": [],
- "description": "",
- "contents": "Description\n",
- "type": "categories"
- }]
- 
- 
+  
+  
+  
+  
+    {
+      "id": "0",
+	  "permalink": "https://hwantage.github.io/posts/hugo/",
+      "title": "HUGO를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법",
+      "tags": ["hugo", "github pages", "SSG", "JAM Stack"],
+      "description": "SSG(Static Site Generator)를 생성 운영하는 방법에 대한 포스팅입니다. hugo 와 github pages를 이용합니다.",
+      "category": "[Front-end]",
+      "contents": "Agenda\nSSG 개념 JAM Stack 개념 SSG 툴 Github 계정 생성 및 사용 Github pages 사용법 HUGO를 이용한 블로그 생성 Markdown 사용법 VSCode Markdown 에디터 활용법 SSG 개념 정적 사이트 : 단순 html, css, js 로만 구성된 사이트.\n동적 사이트 : 게시판, 대시보드 등 백엔드 데이터 연동 또는 API에 따라 동적으로 구성된 사이트.\nSSG : Static Site Generator 정적 사이트 생성기 = 정적 사이트를 쉽게 만들 수 있도록 도와주는 도구\nJAM Stack 개념 JAM(JavaScript, API, Markup Stack): JavaScript, API, HTML이나 CSS 등을 칭하는 Markup으로 이루어진 웹 구성 방법\nSSG 툴 Gatsby\nJekyll : github pages 공식 지원\nHexo\nHugo\n…\n다양한 툴이 있는데 Hugo가 가장 널리 사용되는 것으로 파악됨.\nhttps://trends.google.co.kr/trends/explore?q=Hugo,Jekyll,Gatsby,Hexo\u0026amp;hl=ko\nGithub 계정 생성 및 사용 계정 생성 : https://github.com/\nPC에 git 설치 https://git-scm.com/download/win\n설치 확인 방법 command 창을 열어 아래의 명령어로 확인\n\u0026gt; git version git version 2.40.0.windows.1 Github pages 사용법 내가 제작한 페이지를 어딘가에 호스팅을 해야 하는데 올릴 서버가 마땅히 없을 때 github에서 제공하는 무료 호스팅 기능을 이용한다.\nGit 계정은 일단 있다고 가정하고 본인의 Git 계정으로 로그인하여 Repositories 탭에서 New 버튼을 클릭한다.\nRepository name 은 반드시 Owner아이디.github.io 로 입력한다.\nSettings \u0026gt; Pages 메뉴에서 main 브랜치 선택 후 Save 버튼 클릭.\n뭔가 아무거나 파일을 올리면 사이트가 활성화 된다.\n아무 것도 올리지 않은 경우 Readme.md 파일 내용이 나타난다.\nindex.html 파일을 올리면 index.html 파일의 내용이 나타난다.\nHUGO를 이용한 블로그 생성 Hugo 설치 아래의 Git Repository 에 접속 하여 OS에 맞는 설치 프로그램을 다운로드 한다.\nhttps://github.com/gohugoio/hugo/releases/tag/v0.121.1\n아래의 파일을 다운로드 받았다.\nhugo_extended_0.121.1_windows-amd64.zip\nD:\\hugo 폴더에 파일 압축을 해제한다.\nWindows 환경설정 Path 에 압축해제된 경로를 등록한다.\n제어판 \u0026gt; 시스템 \u0026gt; 설정 \u0026gt; 고급 시스템 설정 \u0026gt; 고급 \u0026gt; 환경 변수\n아래와 같이 커멘드 창에서 hugo version 을 쳤을 때 버전정보가 잘 표기된다면 설치 성공.\n\u0026gt; hugo version hugo v0.121.1-00b46fed8e47f7bb0a85d7cfc2d9f1356379b740 windows/amd64 BuildDate=2023-12-08T08:47:45Z VendorInfo=gohugoio Hugo 프로젝트 만들기 D:\\hugo 폴더로 이동하여 아래의 명령어로 프로젝트를 생성한다.\n# hugo new site \u0026lt;프로젝트이름\u0026gt; \u0026gt; hugo new site hwan77 hwan77 폴더가 생성되었고 우측과 같은 파일들이 설치되어 있다.\n휴고 템플릿 사이트에서 마음에 드는 템플릿을 다운로드 한다. https://themes.gohugo.io/\nArchie 템플릿을 설치해본다.\nhttps://github.com/athul/archie\n/\u0026gt; hugo new site archie /\u0026gt; cd archie /archie\u0026gt; cd themes /archie/themes\u0026gt; git clone https://github.com/athul/archie.git hugo.toml 파일의 내용을 아래와 같이 수정\nbaseURL = \u0026#34;https://hwantage.github.io\u0026#34; languageCode = \u0026#34;en-us\u0026#34; title = \u0026#34;Hwantage world\u0026#34; theme=\u0026#34;archie\u0026#34; copyright = \u0026#34;© hwantage\u0026#34; # Code Highlight pygmentsstyle = \u0026#34;monokai\u0026#34; pygmentscodefences = true pygmentscodefencesguesssyntax = true disqusShortname = \u0026#34;hwantage\u0026#34; paginate=10 # articles per page [params] mode=\u0026#34;toggle\u0026#34; # color-mode → light,dark,toggle or auto useCDN=false # don\u0026#39;t use CDNs for fonts and icons, instead serve them locally. subtitle = \u0026#34;Hwantage world blog with hugo Archie template\u0026#34; mathjax = true # enable MathJax support katex = true # enable KaTeX support # Social Tags [[params.social]] name = \u0026#34;GitHub\u0026#34; icon = \u0026#34;github\u0026#34; url = \u0026#34;https://github.com/hwantage\u0026#34; #[[params.social]] #name = \u0026#34;Twitter\u0026#34; #icon = \u0026#34;twitter\u0026#34; #url = \u0026#34;https://twitter.com/athulcajay/\u0026#34; #[[params.social]] #name = \u0026#34;GitLab\u0026#34; #icon = \u0026#34;gitlab\u0026#34; #url = \u0026#34;https://gitlab.com/athul/\u0026#34; # Main menu Items [[menu.main]] name = \u0026#34;Home\u0026#34; url = \u0026#34;/\u0026#34; weight = 1 [[menu.main]] name = \u0026#34;All posts\u0026#34; url = \u0026#34;/posts\u0026#34; weight = 2 [[menu.main]] name = \u0026#34;About\u0026#34; url = \u0026#34;/about\u0026#34; weight = 3 [[menu.main]] name = \u0026#34;Tags\u0026#34; url = \u0026#34;/tags\u0026#34; weight = 4 Hugo exampleSite 코드 복사 themes/archie/exampleSite 폴더의 파일들을 /archie/content 폴더로 복사\nHugo 포스트 작성 /archie\u0026gt; hugo new posts/first.md 위와 같이 하면 content 디렉토리 밑에 posts 디렉토리 하위로 first.md 파일이 생성된다.\n/content/posts/first.md 파일의 내용을 원하는대로 수정\nHugo 서버 실행 /archie\u0026gt; hugo server -D http://localhost:1313/ 로 접속하여 결과 확인\n빌드 및 배포하기 1. 빌드 새 글이 정상적으로 보인다면 이제 빌드를 할 차례입니다.\n블로그 루트 디렉토리로 이동하여 아래 명령으로 빌드합니다.\n/archie\u0026gt; hugo -D Start building sites … hugo v0.110.0-e32a493b7826d02763c3b79623952e625402b168+extended linux/amd64 BuildDate=2023-01-17T12:16:09Z VendorInfo=snap:0.110.0 | EN -------------------+----- Pages | 7 Paginator pages | 0 Non-page files | 0 Static files | 57 Processed images | 0 Aliases | 3 Sitemaps | 1 Cleaned | 0 Total in 61 ms 빌드가 완료되면 public 디렉토리에 html을 포함한 여러가지 파일들이 생성됩니다. 이제 이 파일들을 github에 푸시하여 배포하면 끝납니다. 푸시한 후에 레포지토리명을 브라우저 주소창에 입력하여 접속하면 배포된 블로그를 확인할 수 있습니다.\n푸시하면 배포까지는 1분 가량이 시간이 소요되니 1분 후 다시 시도하면 블로그 화면을 보실 수 있습니다.\n명령어에서 뒤에 붙는 -D 옵션은 draft 문서도 보여준다는 표시인데, draft란 현재 이 문서가 작업 중인지 아닌지 나타내는 특성으로 front matter에 포함되어있다. 문서의 front matter부분에 draft = true로 되어있으면, hugo server -D로 했을 때에는 이 문서도 포함되어 보여주지만 나중에 빌드할 때 생성되는 html에는 포함되지 않는다. 따라서 문서를 작업할 때 draft = true로 해놓고 localhost로 확인하면서 작업한 다음 나중에 작업을 완료하면 저 부분을 지우면 된다.\n참고로 public 폴더의 기존 파일을 모두 삭제하고 빌드롤 수행하려면 \u0026ndash;cleanDestinationDir 옵션을 추가하면 된다.\nhugo --cleanDestinationDir\n2. 배포 public 디렉토리의 내용을 github에 업로드\n드래그 드롭으로 싹다 업로드\n잠시 후 확인 https://hwantage.github.io\nMarkdown 사용법 마크다운(Markdown) 사용법\nVSCode Markdown 에디터 활용법 Visual Studio Code 실행하여 Extension 설치\n파일 우마우스 클릭 후 Open with markdown editor 클릭\nWYSIWYG방식으로 편집 (What You See Is What You Get)\n또다른 방법은 노션에서 작성 후 Copy \u0026amp; Paste 해도 됨. 단, 노션에서만 제공하는 마크다운 문법 깨질 수 있으니 주의가 필요하다.\n",
+      "date": "2024-01-12 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "1",
+	  "permalink": "https://hwantage.github.io/posts/nvm/",
+      "title": "nvm을 이용한 node.js의 버전 관리 방법",
+      "tags": ["node", "node.js", "nvm"],
+      "description": "NVM(Node Version Manager)를 이용한 node  버전 관리 방법",
+      "category": "[Front-end]",
+      "contents": "새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.\nD:\\redmanager\\views\u0026gt;npm run start \u0026gt; tuto@0.1.0 start \u0026gt; set PORT=1024 \u0026amp;\u0026amp; react-scripts start Starting the development server... Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\\redmanager\\views\\node_modules\\webpack\\lib\\util\\createHash.js:90:53) at NormalModule._initBuildHash (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:401:16) at handleParseError (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:449:10) at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:481:5 at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:342:12 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:373:3 at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:214:10) at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:221:10) at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:236:3 at runSyncOrAsync (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:130:11) at iterateNormalLoaders (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:232:2) at Array.\u0026lt;anonymous\u0026gt; (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:205:4) at Storage.finished (D:\\redmanager\\views\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:55:16) at D:\\redmanager\\views\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:91:9 Browserslist: caniuse-lite is outdated. Please run: npx browserslist@latest --update-db Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating D:\\redmanager\\views\\node_modules\\react-scripts\\scripts\\start.js:19 throw err; ^ Error: error:0308010C:digital envelope routines::unsupported at new Hash (node:internal/crypto/hash:71:19) at Object.createHash (node:crypto:133:10) at module.exports (D:\\redmanager\\views\\node_modules\\webpack\\lib\\util\\createHash.js:90:53) at NormalModule._initBuildHash (D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:401:16) at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:433:10 at D:\\redmanager\\views\\node_modules\\webpack\\lib\\NormalModule.js:308:13 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11 at D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18 at context.callback (D:\\redmanager\\views\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13) at D:\\redmanager\\views\\node_modules\\babel-loader\\lib\\index.js:51:103 at process.processTicksAndRejections (node:internal/process/task_queues:95:5) { opensslErrorStack: [ \u0026#39;error:03000086:digital envelope routines::initialization error\u0026#39; ], library: \u0026#39;digital envelope routines\u0026#39;, reason: \u0026#39;unsupported\u0026#39;, code: \u0026#39;ERR_OSSL_EVP_UNSUPPORTED\u0026#39; } Node.js v18.15.0 확인해 보니 최신버전의 node 가 설치 되어 발생하는 문제였다.\n다시 삭제하고 재설치 해야 하나 싶었는데 nvm 으로 node의 버전을 손쉽게 관리 할 수 있었다.\n협업을 할 때, 또는 다양한 프로젝트를 동시에 진행해야 할 때 다양한 라이브러리 / 프레임워크 / 개발툴의 버전 호환 문제를 겪을 수 있다.\n그때마다 Node.js를 재설치 및 삭제하는 방법으로는 한계가 있고 불편할 뿐더러 시간도 아깝다.\n이런 상황에서 Node.js 버전을 상황에 따라 변경해 가면서 사용하게끔 도와주는 것이 NVM이다.\nNVM 은 Node Version Manager 의 약자로써 Node.js의 도구이며, 상황에 따라 버전을 변경해 가면서 사용할 수 있도록 도와준다.\n터미널에서 명령어로 매우 간단하게 노드 버젼을 스위칭할 수 있다.\nnvm-windows는 MIT 라이센스의 오픈 소스로 Go로 작성되었다.\n아래 링크에서 nvm-setup.exe 5.22 MBNov 13, 2022 로 설치를 진행해 보았다.\nhttps://github.com/coreybutler/nvm-windows/releases\nnvm-windows는 Node.js v4+에서 지원되기 때문에 기본적인 Node.js는 설치가 되어 있어야 한다.\n컴퓨터에 다양한 버전의 Node.js 를 설치할 수 있게 해준다. use 커맨드를 이용해 사용할 Node 버전으로 간단하게 스위칭할수 있게 해준다. 디폴트 버전을 설정하거나 / 설치한 버전들의 전체 리스트를 확인하거나 / 필요 없는 버전을 삭제하는 등등\u0026hellip; 소위 버전 관리가 쉬워진다. node -v # 노드 버전 확인 nvm list # 설치된 노드 버전 리스트 확인 nvm install lts # 최신 lts 버전 설치 nvm install 14.17.4 # 특정 버전 node 설치 nvm use 14.17.4 # 14.17.4 버전으로 스위칭 아래는 실제로 수행했던 cmd 창 갈무리.\nD:\\redmanager\\views\u0026gt;nvm install 14.17.4 Downloading node.js version 14.17.4 (64-bit)... Complete Creating C:\\Users\\User\\AppData\\Roaming\\nvm\\temp Downloading npm version 6.14.14... Complete Installing npm v6.14.14... Installation complete. If you want to use this version, type nvm use 14.17.4 D:\\redmanager\\views\u0026gt;nvm list * 18.15.0 (Currently using 64-bit executable) 14.17.4 D:\\redmanager\\views\u0026gt;nvm use 14.17.4 Now using node v14.17.4 (64-bit) D:\\redmanager\\views\u0026gt;nvm list 18.15.0 * 14.17.4 (Currently using 64-bit executable) 더 자세한 내용은 git 링크에서 확인하십시오.\n",
+      "date": "2024-01-12 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "2",
+	  "permalink": "https://hwantage.github.io/posts/npm-publish/",
+      "title": "CSS-Deduplication part 3 (postcss 플러그인을 npmjs.org에 배포)",
+      "tags": ["PostCSS", "CSS deduplicate", "npm 패키지 배포", "postcss-delete-duplicate-selector", "npm publish"],
+      "description": "postcss 플러그인을 npmjs에 배포하기",
+      "category": "[Front-end]",
+      "contents": "CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거) 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.\nCSS-Deduplication part2(CSS 중복제거 플러그인 제작) 포스트를 통해 postcss 플러그인으로 제작해 보았습니다.\n이번 포스팅을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.\nAbstract postcss 플러그인 배포 postcss 플러그인 삭제 및 관리 및 홍보 npm 모듈 혹은 npm 패키지를 생성하여 실제로 NPM Registry에 업로드까지 하여 오픈소스로서 NPM 생태계에 기여하는 방법.\nNPM 가입 NPM Registry 가입은 NPM 공식 페이지에서 가입할 수 있다.\n패키지 만들기 우선 git repository에 소스코드를 업로드 합니다.\nfull source 경로 : https://github.com/hwantage/postcss-delete-duplicate-selector\n패키지 배포 terminal 창에서 다음 명령어를 수행하여 로그인을 수행합니다.\n\u0026gt; npm login\n로그인이 정상인지 확인합니다. 자신의 아이디가 출력되면 정상입니다.\n\u0026gt; npm whoami\n작성된 코드를 npm repository에 퍼블리싱합니다.\n\u0026gt; npm publish\nD:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; npm login npm notice Log in on https://registry.npmjs.org/ Login at: https://www.npmjs.com/login?next=/login/cli/3b565c98-89df-4bb2-a90c-cc7319a19319 Press ENTER to open in the browser... Logged in on https://registry.npmjs.org/. D:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; npm whoami hwantage D:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; npm publish npm notice npm notice package: postcss-delete-duplicate-selector@1.0.0 npm notice === Tarball Contents === npm notice 1.1kB LICENSE npm notice 1.5kB README.md npm notice 614B package.json npm notice 536B src/index.js npm notice === Tarball Details === npm notice name: postcss-delete-duplicate-selector npm notice version: 1.0.0 npm notice filename: postcss-delete-duplicate-selector-1.0.0.tgz npm notice package size: 1.8 kB npm notice unpacked size: 3.7 kB npm notice shasum: b452a9e365ba9e0023512a334d21867fc055f3dc npm notice integrity: sha512-7raaTngpoMog1[...]wSP0qjnDPnICQ== npm notice total files: 4 npm notice npm notice Publishing to https://registry.npmjs.org/ with tag latest and default access + postcss-delete-duplicate-selector@1.0.0 D:\\Temp\\postcss2\\node_modules\\postcss-delete-duplicate-selector\u0026gt; https://www.npmjs.com/ 에서 확인. 플러그인 이름이 suggestion에 뜨는지 확인해보고 정상적으로 등록되었는지 확인.\nnpm: postcss-delete-duplicate-selector\n패키지 업데이트 npm version [patch | minor | major]\nnpm version patch 를 수행하면 package.json 파일내의 version 항목의 버전이 \u0026ldquo;1.0.1\u0026rdquo; 과 같이 마지막 번호가 1 증가한다.\nnpm version minor 를 수행하면 \u0026ldquo;1.1.0\u0026rdquo; 과 같이 중간 번호가 증가한다.\nnpm version major 를 수행하면 \u0026ldquo;2.0.0\u0026rdquo; 과 같이 맨 앞의 번호가 증가한다.\n이후 npm publish 명령어를 통해 다시 배포를 수행하면 패키지 정보가 업데이트 된다. 사실 위 명령어를 사용하지 않아도 package.json의 버전 정보를 직접 수정해도 무방하다.\n\u0026gt; npm version patch v1.0.1 # 위 명령어 수행 후 package.json 파일을 확인해 보면 버전 정보가 변경되어 있을 것이다. # npm publish 명령어로 배포를 수행하자. \u0026gt; npm publish npm notice npm notice package: postcss-delete-duplicate-selector@1.0.1 npm notice === Tarball Contents === npm notice 1.1kB LICENSE npm notice 2.2kB README.md npm notice 617B package.json npm notice 536B src/index.js npm notice === Tarball Details === npm notice name: postcss-delete-duplicate-selector npm notice version: 1.0.1 npm notice filename: postcss-delete-duplicate-selector-1.0.1.tgz npm notice package size: 2.0 kB npm notice unpacked size: 4.5 kB npm notice shasum: 6b77abd3659d37eb4b6362a706478cbd9bb2d9a5 패키지 삭제 패키지를 삭제하면 24시간 내에는 동일한 이름으로 패키지 등록이 불가하다.\n\u0026gt; npm unpublish postcss-delete-duplicate-selector 패키지 홍보 아래의 사이트의 가이드에 따라 플러그인을 등록 신청해보도록 하자.\nhttps://github.com/himynameisdave/postcss-plugins\nhttps://awesomejs.dev/\n",
+      "date": "2024-01-14 10:32:14",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "3",
+	  "permalink": "https://hwantage.github.io/posts/css-deduplicate-2/",
+      "title": "CSS-Deduplication part 2 (CSS 중복제거 플러그인 제작)",
+      "tags": ["PostCSS", "CSS deduplicate", "npm 패키지 배포"],
+      "description": "postcss 커스텀 스크립트를 이용하여 CSS 중복 제거 커스텀 스크립트를 개선하고 이를 npm 패키지로 생성 하는 방법",
+      "category": "[Front-end]",
+      "contents": "이전 포스팅을 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.\n이번 포스팅에서는 media 쿼리에 대한 처리 로직을 추가하고 postcss 플러그인으로 제작해 보도록 하겠습니다. 다음 포스팅을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.\nAbstract postcss 커스텀 스크립트 개선(media 쿼리 처리 로직 추가) npm 패키지로 배포 가능한 플러그인으로 제작 커스텀 스크립트 개선 중복제거 커스텀 스크립트는 selector 기반으로 작업을 수행하는데 @media 쿼리에 대해서는 중복제거를 수행하지 못하고 있습니다. @가 붙은 atrule 에 대해서도 처리가 가능하도록 스크립트를 개선하겠습니다.\n스크립트 개선 postcss.config.js 파일을 아래와 같이 수정합니다.\npostcss 코드 기술 방법에 대해서는 API 문서 의 내용을 참고하여 작성하면 됩니다.\nconst postcss = require(\u0026#34;postcss\u0026#34;); module.exports = { plugins: [customMerge({})], }; // custom-clean plugin to keep only the first declaration of each rule function customMerge(options) { return { postcssPlugin: \u0026#34;postcss-delete-duplicate-selector\u0026#34;, Once(root, { result }) { const filteredRules = new Map(); root.walk((node) =\u0026gt; { // Check if the node is a rule and not an at-rule and parent type is root if (node.type === \u0026#34;rule\u0026#34; \u0026amp;\u0026amp; node.parent.type === \u0026#34;root\u0026#34;) { const selector = node.selector; if (!filteredRules.has(selector)) { filteredRules.set(selector, node); } } else if (node.type === \u0026#34;atrule\u0026#34;) { const mediaRule = postcss.atRule({ name: node.name, params: node.params, }); node.nodes.forEach((rule) =\u0026gt; { const clonedRule = rule.clone(); mediaRule.append(clonedRule); }); filteredRules.set(mediaRule.toString(), mediaRule); } }); root.removeAll(); filteredRules.forEach((rule, index) =\u0026gt; { root.append(rule); }); }, }; } npm run build 명령어를 수행하여 atrule 에 대해서도 잘 처리가 되는지 확인합니다.\n플러그인 코드 작성 동작이 잘 되는것을 확인했으면 이를 플러그인 형태로 제작하도록 하겠습니다. 플러그인의 이름은 postcss-delete-duplicate-selector 로 하겠습니다.\nnode_modules 디렉토리 하위에 postcss-delete-duplicate-selector 디렉토리를 생성합니다.\n디렉토리의 전체 구조는 다음과 같습니다.\nnode_modules/potcss-delete-duplicate-selector/\nsrc 디렉토리에 index.js 파일을 다음과 같이 생성합니다.\nnode_modules/potcss-delete-duplicate-selector/src/index.js\nconst postcss = require(\u0026#34;postcss\u0026#34;); const plugin = (opts = {}) =\u0026gt; { return { postcssPlugin: \u0026#34;postcss-delete-duplicate-selector\u0026#34;, Once(root, { result }) { const filteredRules = new Map(); root.walk((node) =\u0026gt; { // Check if the node is a rule and not an at-rule and parent type is root if (node.type === \u0026#34;rule\u0026#34; \u0026amp;\u0026amp; node.parent.type === \u0026#34;root\u0026#34;) { const selector = node.selector; if (!filteredRules.has(selector)) { filteredRules.set(selector, node); } } else if (node.type === \u0026#34;atrule\u0026#34;) { const mediaRule = postcss.atRule({ name: node.name, params: node.params, }); node.nodes.forEach((rule) =\u0026gt; { const clonedRule = rule.clone(); mediaRule.append(clonedRule); }); filteredRules.set(mediaRule.toString(), mediaRule); } }); root.removeAll(); filteredRules.forEach((rule, index) =\u0026gt; { root.append(rule); }); }, }; }; plugin.postcss = true; module.exports = plugin; module.exports 를 이용하여 외부 참조가 가능하도록 코드를 작성해줍니다.\npackage.json 파일은 다음과 같이 작성합니다.\nnode_modules/potcss-delete-duplicate-selector/package.json\n{ \u0026#34;name\u0026#34;: \u0026#34;postcss-delete-duplicate-selector\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;PostCSS plugin delete duplicate css selector in the file\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;src/index.js\u0026#34;, \u0026#34;keywords\u0026#34;: [ \u0026#34;postcss\u0026#34;, \u0026#34;css\u0026#34;, \u0026#34;postcss-plugin\u0026#34;, \u0026#34;delete\u0026#34;, \u0026#34;duplicate\u0026#34;, \u0026#34;selector\u0026#34;, \u0026#34;Deduplication\u0026#34; ], \u0026#34;author\u0026#34;: \u0026#34;hwantage \u0026lt;hwantagexsw2@gmail.com\u0026gt;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;MIT\u0026#34;, \u0026#34;repository\u0026#34;: { \u0026#34;type\u0026#34;: \u0026#34;git\u0026#34;, \u0026#34;url\u0026#34;: \u0026#34;https://github.com/hwantage/postcss-delete-duplicate-selector.git\u0026#34; }, \u0026#34;engines\u0026#34;: { \u0026#34;node\u0026#34;: \u0026#34;\u0026gt;=18.15.0\u0026#34; }, \u0026#34;peerDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34; }, \u0026#34;devDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34; } } \u0026ldquo;main\u0026rdquo; 항목이 entry 소스 경로가 됩니다. 우리는 src 디렉토리 하위에 코드를 작성했기 때문에 src/index.js 로 작성합니다.\n\u0026ldquo;version\u0026quot;의 경우 1.0.0 부터 작성을 하시면 됩니다.\n프로젝트 루트의 postcss.config.js 파일을 다음과 같이 변경합니다.\n/postcss.config.js\nmodule.exports = { plugins: [require(\u0026#34;postcss-delete-duplicate-selector\u0026#34;)], }; 기존의 커스텀 함수 코드를 제거하고 node_modules 에 작성된 플러그인을 참조하도록 변경하였습니다.\nnpm run build 를 수행하여 node_modules 하위에 생성한 플러그인 코드를 통해 CSS 중복 제거가 잘 수행되는지 확인합니다.\n여기까지 하면 postcss 를 통해 플러그인 생성 준비를 완료했습니다.\n작성된 플러그인을 npm 패키지에 등록하여 오픈소스 생태계에 기여하는 방법에 대해 다음 포스팅에서 설명하겠습니다.\n다음 포스팅 확인하기\n",
+      "date": "2024-01-15 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "4",
+	  "permalink": "https://hwantage.github.io/posts/css-deduplicate/",
+      "title": "CSS-Deduplication part1 (postcss 커스텀 스크립트를 이용한 CSS 중복 제거)",
+      "tags": ["PostCSS", "CSS deduplicate", "file merge"],
+      "description": "두 개의 CSS 파일을 하나의 파일로 병합하고, 중복을 제거합니다. 이후 최적화를 위한 압축을 수행합니다.",
+      "category": "[Front-end]",
+      "contents": "본 포스팅을 통해 postcss 를 이용하는 방법에 대해 배울 수 있습니다. 또한 원하는 플러그인이 없는 경우 custom 플러그인을 작성하는 방법을 학습할 수 있습니다.\nAbstract 두 개의 파일을 하나의 파일로 병합. CSS 파일내에 중복된 속성에 대해 상위에 선언된 속성만 남기고 동일 속성명에 대해서는 삭제를 수행. CSS 압축 수행. 두 개의 파일을 하나의 파일로 병합 두개 또는 세개의 파일을 하나의 파일로 병합하는 방법은 다음과 같다.\n# linux \u0026gt; cat a.css b.css c.css \u0026gt; input.css # windows \u0026gt; type a.css b.css c.css \u0026gt; input.css 프로젝트 초기화 npm 프로젝트를 초기화 합니다.\n\u0026gt; npm init -y # -y 옵션을 사용하면 불필요한 질문을 skip 합니다. PostCSS 플러그인 설치 공식문서에 다음과 같이 postcss를 설명하고 있다.\n이름에서도 알 수 있듯이 CSS 후처리를 js 플러그인을 기반으로 다양한 변환 작업 수행을 도와준다.\n아래의 명령어를 통해 PostCSS 와 PostCSS-CLI 를 설치해보자.\n\u0026gt; npm i -D postcss postcss-cli # -D 옵션 : --save-dev의 축약형으로 devDependency로 설치 node 의 버전은 18.15.0 으로 진행 \u0026gt; node -v v18.15.0 \u0026gt; nvm list 18.15.0 (Currently using 64-bit executable) 14.17.4 # 💡 14.17.4 버전에서는 postcss-cli 가 동작하지 않는다. 아래의 명령어로 버전 변경. \u0026gt; nvm use 18.15.0 package.json 파일 내용\n{ \u0026#34;name\u0026#34;: \u0026#34;postcss2\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;, \u0026#34;build\u0026#34;: \u0026#34;postcss input.css --output dist/output.css\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;, \u0026#34;devDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34;, \u0026#34;postcss-cli\u0026#34;: \u0026#34;^11.0.0\u0026#34; } } input.css 파일의 내용에서 중복제거하여 dist/output.css 로 떨구도록 설정하였다.\ninput.css 파일 내용\nh1 { margin: 0 auto; padding-left: 10px; } h1 { margin: 10 10 10 10; } h1 { color: red; } .test { color: red; } .hello { background-color: blue; } .foo { width: 100px; height: 100px; } .foo { height: 100px; width: 100px; } .test { margin: 0 auto; padding-left: 10px; } input.css 파일내용 중 중복된 h1 선언의 경우 맨 위에것만 남기도록 처리할 것이다. (모든 중복 선택자 제거)\npostcss 플러그인 사용을 위한 환경설정 파일인 postcss.config.js 파일을 프로젝트 루트에 생성한다.\npostcss.config.js 파일 내용\nconst postcss = require(\u0026#34;postcss\u0026#34;); module.exports = { plugins: [customMerge({})], }; // custom-clean plugin to keep only the first declaration of each rule function customMerge(options) { return postcss.plugin(\u0026#34;custom-clean\u0026#34;, () =\u0026gt; { return (root, result) =\u0026gt; { const visitedRules = new Map(); root.walkRules((rule) =\u0026gt; { const selector = rule.selector; if (!visitedRules.has(selector)) { visitedRules.set(selector, rule); } }); root.removeAll(); visitedRules.forEach((rule) =\u0026gt; { root.append(rule); }); }; }); } 빌드 수행\n\u0026gt; npm run build postcss2@1.0.0 build postcss input.css --output dist/output.css custom-clean: postcss.plugin was deprecated. Migration guide: https://evilmartians.com/chronicles/postcss-8-plugin-migration dist/output.css 파일 결과\nh1 { margin: 0 auto; padding-left: 10px; } .test { color: red; } .hello { background-color: blue; } .foo { width: 100px; height: 100px; } 여기까지 하면 CSS 중복을 제거 하는 작업이 완료되었다.\npostcss-clean을 이용한 CSS 압축 postcss-clean 설치\n\u0026gt; npm i -D postcss-clean package.json 파일 내용\n{ \u0026#34;name\u0026#34;: \u0026#34;postcss2\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;, \u0026#34;build\u0026#34;: \u0026#34;postcss input.css --output dist/output.css\u0026#34;, \u0026#34;build:min\u0026#34;: \u0026#34;postcss dist/output.css --use postcss-clean -o dist/output.min.css\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;, \u0026#34;devDependencies\u0026#34;: { \u0026#34;postcss\u0026#34;: \u0026#34;^8.4.32\u0026#34;, \u0026#34;postcss-cli\u0026#34;: \u0026#34;^11.0.0\u0026#34;, \u0026#34;postcss-clean\u0026#34;: \u0026#34;^1.2.2\u0026#34; } } 💡 build:min 스크립트를 추가했다. 다른설정은 불필요.\n바로 빌드 수행\n\u0026gt; npm run build:min output.min.css 파일 결과 내용\nh1{margin:0 auto;padding-left:10px}.test{color:red}.hello{background-color:#00f}.foo{width:100px;height:100px}h1,h2{margin:10 10 10 10}.hwan77{color:red} /_# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIiUzQ2lucHV0JTIwY3NzJTIwMSUzRSJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxHQUFHLGFBQWEsQ0FBQyxpQkFBaUIsQ0FBQyxNQUFNLFNBQVMsQ0FBQyxPQUFPLHFCQUFxQixDQUFDLEtBQUssV0FBVyxDQUFDLFlBQVksQ0FBQyxNQUFNLGtCQUFrQixDQUFDLFFBQVEsU0FBUyIsImZpbGUiOiJvdXRwdXQubWluLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxe21hcmdpbjowIGF1dG87cGFkZGluZy1sZWZ0OjEwcHh9LnRlc3R7Y29sb3I6cmVkfS5oZWxsb3tiYWNrZ3JvdW5kLWNvbG9yOiMwMGZ9LmZvb3t3aWR0aDoxMDBweDtoZWlnaHQ6MTAwcHh9aDEsaDJ7bWFyZ2luOjEwIDEwIDEwIDEwfS5od2FuNzd7Y29sb3I6cmVkfSJdfQ== _/ build 스크립트에서 postcss ... 와 같이 설정하는 경우 postcss.config.js 파일의 내용을 기반으로 스크립트를 수행한다.\npostcss --use postcss-clean 과 같이 플러그인의 이름을 직접 지정하는 경우 postcss.config.js 파일을 참고하지 않고 바로 postcss-cli를 통해서 플러그인을 실행할 수 있다.\n",
+      "date": "2024-01-16 11:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "5",
+	  "permalink": "https://hwantage.github.io/posts/symboliclink/",
+      "title": "심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인",
+      "tags": ["Symbolic link", "powershell", "hugo", "image", "마크업 에디터"],
+      "description": "마크업 에디터를 통해 이미지를 붙여넣기 하면 링크 경로가 맞지 않아 심볼릭 링크를 생성하여 이미지가 정상적으로 뜨도록 설정해보자.",
+      "category": "[Front-end]",
+      "contents": "Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 hugo server 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.\n설정 화면으로 이동하여\n이미지 경로를 다음과 같이 설정한다.\n위와 같이 설정하면 문서가 존재하는 posts의 하위 디렉토리인 content 의 assets 디렉토리에 붙여넣기한 이미지 파일이 저장된다.\n하지만 브라우저를 통해 페이지를 확인해 보면 제대로 이미지가 뜨지 않게 된다.\n실제로 이미지가 저장된 경로는 content/assets 이지만 블로그 포스트의 url은 파일이름(포스트이름)이 한번더 들어가기 때문이다.\nhttp://localhost:1313/posts/symboliclink/\n실제로는 content/assets 디렉토리에 파일이 있다. 마크업 소스상에 ../assets/이미지파일명 형태로 입력되어 있기 때문에 url상에서의 이미지 파일 위치는 /posts/assets 이어야 한다.\n심볼릭 링크를 통해 content/assets에 파일이 생성되면 content/posts/assets 디렉토리로 파일이 복사되도록 처리해보자.\n파워쉘을 관리자 권한으로 실행한다.\ncontent/posts 디렉토리로 이동하여 아래의 명령어를 수행한다.\nSet-Location -Path .\\\n이어서 같은 폴더에서 다음과 같이 명령어를 수행한다.\nNew-Item -ItemType SymbolicLink -Path .\\assets -Target ..\\assets\n중간에 에러가 발생한 이유는 posts/assets 디렉토리가 이미 생성되어 있기 때문에다. 탐색기에서 해당 디렉토리를 삭제후 재시도 하면 정상적으로 심볼릭 링크가 생성됨을 확인할 수 있다.\n탐색기에서는 아래와 같이 보인다. (참고로 심볼릭 링크를 삭제하려면 해당 디렉토리를 탐색기에서 삭제하면 된다)\n이제 이미지를 붙여넣기 하면 content/assets 디렉토리에 파일이 저장되면서 동시에 content/posts/assets 디렉토리에도 파일이 생성되는 것을 확인할 수 있다.\n참고로 windows cmd.exe 에서 mklink 명령어를 통해 심볼릭 링크를 생성하는 방법이 있지만 해당 방법으로 링크 생성 후 hugo 서버를 수행하면 에러가 발생한다.\n참고 url : https://mikefrobbins.com/2023/02/08/rendering-images-in-markdown-preview-of-hugo-site/\n",
+      "date": "2024-01-16 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "6",
+	  "permalink": "https://hwantage.github.io/posts/fake-terminal/",
+      "title": "Xterm.js 를 이용한 fake terminal 웹 제작",
+      "tags": ["Xterm.js", "fake terminal"],
+      "description": "웹 사이트에서 fake terminal 제작하는 방법.",
+      "category": "[Front-end]",
+      "contents": "\nXterm.js 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.\n데모를 확인해보세요. DEMO\n시작하기 먼저, 모듈을 설치해야 합니다. npm을 통해서만 제공 되므로 다음을 실행하여 xterm.js를 해당 모듈을 종속성으로 추가해야 합니다.\nnpm install xterm 루트에 index.html 파일을 만들고 다음과 같이 코딩합니다.\n/index.html:\n\u0026lt;!DOCTYPE html\u0026gt; \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;node_modules/xterm/css/xterm.css\u0026#34; /\u0026gt; \u0026lt;script src=\u0026#34;node_modules/xterm/lib/xterm.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; \u0026lt;div id=\u0026#34;terminal\u0026#34;\u0026gt;\u0026lt;/div\u0026gt; \u0026lt;script\u0026gt; var term = new Terminal(); term.open(document.getElementById(\u0026#34;terminal\u0026#34;)); term.write(\u0026#34;Hello from \\x1B[1;3;31mxterm.js\\x1B[0m $ \u0026#34;); \u0026lt;/script\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 브라우저를 통해 index.html 파일을 실행하면 다음과 같은 결과를 확인할 수 있습니다.\n아직까지는 아무런 동작을 하지 않습니다. 키보드 이벤트를 추가하고 제어 코드를 작성해야 합니다.\n코드 작성 방법 xterm 의 공식 문서에서 사용가능한 Method 를 확인하고 원하는 기능을 구현합니다.\n기본적으로 모든 키보드와 출력 메시지를 javascript 로 하나 하나 구현하여 xterm 모듈을 통해 출력하도록 처리하면 됩니다.\n본 프로젝트에서 사용한 method의 목록은 다음과 같습니다.\nopen : 원하는 html 객체에 터미널을 생성합니다. write : 텍스트를 출력합니다. writeln : 텍스트를 라인단위로 출력합니다. onKey : 키보드 입력 이벤트를 처리합니다. focus : 터미널 커서를 포인트 합니다. dispose : 터미널을 dispose 합니다. 스타일링 ANSI Escape 코드를 이용하여 글자색, 전경색 등을 스타일링 할 수 있습니다. ANSI 이스케이프 코드 는 터미널을 제어하는데 사용되는 표준입니다.\n16진수 값으로 \\x1B 또는 8진수 값으로 \\033 인 Escape문자로 시작하고 아래의 코드표를 참고하면 됩니다.\nANSI color code color code 기능 [0m 모든 색과 스타일 초기화 [1m 굵게(bold) / 밝게 [3m 이탤릭체(italic) [4m 밑줄(underline) [7m 반전(글자색/배경색을 거꾸로) [9m 가로줄 치기 [22m 굵게(bold) 제거 [23m 이탤릭체(italic)제거 [24m 밑줄(underline)제거 [27m 반전 제거 [29m 가로줄 제거 [30m 글자색: 검정 [31m 글자색: 빨강 [32m 글자색: 초록 [33m 글자색: 노랑 [34m 글자색: 파랑 [35m 글자색: 마젠트(분홍) [36m 글자색: 시안(청록) [37m 글자색: 백색 [39m 글자색으로 기본값으로 [40m 바탕색: 흑색 [41m 바탕색: 적색 [42m 바탕색: 녹색 [43m 바탕색: 황색 [44m 바탕색: 청색 [45m 바탕색: 분홍색 [46m 바탕색: 청록색 [47m 바탕색: 흰색 [49m 바탕색을 기본값으로 사용법 및 사용 예 Repo git : https://github.com/hwantage/fake-terminal.git\ndemo : https://hwantage.github.io/fake-terminal/demo/\n",
+      "date": "2024-01-19 10:29:50",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "7",
+	  "permalink": "https://hwantage.github.io/posts/google-analytics/",
+      "title": "HUGO 블로그에 구글 애널리틱스 연결하기",
+      "tags": ["hugo", "google analytics", "구글 애널리틱스"],
+      "description": "구글 애널리틱스 계정을 생성하고 블로그에 방문하는 사용자 정보를 확인하기",
+      "category": "[Front-end]",
+      "contents": "HUGO를 통해 블로그를 생성하고 나서 과연 방문객이 얼마나 될지 궁금할 것이다.\n구글 애널리틱스를 이용하여 방문현황을 파악해 보자.\n구글 애널리틱스 계정 생성하기 그글 애널리틱스 홈으로 이동하여 지금 시작하기를 클릭합니다.\nhttps://marketingplatform.google.com/about/analytics/\n당연하게도 구글 계정이 존재해야 합니다.\n왼쪽 하단의 관리 메뉴를 클릭한 후 +만들기 에서 계정을 선택하여 계정을 생성합니다. 이 계정은 구글 계정이 아니고 추적하고자 하는 사이트별로 생성하는 계정이라 생각하면 됩니다. 블로그를 여러개 운영중이라면 여러개의 계정을 생성하면 됩니다.\n아래의 단계별 정보를 모두 입력하면 계정생성이 완료됩니다.\n비지니스 정보 등 애매한 부분은 적당히 입력하고 넘어갑니다.\n홈에서 아래와 같이 0이라는 숫자만 확인할 수 있을겁니다. \u0026ldquo;태그 지정 도움말 얻기\u0026rdquo; 버튼을 눌러 추적 코드를 확인하고 블로그에 적용해야 합니다.\n계정 생성이 완료되면 직접설치 태그를 확인할 수 있습니다.\nHUGO 탬플릿에 코드 적용 하기 휴고 템플릿에 따라 적용 방법은 상이할 수 있습니다.\n나의 경우에는 아래의 경로의 파일을 직접 수정하는 방법으로 처리했습니다. header 폴더의 경우 항상 포함되는 파일이기 때문에 index.html 파일에 구글 애널리틱스 코드가 적용된 google_analytics.html 파일을 인크루드 하도록 했습니다.\ngoogle_analytics.html 파일 내용 (구글 추적 코드를 그대로 붙여넣었습니다)\n\u0026lt;!-- Google tag (gtag.js) --\u0026gt; \u0026lt;script async src=\u0026#34;https://www.googletagmanager.com/gtag/js?id=G-JB0QM0P0XF\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; \u0026lt;script\u0026gt; window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag(\u0026#34;js\u0026#34;, new Date()); gtag(\u0026#34;config\u0026#34;, \u0026#34;G-JB0QM0P0XF\u0026#34;); \u0026lt;/script\u0026gt; index.html 파일 내용\n\u0026lt;header class=\u0026#34;flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12\u0026#34;\u0026gt; {{ partial \u0026#34;header/avatar\u0026#34; . }} \u0026lt;div class=\u0026#34;flex flex-col gap-5\u0026#34;\u0026gt;{{ partial \u0026#34;header/title\u0026#34; . }} {{ partial \u0026#34;header/nav\u0026#34; . }}\u0026lt;/div\u0026gt; {{- if not .Site.IsServer -}} {{ partial \u0026#34;header/google_analytics\u0026#34; . }} {{- end -}} \u0026lt;/header\u0026gt; {{- if not .Site.IsServer -}} 이 코드는 hugo server 명령어를 통해 로컬에서 실행된 경우에는 구글 추적을 하지 않기 위해 localhost 조건을 체크합니다. 없어도 무관합니다.\n{{ partial \u0026quot;header/google_analytics\u0026quot; . }} 이 코드에서 google_analytics.html 파일을 불러오게 됩니다.\n정상 동작하는지 확인하기 위해서는 github 에 배포 한 후 접속을 해보면 됩니다.\nhttps://hwantage.github.io\n구글 애널리틱스 홈으로 이동해보면 카운트가 1이 되어있다면 정상 동작하는 겁니다.\n이상입니다.\n",
+      "date": "2024-01-20 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "8",
+	  "permalink": "https://hwantage.github.io/posts/utterances/",
+      "title": "HUGO 블로그에 댓글 기능 연동",
+      "tags": ["hugo", "utterances", "댓글 기능"],
+      "description": "utterances 서비스를 이용해 HUGO 블로그에 댓글 기능 달기",
+      "category": "[Front-end]",
+      "contents": "HUGO를 통해 블로그 포스트 하단에 댓글 기능을 연동하는 방법을 알아보겠습니다.\n댓글 기능을 연동하는 방법은 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.\n하지만 최근에는 Github Application 방식으로 친화적이며 편리하며 접근성이 강력한 Utterances 를 많이 이용합니다.\n작동방식은 Github의 이슈 검색 API를 사용해서 각 글에 해당하는 이슈가 생성되고(최초 댓글 작성 시), 댓글들은 해당 글로 생성된 이슈에 대한 댓글로 추가되는 방식이기 때문에 Github와 찰떡 이라 할 수 있습니다.\n적용하는 방법 또한 매우 간단하여 적용한는데 어려움이 없었습니다.\nUtterance 설치? 설치랄 것이 없는게 그냥 사이트에서 버튼 클릭하면 끝이다. 로컬에 뭔가 설치하는 것이 아님.\n우선 아래의 url로 접속하여 중간에 있는 configuration 아래의 utterances app 항목을 클릭합니다.\nhttps://utteranc.es/\n아래와 같은 화면에서 install 버튼을 클릭합니다.\n이후 등장하는 화면에서 블로그를 운영중인 repository를 선택하세요.\nSelected 1 repository 아래의 url을 잘 기억해야 합니다.\n저의 경우 hwantage/hwantage.github.io 입니다.\nInstall을 눌러 완료 합니다.\n다시 https://utteranc.es/ 사이트에서 Configuration 항목 하위의 input 상자에 적절한 값을 입력하면 스크립트가 생성됩니다.\nHUGO 에 댓글 기능 적용하기 위에서 생성된 스크립트를 HUGO 템플릿의 적당한 파일에 붙여넣기 하면 모든게 완료된다.\n나의 경우 아래 위치의 index.html에 붙여넣기를 했다.\nindex.html 파일 내용:\n{{ if .IsPage }} \u0026lt;!-- giscus --\u0026gt; {{ if .Site.Params.giscus.enable }} {{ partial \u0026#34;single/comments/giscus\u0026#34; . }} {{ end }} \u0026lt;!-- disqus --\u0026gt; {{ if .Site.Params.disqusShortname }} {{ partial \u0026#34;single/comments/disqus\u0026#34; . }} {{ end }} {{ end }} \u0026lt;script src=\u0026#34;https://utteranc.es/client.js\u0026#34; repo=\u0026#34;hwantage/hwantage.github.io\u0026#34; issue-term=\u0026#34;pathname\u0026#34; theme=\u0026#34;github-light\u0026#34; crossorigin=\u0026#34;anonymous\u0026#34; async\u0026gt; \u0026lt;/script\u0026gt; 맨 아래에 스크립트를 붙여 넣었다.\n완료!\n",
+      "date": "2024-01-20 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "9",
+	  "permalink": "https://hwantage.github.io/posts/google-search-console/",
+      "title": "HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기",
+      "tags": ["hugo", "google search console", "naver search advisor", "daum", "sitemap.xml", "robots.txt"],
+      "description": "검색엔진에 블로그 게시물을 노출시키는 방법을 정리합니다.",
+      "category": "[Front-end]",
+      "contents": "검색엔진에 노출이 되도록 블로그를 설정합니다.\n구글 검색 노출 방법 구글 서치 콘솔 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.\n도메인이 있는 경우 왼쪽에 입력을 하면 됩니다. 대부분의 블로그는 우측 항목을 입력하면 됩니다.\n계속을 누르면 소유권 확인 페이지가 나타납니다. 파일을 다운로드 해서 블로그 루트에 업로드를 해야합니다.\n파일 업로드 이전에 확인 버튼을 누르면 아래와 같은 메시지가 출력됩니다.\n업로드 후 다시 확인하도록 합니다.\n속성으로 이동하기 해서 새 사이트맵 추가를 합니다. sitemap.xml 을 입력후 제출버튼을 클릭하면됩니다.\n사이트맵을 제출합니다.\n그런데 여기서 문제가 발생했네요. 상태에 가져올 수 없음 이라고 뜨고 있습니다.\nURL 검사 메뉴에서 포스트 주소를 입력하고 색인 생성 요청을 해보겠습니다.\n색인이 생성되어 있지 않다고 나오는데, 색인 생성 요청을 눌러보겠습니다.\nrobots.txt에 의해 차된되어 등록할 수 없다고 확인되네요.\n실제로 robots.txt 파일을 확인해보니 아래와 같이 되어 있습니다.\nUser-agent: * Disallow: /tags/daum/ Disallow: /categories/front-end/ Disallow: /tags/google-search-console/ Disallow: /tags/hugo/ Disallow: /posts/google-search-console/ Disallow: / Disallow: /tags/naver-search-advisor/ Disallow: /posts/ ... 전부 Disallow 로 되어 있기 때문에 크롤링이 금지된 것입니다. HUGO 에서 robots.txt 파일의 설정을 변경해야 할 것 같습니다.\nHUGO 공식 가이드를 확인해 보니 설정 방법은 다음과 같이 안내되어 있습니다.\nrobots.txt template lookup order You may overwrite the internal template with a custom template. Hugo selects the template using this lookup order:\n/layouts/robots.txt /themes/\u0026lt;THEME\u0026gt;/layouts/robots.txt 저의 경우 1번의 방법으로 하겠습니다. /layouts/robots.txt 파일을 아래와 같이 생성합니다.\nUser-agent: * Allow: / Sitemap: https://hwantage.github.io/sitemap.xml HUGO 빌드를 수행합니다.\nHUGO 설정 HUGO 빌드를 수행하면 public 폴더에 sitemap.xml 과 robots.txt 파일을 자동으로 생성합니다.\nhugo.toml 파일에 다음과 같이 설정합니다.\nenableRobotsTXT = true # sitemap 생성 [sitemap] # always, hourly daily, weekly, monthly, yearly, never changefreq = \u0026#34;weekly\u0026#34; filename = \u0026#34;sitemap.xml\u0026#34; priority = 0.5 네이버 등록 방법 네이버 Search Advisor에 접속합니다.\n로그인을 하고 웹마스터 도구 사용하기 버튼을 클릭합니다.\n블로그 주소를 입력하면 소유주 확인창이 나타납니다.\nHTML 확인 파일을 다운로드 받아 블로그 저장소에 업로드 합니다.\n사이트맵 제출 메뉴에서 sitemap.xml 파일을 등록합니다.\nRSS 제출 메뉴에서 RSS 파일을 등록합니다. HUGO 에서 자동으로 index.xml 파일을 생성하므로 아래와 같이 입력합니다.\nrobots.txt 파일 검증을 합니다. 수집요청 버튼을 클릭하면 됩니다.\n이제 검색 결과에 반영되기를 기다려 보겠습니다.\nDAUM 에 등록하기 Daum 검색등록 페이지로 이동합니다.\n시키는대로 따라 하면 됩니다. 제일 간단하네요.\n",
+      "date": "2024-01-21 11:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "10",
+	  "permalink": "https://hwantage.github.io/posts/js-destructuring-assignment/",
+      "title": "Javascript 비구조화 할당",
+      "tags": ["JS", "비구조화 할당"],
+      "description": "비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)",
+      "category": "[Javascript]",
+      "contents": "정의 비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)\n즉 배열 또는 복잡한 구조의 Json 안에 있는 값을 편하게 꺼내 쓸 수 있는 방법.\n배열 기본 문법 const [a1, a2, ...a3over] = [1, 2, 3, 4, 5]; console.log(a1); // 1 console.log(a2); // 2 console.log(a3over); // [3, 4, 5] 좌항이 호출될 변수명 집합, 우항이 할당할 값\n좌항의 전개 연산자(\u0026hellip;)은 항상 우측 끝에 있어야 한다.\nconst [a1, ...a3over, a3] = [1, 2, 3, 4, 5]; // error 객체 기본 문법 중요 const { a1, a2, ...a3over } = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; console.log(a1); // 10 console.log(a2); // 20 console.log(a3over); // { a3: 30, a4: 40 } 우항의 key 값이 좌항의 변수명과 매칭, 따라서 순서는 상관없음.\n좌항의 전개 연산자(\u0026hellip;)은 항상 우측 끝에 있어야 한다.\nconst { a2, a4, ...a_rest } = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; // 순서 상관 없음 console.log(a2); // 20 console.log(a4); // 40 console.log(a_rest); // { a1 : 10, a3 : 30 }; const { a2, ...a_rest, a4 } = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; // error 깊은 구조의 객체 할당 const object = { id : \u0026#39;hwan77\u0026#39;, information: { name: \u0026#39;김정환\u0026#39;, languages: [\u0026#39;korean\u0026#39;, \u0026#39;english\u0026#39;, \u0026#39;chinese\u0026#39;] }, age : 18 }; const {name, languages} = object.information; const {id, age} = object; console.log(name); // 김정환 console.log(languages); // [\u0026#39;korean\u0026#39;, \u0026#39;english\u0026#39;, \u0026#39;chinese\u0026#39;] console.log(id); // hwan77 console.log(age); // 18 이름 변경 및 기본값 할당 const object = { id : \u0026#39;hwan77\u0026#39;, information: { name: \u0026#39;김정환\u0026#39;, languages: [\u0026#39;korean\u0026#39;, \u0026#39;english\u0026#39;, \u0026#39;chinese\u0026#39;] }, age : 18 }; const {id : userID, address : addr = \u0026#39;homeless\u0026#39; } = object; // object 내의 id 키를 userID 로 이름 변경 // object 내의 adress 키를 addr로 이름 변경 및 객체에 값이 없는 경우 homeless 기본값 세팅 console.log(id); // error (id is not defined) console.log(userID); // hwan77 console.log(address); // error (address is not defined) console.log(addr); // homeless 배열, 객체 Deep Copy shallow copy(얕은 복사) // shallow copy let array1 = [1, 2, 3, 4, 5]; let array2 = array1; array1[0] = \u0026#39;one\u0026#39;; console.log(array1); // [\u0026#39;one\u0026#39;, 2, 3, 4, 5] console.log(array2); // [\u0026#39;one\u0026#39;, 2, 3, 4, 5] 같은 값에 대한 참조만 복사 하여 같은 메모리를 가리킨다.\ndeep copy(깊은 복사) let array1 = [1, 2, 3, 4, 5]; let array2 = [...array1]; array1[0] = \u0026#39;one\u0026#39;; console.log(array1); // [\u0026#39;one\u0026#39;, 2, 3, 4, 5] console.log(array2); // [1, 2, 3, 4, 5] 완전히 새로운 객체로 할당됨\ndeep copy \u0026amp; 값 변경 \u0026amp; 값 추가 const a = { a1 : 10, a2 : 20, a3 : 30, a4 : 40 }; // deep copy + 값 변경 const aCopy = { ...a, a3 : \u0026#39;삼십\u0026#39; }; console.log(aCopy); // {a1: 10, a2: 20, a3: \u0026#39;삼십\u0026#39;, a4: 40} const aCopy2 = { a3 : \u0026#39;삼십\u0026#39;, ...a }; // 순서를 바꾸면? console.log(aCopy2); // {a1: 10, a2: 20, a3: 30, a4: 40} // deep copy + 새로운 값 할당 const aCopy3 = { aFirst : 0, ...a }; console.log(aCopy3); // {aFirst: 0, a1: 10, a2: 20, a3: 30, a4: 40} const aCopy4 = { ...a, aLast : 999 }; // 순서를 바꾸면? console.log(aCopy4); // {a1: 10, a2: 20, a3: 30, a4: 40, aLast: 999} ",
+      "date": "2024-01-22 13:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "11",
+	  "permalink": "https://hwantage.github.io/posts/js-find/",
+      "title": "Javascript find, findIndex, filter",
+      "tags": ["JS", "find", "findIndex", "filter"],
+      "description": "Javascript 객체 탐색시 자주 사용하는 find, findIndex, filter 문법을 정리합니다.",
+      "category": "[Javascript]",
+      "contents": "find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.\nconst array1 = [5, 12, 8, 130, 44]; const found = array1.find(element =\u0026gt; element \u0026gt; 13); console.log(found); // 44 findIndex findIndex() 메서드는 주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.\nconst array1 = [5, 12, 8, 130, 44]; const index1 = array1.findIndex((element) =\u0026gt; element \u0026gt; 10) console.log(index1); // 1 // findIndex 는 콜백으로 3개의 인수를 반환 // element // 배열에서 처리중인 현재 요소. // index // 배열에서 처리중인 현재 요소의 인덱스. // array // findIndex 함수가 호출된 배열 자체. const index2 = array1.findIndex((element, index, array) =\u0026gt; { console.log(element, index, array); return element===8; }) //5 0 (5) [5, 12, 8, 130, 44] //12 1 (5) [5, 12, 8, 130, 44] //8 2 (5) [5, 12, 8, 130, 44] console.log(index2); // 2 filter filter() 메서드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다. 만족하는 결과가 없는 경우 빈 배열 [] 을 반환합니다.\nconst numbers = [1, 2, 3, 4, 5]; const result = numbers.filter(element =\u0026gt; element \u0026gt; 3); console.log(result); // [4, 5] const people = [ {\u0026#34;name\u0026#34; : \u0026#34;김정환\u0026#34;, \u0026#34;age\u0026#34; : 18}, {\u0026#34;name\u0026#34; : \u0026#34;홍길동\u0026#34;, \u0026#34;age\u0026#34; : 17}, {\u0026#34;name\u0026#34; : \u0026#34;강감찬\u0026#34;, \u0026#34;age\u0026#34; : 16}, {\u0026#34;name\u0026#34; : \u0026#34;이순신\u0026#34;, \u0026#34;age\u0026#34; : 15}, {\u0026#34;name\u0026#34; : \u0026#34;아이유\u0026#34;, \u0026#34;age\u0026#34; : 14} ] const oldPeople = people.filter(element =\u0026gt; element.age \u0026gt; 15); console.log(oldPeople); //(3) [{…}, {…}, {…}] //0: {name: \u0026#39;김정환\u0026#39;, age: 18} //1: {name: \u0026#39;홍길동\u0026#39;, age: 17} //2: {name: \u0026#39;강감찬\u0026#39;, age: 16} const youngPeople = people.filter(element =\u0026gt; element.age \u0026lt; 14); console.log(youngPeople); // [] ",
+      "date": "2024-01-22 14:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "12",
+	  "permalink": "https://hwantage.github.io/posts/js-serialization/",
+      "title": "Javascript 직렬화(serialization)",
+      "tags": ["JS", "Function", "Hoisting"],
+      "description": "직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.",
+      "category": "[Javascript]",
+      "contents": "직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.\n위키의 정의는 아래와 같다.\n직렬화 (直列化) 또는 시리얼라이제이션(serialization)은 컴퓨터 과학의 데이터 스토리지 문맥에서 데이터 구조나 오브젝트 상태를 동일하거나 다른 컴퓨터 환경에 저장(이를테면 파일이나 메모리 버퍼에서, 또는 네트워크 연결 링크 간 전송)하고 나중에 재구성할 수 있는 포맷으로 변환하는 과정이다.\nWhy? 아래와 같이 해보면 alert창에는 [object Object] 라고 나오게 된다.\nvar hello = {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;}; alert(hello) // [object Object] 네트워크로 전송을 할 때도 동일하게 [object Object] 로 전달되기 때문에 직렬화를 통해 문자열로 변경이 필요한 것이다.\nHow? JSON.stringify() var hello = {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;}; var stringHello = JSON.stringify(hello); alert(stringHello) // {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;} console.log(typeof hello); // object console.log(typeof stringHello); // string 역직렬화(deserialization) JSON.parse() var hello = {\u0026#34;name\u0026#34;:\u0026#34;hello\u0026#34;}; var stringHello = JSON.stringify(hello); // serialization var objectHello = JSON.parse(stringHello); // deserialization alert(objectHello) // [object Object] console.log(typeof hello); // object console.log(typeof stringHello); // string console.log(typeof objectHello); // object ",
+      "date": "2024-01-22 14:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "13",
+	  "permalink": "https://hwantage.github.io/posts/js-template-literal/",
+      "title": "Javascript 템플릿 리터럴(Template literal)",
+      "tags": ["JS", "Template literal"],
+      "description": "ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다. 템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다. 문자열 인터폴레이션은 ${}으로 표현식을 감싸 사용합니다.",
+      "category": "[Javascript]",
+      "contents": " ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다. 템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다. 문자열 인터폴레이션은 ${}으로 표현식을 감싸 사용합니다.\nTemplate Literal 적용전\nfunction printStr(str) { console.log(\u0026#39;String is \u0026#39; + str + \u0026#39; !\u0026#39;) } Template Literal 적용\nfunction printStr(str) { console.log(`String is ${str} !`) } ",
+      "date": "2024-01-22 14:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "14",
+	  "permalink": "https://hwantage.github.io/posts/js-function/",
+      "title": "Javascript 함수 선언 방법과 호이스팅",
+      "tags": ["JS", "Function", "Hoisting"],
+      "description": "Javascript 함수선언문 (Function Declaration)과 함수표현식 (Function expression)의 차이점을 알아보고 호이스팅(hoisting)에 대해 알아본다.",
+      "category": "[Javascript]",
+      "contents": "함수 선언 방법 함수선언문 (Function Declaration) // 일반적인 함수 선언 방법 function add(a, b) { return a + b } 함수표현식 (Function expression) // arrow function으로 함수표현식 선언 방법 const myFunc1 = () =\u0026gt; { } // 매개변수가 없을 경우 const myFunc2 = x =\u0026gt; { } // 매개변수가 한 개인 경우, 소괄호를 생략 가능 const myFunc3 = (x, y) =\u0026gt; { } // 매개변수가 여러 개인 경우, 소괄호를 생략 불가 // Body 전개 방법 const myFunc4 = x =\u0026gt; { return x * 2 } // single line block const myFunc5 = x =\u0026gt; x * 2 // 함수 몸체가 한줄의 구문이라면 중괄호 생략 가능 const myFunc6 = () =\u0026gt; { return { a: 1 }} const myFunc7 = () =\u0026gt; ({ a: 1 }) // 위 표현과 동일. 객체 반환시는 소괄호를 사용. 호이스팅(hoisting) 예제 부터 보면\nhoistFunc(); function hoistFunc(){ console.log(\u0026#39;함수 선언이 아래에 있지만 문제 없어요\u0026#39;) } 자바스크립트는 실행되기 전에 필요한 함수와 변수들을 모두 모아서 유효 범위의 최상단에 선언한다. 이를 호이스팅이라고 한다. hoisting\n[명사] 끌어 올리기, 들어올려 나르기.\n호이스팅 되는 놈 : 함수선언문, var (단, 선언만 끌어 올려지고 값은 끌어올려지지 않음)\n호이스팅 안되는 놈 : 함수표현식, let, const\n왜 안해줌?\n파서가 안해줌.\n개발 실수도 줄여주고 나쁘지 않은 방향. 되는 놈은 하위 호환 유지를 위해 여전히 지원하는것 뿐.\nfunc1(message); // 함수 func1과 message가 선언되기 전에 함수를 호출 하였지만 호이스팅됨. function func1(message){ console.log(\u0026#39;your message is \u0026#39; + message); // your message is undefined } var message = \u0026#39;안녕\u0026#39;; // 안녕 이라는 값은 호이스팅되지 않아 undefined로 출력된다. func1 선언과 message 변수 선언이 호이스팅 되어 에러 없이 동작한다. 단, 값이 호이스팅 되지 않아 undefined 로 처리 된다.\n// 변수를 선언하지 않는 경우 func2(msg); // Uncaught ReferenceError 발생 function func2(msg){ console.log(msg); } func2의 경우 호이스팅 되어 문제 없으나 msg 변수는 선언이 되지 않아 에러 발생한다.\nconsole.log(name); // undefined var name = \u0026#39;hwan77\u0026#39;; // 위의 코드는 실제로 실행될 때 아래와 같이 처리됨. var name; console.log(name); // undefined name = \u0026#39;hwan77\u0026#39;; function과 arrow function 의 차이점(3가지가 없는 놈) 1) 이름이 없다. Arrow function은 익명 함수라는 점.\n//일반 function function myFunc(){ console.log(\u0026#34;hwan77\u0026#34;) } //arrow function () =\u0026gt; { console.log(\u0026#34;Nameless ㅠㅠ\u0026#34;) } //참조해서 다른곳에서 쓰려면? const myFunc = () =\u0026gt; {} 2) this가 없다. Arrow function은 자신의 this가 없다.\narrow function은 외부에 있던 this를 그대로 내부로 가져와서 사용한다.\n자바스크립트에서 this는 그 용법이 특이하다. 요약하자면 es5에서의 this는 이렇다.\n함수 실행시에는 전역(window) 객체를 가리킨다. 메소드 실행시에는 메소드를 소유하고 있는 객체를 가리킨다. 생성자 실행시에는 새롭게 만들어진 객체를 가리킨다. // this example let myInfo={ name: \u0026#34;hwan77\u0026#34;, print: function(){ console.log(this, this.name); } }; myInfo.print(); // {name: \u0026#39;hwan77\u0026#39;, print: ƒ} \u0026#39;hwan77\u0026#39; let myInfo={ name: \u0026#34;hwan77\u0026#34;, print: () =\u0026gt; { console.log(this, this.name); } }; myInfo.print(); // window \u0026#39;\u0026#39; const o = { name: \u0026#39;Kim\u0026#39;, speak: function () { function getName() { return `${this.name}`; } // 여기서의 this는 window 객체이다. 함수 실행시에는 전역(window) 객체를 가리킨다 return `My name is ${getName()}`; } }; o.speak(); // \u0026#34;My name is \u0026#34; const o = { name: \u0026#39;Kim\u0026#39;, speak: function() { const getName = () =\u0026gt; { return `${this.name}`; } // 여기에서의 this는 o라는 객체 return `My name is ${getName()}`; } }; o.speak(); // \u0026#34;My name is Kim\u0026#34; // arrow function은 맥락 상 위의 코드부터 보고 결합 3) arguments가 없다. Arrow function은 arguments가 없다.\n// 일반 function function func1() { console.log(arguments[0]); // 1 console.log(arguments[1]); // 2 console.log(arguments[2]); // undefined } func1(1, 2); // Arrow function const myFunc2 = () =\u0026gt; { console.log(arguments); // error } myFunc2(1, 2); 위 코드를 실행시켜보면\n그래서 Arrow function의 경우 arguments를 추가 시켜주기 위해서는 전개 연산자를 활용해 arguments를 직접 명시해주어야 한다!\n// 전개연산자 사용 const myFunc2 = (...arguments) =\u0026gt; { console.log(arguments); // [1, 2, 3, 4] } myFunc2(1, 2, 3, 4); ",
+      "date": "2024-01-22 14:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "15",
+	  "permalink": "https://hwantage.github.io/posts/js-performance-coding/",
+      "title": "Javascript 성능 향상 코딩 팁",
+      "tags": ["JS", "Performance", "성능"],
+      "description": "Javascript 코드 작성시 성능을 최적화 하는 방법",
+      "category": "[Javascript]",
+      "contents": "자바스크립트 성능 측정 방법 console.time console.time(0); // 여러가지 로직 수행 console.timeEnd(0); console.time(\u0026#39;t1\u0026#39;); // 다양한 로직 수행 console.timeEnd(\u0026#39;t1\u0026#39;); 0: 7468.280029296875 ms performance.now var t1 = performance.now(); // 여러가지 로직 수행 var t2 = performance.now(); console.log(\u0026#34;소요 시간: \u0026#34; + (t2 - t1) + \u0026#39;ms\u0026#39;) 소요 시간: 5976.399999976158ms console.time 이 더 사용하기 쉬우나 비표준이므로 디버깅 용도로만 사용할 것. 프로덕션 환경에서는 사용하지 않는 것이 좋다.\nperformance.now 는 사용하기는 번거롭지만 표준이며, one thousandth of a millisecond 의 정확도를 가지고 있어 정밀한 측정이 가능하다.\n성능 향상을 위한 코딩 변수 선언을 한번에 하는 방법 // 한번에 여러개의 변수를 할당할 수 있다. const a = 1, b = 2, c = 3; Loop 성능 향상 방법 const person = { home : [ { addr:\u0026#39;서울\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;대전\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;대구\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;부산\u0026#39;, country : \u0026#39;ko\u0026#39;}, { addr:\u0026#39;파리\u0026#39;, country : \u0026#39;fr\u0026#39;} ] } for (let i=0; i \u0026lt; person.home.length; i++){ console.log(person.home[i]); } // 위 코드는 아래와 같은 단계를 거침 // 1) i값 탐색 // 2) person 객체 탐색 // 3) home 속성 탐색 // 4) home 속성의 인덱스 탐색 // 5) length 프로퍼티 검색 // for 문을 수행하는 동안 위 5단계를 계속 반복 // =\u0026gt; 아래와 같이 향상 let len = person.home.length;\t// length 1회 접근 for (let i=0; i \u0026lt; len; i++){ console.log(person.home[i]); } // =\u0026gt; 아래와 같이 향상 for (let i=0, len=person.home.length; i \u0026lt; len; i++){ // 전역으로 선언하지 않아 메모리 절감 console.log(person.home[i]); } // =\u0026gt; 아래와 같이 향상 let list = person.home; // list에 person 객체의 home 속성을 미리 할당. for (let i=0, len = list.length; i \u0026lt; len ; i++){ console.log(list[i]); // 반복할 때 마다 person 객체의 home 속성에 접근할 필요 없음. } // =\u0026gt; chatGPT 솔루션 person.home.forEach(item =\u0026gt; { console.log(item); }); 정규표현식 Loop 성능 향상 for (let i = 0; i \u0026lt; 100; i++) { str[i].replace(/^\\d{3}-\\d{3,4}-\\d{4}$/, \u0026#34;\u0026#34;); } // 정규 표현식은 컴파일 이후 처리가 필요. 100회의 반복적인 컴파일을 수행하게 된다. // =\u0026gt; 아래와 같이 향상 let reg = /^\\d{3}-\\d{3,4}-\\d{4}$/; // 1회만 컴파일 for (let i = 0; i \u0026lt; 100; i++) { str[i].replace(reg, \u0026#34;\u0026#34;); } 조건 비교 연산 성능 향상 let value = 3; if (value === 1) { ... } else if (value === 2) { ... } else if (value === 3) { // 맨 위부터 순차적으로 비교 ... } // =\u0026gt; 아래와 같이 향상 switch (value) { case 1 : ... case 2 : ... case 3 : // 3으로 바로 진입 ... } 스크립트 선언을 통한 성능 향상 // 브라우저의 렌더링 엔진은 HTML문서를 한줄 한줄 순차적으로 파싱하며 DOM을 생성 \u0026lt;html\u0026gt; \u0026lt;head\u0026gt; \u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt; // 여기까지 파싱했고... \u0026lt;link rel=\u0026#34;stylesheet\u0026#34; href=\u0026#34;style.css\u0026#34;/\u0026gt; \u0026lt;style type=\u0026#34;text/css\u0026#34;\u0026gt; ... // link 태그를 만나면 CSS파일을 서버에 요청한 후 응답받아 CSS파싱을 시작. // style 태그는 상단에 선언하여 DOM 렌더링이 다시 이루어지지 않도록 하는 것이 좋다. \u0026lt;/style\u0026gt; \u0026lt;/head\u0026gt; \u0026lt;body\u0026gt; ... \u0026lt;script type=\u0026#34;text/javascript\u0026#34;\u0026gt; // 가급적 최하단에 script 선언 ... // script 태그를 만나면 DOM 파싱을 중단하고 script 엔진에 제어권을 넘긴다. // DOM이 완성되지 않은 상태에서 DOM Api를 통해 DOM을 조작하면 에러가 발생할 수 있음. // 자바스크립트의 로딩/파싱/실행으로 인해 페이지의 로딩 시간이 길어질 수 있다. // 스크립트 처리가 지연되는 경우 사용자는 빈 화면 또는 미완성된 화면을 볼 수 있다. \u0026lt;/script\u0026gt; \u0026lt;/body\u0026gt; \u0026lt;/html\u0026gt; 정리하면 아래와 같다.\n브라우저 렌더링은 HTML 파서, CSS 파서, Javascript 엔진이 처리한다.\nHTML파서가 한줄 한줄 파싱 link 또는 style 태그를 만나면 CSS파서가 파싱 1, 2 는 병렬적으로 처리된다. 1, 2 는 머지 되어 Painting 이 이루어 진다. 스크립트가 실행되는 동안 문서의 파싱은 중단된다. 스크립트가 외부에 있는 경우 우선 네트워크로부터 자원을 가져와야 하는데 이 또한 실시간으로 처리되고 자원을 받을 때까지 파싱은 중단된다. 결론적으로 사용자에게 빠르게 화면을 보여주기 위해서 파싱 중단을 야기하는 Script 태그는 하단에 배치하는것이 바람직하다.\nReflow 를 최소화 DOM의 변경으로 다시 렌더 트리를 재생성 하는 과정을 Reflow, 재생성된 렌더 트리를 다시 그리는걸 Repaint(or Redraw) 라고 한다.\nvar target = document.getElementById(\u0026#39;container\u0026#39;); for (var i = 0 ; i \u0026lt; 1000; i++){ var div = document.createElement(\u0026#39;div\u0026#39;); div.innerText = i; target.appendChild(div); // 1000번의 reflow 발생 } // =\u0026gt; 아래와 같이 향상 var fragment = document.createDocumentFragment(); for (var i = 0 ; i \u0026lt; 1000; i++){ var div = document.createElement(\u0026#39;div\u0026#39;); div.innerText = i; flagment.appendChild(div); } var target = document.getElementById(\u0026#39;container\u0026#39;); target.appendChild(flagment); // 1번의 reflow 발생 ",
+      "date": "2024-01-23 14:14:52",
+      "type": "posts"
+    }
+  ,
+    {
+      "id": "16",
+	  "permalink": "https://hwantage.github.io/posts/hugo-deploy-automation/",
+      "title": "HUGO 사이트 배포를 위한 배치 파일 생성",
+      "tags": ["hugo", "github pages", "SSG", "배치", "auto deploy", "commit"],
+      "description": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.",
+      "category": "[Front-end]",
+      "contents": "블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다. 이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다. 이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.\n배치 파일 생성 hugo 블로그 프로젝트 루트에 commit.bat 파일을 생성합니다.\nhugo --cleanDestinationDir @echo off set /p commit_message=Enter your commit message: cd ./public git add . git commit -m \u0026#34;%commit_message%\u0026#34; git push origin main cd .. 소스 설명\nhugo --cleanDestinationDir hugo 명령어로 빌드를 하면 public 폴더에 최종 파일이 빌드되어 생성되는데 hugo는 새로운 파일에 대해서 추가만 합니다. 쓰고 지우는 과정에서 구조가 바뀔 수 있는데 추가만 하므로 사용하지 않는 파일들이 쌓일 수가 있습니다. \u0026ndash;cleanDestinationDir 옵션으로 public 폴더를 완전히 청소후 빌드를 수행합니다. set /p commit_message=Enter your commit message: 커밋 메시지 입력을 받도록 설정합니다. 입력한 커밋 메시지는 commit_message 변수에 세팅됩니다. cd ./public public 폴더로 이동합니다. git add . public 폴더의 모든 파일을 add 합니다. git commit -m \u0026quot;%commit_message%\u0026quot; 작성된 커밋 메시지로 commit 을 수행합니다. git push origin main push 처리합니다. cd .. 원래 있던 폴더로 이동후 종료합니다. 배치 파일의 내용은 각자의 상황의 맞게 변경해서 활용하시면 편리하게 블로그 배포를 진행하실 수 있을겁니다.\n배치 파일 실행 프로젝트 루트에서 commit 명령어를 실행하세요.\n",
+      "date": "2024-01-27 13:14:52",
+      "type": "posts"
+    }
+  
+]
