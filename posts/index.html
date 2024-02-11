@@ -143,7 +143,7 @@
 }
 </style>
 
-<script type="text/javascript" src="/js/hwmenu.min.js?1707095518"></script><div class="terminal-content hideTerm hidden">
+<script type="text/javascript" src="/js/hwmenu.min.js?1707663263"></script><div class="terminal-content hideTerm hidden">
   <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
   <div id="terminal" class="terminal-item"></div>
   <div class="terminal-item term-info"><br/></div>
@@ -152,7 +152,7 @@
 </div>
 
 
-<link rel="stylesheet" href="/css/hwterminal.min.css?1707095518" />
+<link rel="stylesheet" href="/css/hwterminal.min.css?1707663263" />
 <script>
  
 window.addEventListener('load', function() {
@@ -322,9 +322,9 @@ window.addEventListener('load', function() {
   }
 </script>
 
-<link rel="stylesheet" href="/css/xterm.min.css?1707095518" />
+<link rel="stylesheet" href="/css/xterm.min.css?1707663263" />
 
-<script type="text/javascript" src="/js/hwterminal.js?1707095518"></script>
+<script type="text/javascript" src="/js/hwterminal.js?1707663263"></script>
 
     </div>
   
@@ -341,9 +341,9 @@ window.addEventListener('load', function() {
 </div>
 
 
-<link rel="stylesheet" type="text/css" href="/lib/css/nouislider.min.css?1707095518" />
+<link rel="stylesheet" type="text/css" href="/lib/css/nouislider.min.css?1707663263" />
 
-<link rel="stylesheet" type="text/css" href="/lib/css/HTimelineChart.min.css?1707095518" />
+<link rel="stylesheet" type="text/css" href="/lib/css/HTimelineChart.min.css?1707663263" />
 <style>
   #timelineWrapper {
 	position: relative;
@@ -489,7 +489,7 @@ window.addEventListener('load', function() {
     var timeline = HTimelineChart.makeChart("timelineWrapper", {
       ChartType: "TimeLine",
       ChartTitle: "Post Timeline", 
-      TimeSkipInterval: 1440, 
+      TimeSkipInterval: 0, 
       TimeSkipTickInterval: 200, 
       TickInterval: 200, 
       DateFormatType: "normal", 
@@ -497,9 +497,10 @@ window.addEventListener('load', function() {
       Onload: function (chart) {
         
       },
-      NodeActive: function (node, nodeData) {
-        console.log(node);
-        console.log(nodeData);
+      NodeClick: function (node, nodeData) {
+        
+        
+        window.open(nodeData["permalink"], "_blank");
       },
     });
 
