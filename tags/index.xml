@@ -7,8 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Sat, 27 Jan 2024 13:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 12 Feb 2024 14:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chrome</title>
+      <link>https://hwantage.github.io/tags/chrome/</link>
+      <pubDate>Mon, 12 Feb 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/chrome/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chrome Extension</title>
+      <link>https://hwantage.github.io/tags/chrome-extension/</link>
+      <pubDate>Mon, 12 Feb 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/chrome-extension/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JS</title>
+      <link>https://hwantage.github.io/tags/js/</link>
+      <pubDate>Mon, 12 Feb 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/js/</guid>
+      <description></description>
+    </item>
     <item>
       <title>auto deploy</title>
       <link>https://hwantage.github.io/tags/auto-deploy/</link>
@@ -49,13 +70,6 @@
       <link>https://hwantage.github.io/tags/%EB%B0%B0%EC%B9%98/</link>
       <pubDate>Sat, 27 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/tags/%EB%B0%B0%EC%B9%98/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>JS</title>
-      <link>https://hwantage.github.io/tags/js/</link>
-      <pubDate>Tue, 23 Jan 2024 14:14:52 +0900</pubDate>
-      <guid>https://hwantage.github.io/tags/js/</guid>
       <description></description>
     </item>
     <item>

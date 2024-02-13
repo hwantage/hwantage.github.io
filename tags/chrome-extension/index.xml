@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chrome Extension on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/chrome-extension/</link>
+    <description>Recent content in Chrome Extension on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 12 Feb 2024 14:14:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/chrome-extension/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>크롬 익스텐션 개발기</title>
+      <link>https://hwantage.github.io/posts/chrome-extension/</link>
+      <pubDate>Mon, 12 Feb 2024 14:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/chrome-extension/</guid>
+      <description>Summary 라이선스 발급 취소 사유 메일 발송 크롬 익스텐션 개발 후기.&#xA;Abstract 사내 라이선스 센터 발급 취소시 발급 취소 사유를 이메일로 발송하는 기능에 대한 요구사항으로 개발을 진행했습니다.</description>
+    </item>
+  </channel>
+</rss>

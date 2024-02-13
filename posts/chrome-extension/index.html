@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="/favicon-32x32.png" type="image/x-icon">
+<link rel="icon" href="/favicon-32x32.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>크롬 익스텐션 개발기</title>
+<meta name="description" content="크롬 익스텐션 개발 방법">
+<link rel="canonical" href="https://hwantage.github.io/posts/chrome-extension/">
+<link rel="robots" href="/robots.txt" />
+
+
+
+
+<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.372b1e0957dd20f70e2ffffd50df8546c8d95ae68740b122ed012d81fc59008c.css" integrity="sha256-NyseCVfdIPcOL//9UN+FRsjZWuaHQLEi7QEtgfxZAIw=" />
+    
+    <link href="/css/copy-code-button.min.css" rel="stylesheet">
+<div id="hwmenu">
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="menu-inner">
+    <ul>
+	  <li><img src="/img/hwan_yellow.png" width="200" height="200" alt="Hwantage world"></li>
+      <li><a href="/">HOME</a></li>
+	  <li><a href="/about/">ABOUT ME</a></li>
+      <li><a href="/posts/">BLOG POSTS</li>
+      <li><a href="/categories/">CATEGORIES</li>
+      <li><a href="/tags">TAGS</li>
+	  <li><a href="/search">SEARCH</li>
+	  <li class="terminal"><a href="#" onclick="loadTerminal()"><b>TERMINAL MODE</b></a></li>
+	  <li><a href="#" onclick="toggleTheme()">CHANGE THEME</a></li>
+      <li><span class="git-icon"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false"
+  viewBox="0 0 24 24"
+  class="vt-social-link-icon"
+>
+  <path
+    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+  ></path>
+</svg>
+</span><a href="https://github.com/hwantage">GITHUB</a></li>
+    </ul>
+  </div>
+
+  <svg version="1.1" id="blob" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z" />
+  </svg>
+</div>
+<style>
+#hwmenu {
+	height: 100%;
+	position: fixed;
+	background-color: #FED057;
+	width: 300px;
+	transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
+	transform: translateX(-100%);
+	left: 60px;
+}
+
+#hwmenu.expanded {
+	transform: translateX(0%);
+	left: 0px;
+}
+
+#hwmenu .menu-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#hwmenu #blob {
+	top: 0;
+	z-index: -1;
+	right: 60px;
+	transform: translateX(100%);
+	height: 100%;
+	position: absolute;
+}
+
+#hwmenu #blob-path {
+	height: 100%;
+	fill:  #FED057;
+}
+
+#hwmenu .hamburger {
+	right: 20px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;	
+}
+
+#hwmenu .hamburger .line {
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	position: absolute;
+}
+
+#hwmenu .hamburger .line:nth-child(2) {
+	top: 50%;
+	margin-top: -2px;
+}
+
+#hwmenu .hamburger .line:nth-child(3) {
+	bottom: 0;
+}
+
+#hwmenu .menu-inner ul {
+	padding: 0;
+	list-style: none;
+	width: 80%;
+	margin-left: 10%;
+	position: absolute;
+	top: 10px;
+}
+
+#hwmenu .menu-inner ul li {
+	color: #111827;
+	font-family: sans-serif;
+	padding: 15px 0 15px 15px;
+}
+
+#hwmenu .menu-inner ul li a:hover {
+	text-decoration:underline;
+}
+
+@media screen and (max-width: 1000px) {
+  #hwmenu {
+    display: none;
+  }
+}
+
+.git-icon {
+    height: 25px;
+	width: 25px;
+	float: left;
+	padding-top: 5px;
+    display: flex;
+}
+</style>
+
+<script type="text/javascript" src="/js/hwmenu.min.js?1707805829"></script><div class="terminal-content hideTerm hidden">
+  <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
+  <div id="terminal" class="terminal-item"></div>
+  <div class="terminal-item term-info"><br/></div>
+  <div class="terminal-item term-info"><a href="https://hwantage.github.io/posts/fake-terminal/">🔗 Xterm.js 를 이용한 fake terminal 웹 제작 방법 포스트 확인</a></div>
+  <div class="terminal-item term-info"><a href="https://github.com/hwantage/fake-terminal.git">🔗 소스 다운로드</a></div>
+</div>
+
+
+<link rel="stylesheet" href="/css/hwterminal.min.css?1707805829" />
+<script>
+ 
+window.addEventListener('load', function() {
+  var btnClose = document.querySelector('.close-terminal');
+  btnClose.addEventListener('click', function() {
+    var termContent = document.querySelector('.terminal-content');
+    termContent.classList.toggle('showTerm');
+    termContent.classList.toggle('hideTerm');
+    termContent.classList.remove('hidden');
+  });
+});
+</script></head>
+
+  <body class="max-w-screen-md mx-auto">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="https://hwantage.github.io/">
+    <img
+      srcset="/img/hwan_hubde87792744800e5c30795dfcea71642_32063_80x80_fill_q90_box_smart1_3.png 80w"
+      src="/img/hwan.png"
+      width="366"
+      height="371"
+      alt="Hwantage world"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="https://hwantage.github.io/">
+  <h1 id="site-title">Hwantage world</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/posts/" class="">
+        Blog posts
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+    <li>
+      <a href="/search" class="">
+        Search
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+	<form action="/search/" style="margin-top:-20px;">
+        <div class="search-bar"><input type="search" id="search-query" name="q" placeholder="search phrase" style="color:black;border: 0;border-radius: 15px;outline: none;padding-left: 10px;background-color: rgb(233, 233, 233);padding-right:8px; height:33px;"/></div>
+    </form>
+  </div>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JB0QM0P0XF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JB0QM0P0XF');
+</script></header>
+      
+<style>
+  .clickme { animation: pulse 1.5s 1s infinite;} 
+  @keyframes pulse { 
+    0% {transform: scale(1);} 
+    20% {transform: scale(1.1); } 
+    50% {transform: scale(.9);} 
+    80% {transform: scale(1);} 
+    100% {transform: scale(1);} 
+  }
+</style>
+<button aria-label="Terminal mode" title="Terminal mode" onclick="loadTerminal()">
+  <span class="theme-icon2 light clickme"> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.269 27.269" xml:space="preserve" stroke="#ffffff">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <g> <path d="M25.322,1.947H1.949C0.869,1.947,0,2.818,0,3.898v19.477c0,1.074,0.869,1.947,1.949,1.947h23.373 c1.07,0,1.947-0.873,1.947-1.947V3.898C27.27,2.818,26.393,1.947,25.322,1.947z M9.312,3.41c0.537,0,0.973,0.436,0.973,0.975 c0,0.537-0.436,0.973-0.973,0.973c-0.539,0-0.975-0.436-0.975-0.973C8.338,3.845,8.773,3.41,9.312,3.41z M6.33,3.41 c0.537,0,0.975,0.436,0.975,0.975c0,0.537-0.438,0.973-0.975,0.973c-0.539,0-0.975-0.436-0.975-0.973 C5.355,3.845,5.791,3.41,6.33,3.41z M3.406,3.41c0.541,0,0.975,0.436,0.975,0.975c0,0.537-0.434,0.973-0.975,0.973 c-0.535,0-0.971-0.436-0.971-0.973C2.436,3.845,2.871,3.41,3.406,3.41z M25.322,23.375H1.949V6.838h23.373 C25.322,6.838,25.322,23.375,25.322,23.375z"/> <path d="M14.797,15.566L5.844,20.16v-1.332l7.602-3.781v-0.039l-7.602-3.782V9.894l8.953,4.572V15.566z"/> <path d="M21.422,14.334v1.232h-4.764v-1.232H21.422z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </g> </g>
+</svg> </span>
+  <span class="theme-icon2 dark clickme"> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg fill="#000000" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27.269 27.269" xml:space="preserve" stroke="#000000">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier"> <g> <path d="M25.322,1.947H1.949C0.869,1.947,0,2.818,0,3.898v19.477c0,1.074,0.869,1.947,1.949,1.947h23.373 c1.07,0,1.947-0.873,1.947-1.947V3.898C27.27,2.818,26.393,1.947,25.322,1.947z M9.312,3.41c0.537,0,0.973,0.436,0.973,0.975 c0,0.537-0.436,0.973-0.973,0.973c-0.539,0-0.975-0.436-0.975-0.973C8.338,3.845,8.773,3.41,9.312,3.41z M6.33,3.41 c0.537,0,0.975,0.436,0.975,0.975c0,0.537-0.438,0.973-0.975,0.973c-0.539,0-0.975-0.436-0.975-0.973 C5.355,3.845,5.791,3.41,6.33,3.41z M3.406,3.41c0.541,0,0.975,0.436,0.975,0.975c0,0.537-0.434,0.973-0.975,0.973 c-0.535,0-0.971-0.436-0.971-0.973C2.436,3.845,2.871,3.41,3.406,3.41z M25.322,23.375H1.949V6.838h23.373 C25.322,6.838,25.322,23.375,25.322,23.375z"/> <path d="M14.797,15.566L5.844,20.16v-1.332l7.602-3.781v-0.039l-7.602-3.782V9.894l8.953,4.572V15.566z"/> <path d="M21.422,14.334v1.232h-4.764v-1.232H21.422z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </g> </g>
+</svg> </span>
+</button>
+<button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const theme = localStorage.getItem("theme");
+
+    if (!theme || theme === "light") {
+      setTheme("light");
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector("html");
+    localStorage.setItem("theme", theme);
+
+    if (theme === "light") {
+      if (html.classList.contains("dark")) {
+        document.querySelector("html").classList.remove("dark");
+      }
+
+      document.querySelector(".theme-icon.light").style.display = "none";
+      document.querySelector(".theme-icon.dark").style.display = "block";
+      document.querySelector(".theme-icon2.light").style.display = "none";
+      document.querySelector(".theme-icon2.dark").style.display = "block";
+    } else {
+      if (!html.classList.contains("dark")) {
+        document.querySelector("html").classList.add("dark");
+      }
+
+      document.querySelector(".theme-icon.dark").style.display = "none";
+      document.querySelector(".theme-icon.light").style.display = "block";
+      document.querySelector(".theme-icon2.dark").style.display = "none";
+      document.querySelector(".theme-icon2.light").style.display = "block";
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }
+</script>
+
+<link rel="stylesheet" href="/css/xterm.min.css?1707805829" />
+
+<script type="text/javascript" src="/js/hwterminal.js?1707805829"></script>
+
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">크롬 익스텐션 개발기</h2>
+
+    <div class="meta">
+      
+      <time datetime="2024-02-12 14:14:52 &#43;0900 KST" title='Mon, Feb 12, 2024, 2:14 PM KST'>
+        2024-02-12 - Estimated reading time: 6 minutes
+      </time>
+
+       
+       — 
+        
+          <a class="categories" href="/categories/javascript/" alt="JavaScript">
+            JavaScript
+          </a>
+         
+      
+    </div>
+  </header>
+
+  
+  <aside class="table-of-contents">
+    <h2 class="title-small">Summary</h2>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#project-tree">Project tree</a></li>
+    <li><a href="#manifestjson">manifest.json</a></li>
+    <li><a href="#manage-extensions">Manage Extensions</a>
+      <ul>
+        <li><a href="#확장-프로그램-등록하기">확장 프로그램 등록하기</a></li>
+        <li><a href="#확장-프로그램-디버깅">확장 프로그램 디버깅</a></li>
+        <li><a href="#확장-프로그램-업데이트">확장 프로그램 업데이트</a></li>
+      </ul>
+    </li>
+    <li><a href="#limitation">Limitation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </aside>
+
+
+  <section><h1 id="summary">Summary</h1>
+<p>라이선스 발급 취소 사유 메일 발송 크롬 익스텐션 개발 후기.</p>
+<h1 id="abstract">Abstract</h1>
+<p>사내 라이선스 센터 발급 취소시 발급 취소 사유를 이메일로 발송하는 기능에 대한 요구사항으로 개발을 진행했습니다.</p>
+<p>라이선스 센터는 2010년에 개발된 레거시 코드이며 소스 수정에 대한 부담이 있습니다.</p>
+<p>라이선스 센터의 코드를 수정하지 않고 크롬 익스텐션을 이용하여 해당 요구사항에 대응할 수 있다고 판단했습니다.</p>
+<h1 id="requirements">Requirements</h1>
+<p>라이선스 취소 이후 취소 사유를 이메일로 작성해서 피드백을 수행하고 있는데, 반복적인 안내메시지를 작성해야 합니다. 이메일을 작성하는데 소요되는 시간이 불필요한 업무 비효율성을 초래합니다. 하루에도 수십건의 단순 업무를 자동화 혹은 단순화 하는게 요구사항의 핵심입니다.</p>
+<h1 id="solutions">Solutions</h1>
+<p>라이선스 센터에서 하단의 “라이선스 요청취소” 버튼을 누르면 크롬 익스텐션이 동작합니다.</p>
+<p>우측 상단의 익스텐션 아이콘을 눌러서 기능을 동작시킬 수도 있습니다.</p>
+<p>팝업창에서 사유를 선택하고 취소사유를 입력하고 이메일 발송하기 버튼을 클릭하면 outlook이 실행되면서 메일 발송 대상자, 제목, 내용등이 자동으로 입력되고 발송하기 버튼을 눌러 취소 메일 발송 절차를 마무리 합니다.</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/40ecd39c-6ef3-4a72-aae8-6dca46215462/Untitled.png" alt="Untitled"></p>
+<p><code>받는 사람</code> : 요청자의 이메일 주소가 자동으로 포함됩니다.</p>
+<p><code>참조</code> : 세일즈팀 이메일 주소가 자동으로 포함됩니다.</p>
+<p><code>제목</code> : [소만사] 라이선스 발급 보류 안내 메일입니다. 메시지와 고객사 이름 정보가 자동으로 포함됩니다.</p>
+<p><code>내용</code> : 고정 메시지 + 발급 거절 사유 + 발급 취소 메시지 로 구성됩니다.</p>
+<p>담당자는 보내기 버튼만 눌러 거절 메시지 발송을 마무리 합니다.</p>
+<h1 id="chrome-extension">Chrome Extension</h1>
+<p>크롬 익스텐션은 javascript 로 쉽게 개발이 가능합니다.</p>
+<h2 id="architecture">Architecture</h2>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/a004cc25-8bef-4f34-a909-047428c7a924/Untitled.png" alt="Untitled"></p>
+<ul>
+<li><code>popup.html</code>
+<ul>
+<li>크롬 익스텐션의 UI를 담당하는 html</li>
+</ul>
+</li>
+<li><code>popup.js</code>
+<ul>
+<li><code>popup.html</code>과 직접 상호작용하고, background 스크립트와 함께 API를 호출</li>
+</ul>
+</li>
+<li><code>contentscript.js</code>
+<ul>
+<li>사용자가 방문하는 페이지 영역에서 작동하는 스크립트</li>
+<li>페이지의 현재 상태에 대한 정보를 전달한다.</li>
+<li>현재 페이지의 DOM을 읽어와서 조작이 가능하다.</li>
+</ul>
+</li>
+<li><code>background.js</code>
+<ul>
+<li>브라우저 영역에서 작동하는 스크립트.</li>
+<li>플러그인의 이벤트 핸들러</li>
+<li>중요한 모든 이벤트 리스너가 여기 저장된다.</li>
+<li>이벤트가 트리거 되고, 할당된 로직을 실행할 때까지 inactive 상태로 유지된다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="project-tree">Project tree</h2>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/e73416d1-9fb9-4b6b-a604-627a496ff8e7/Untitled.png" alt="Untitled"></p>
+<h2 id="manifestjson">manifest.json</h2>
+<p>모든 확장 프로그램의 루트 디렉터리에는 확장 프로그램의 구조와 동작에 관한 중요한 정보가 나열된 <code>manifest.json</code> 파일이 있어야 합니다.</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/0d770f71-6e44-4903-9958-485bd4b0b1ad/Untitled.png" alt="Untitled"></p>
+<p><code>manifest.json</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;manifest_version&#34;</span>: <span style="color:#bd93f9">3</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;소만사 라이선스 거절 메일 발송&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Somansa license center extension&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;1.0&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;permissions&#34;</span>: [<span style="color:#f1fa8c">&#34;activeTab&#34;</span>, <span style="color:#f1fa8c">&#34;tabs&#34;</span>, <span style="color:#f1fa8c">&#34;storage&#34;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;action&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;default_icon&#34;</span>: <span style="color:#f1fa8c">&#34;icon.png&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;default_title&#34;</span>: <span style="color:#f1fa8c">&#34;RejectLicense&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;default_popup&#34;</span>: <span style="color:#f1fa8c">&#34;popup.html&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;background&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;service_worker&#34;</span>: <span style="color:#f1fa8c">&#34;background.js&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">&#34;type&#34;</span>: <span style="color:#f1fa8c">&#34;module&#34;</span>
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;content_scripts&#34;</span>: [
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;matches&#34;</span>: [<span style="color:#f1fa8c">&#34;&lt;all_urls&gt;&#34;</span>],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;js&#34;</span>: [<span style="color:#f1fa8c">&#34;content.js&#34;</span>]
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>popup.html</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#ff79c6">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#ff79c6">html</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h2</span>&gt;&lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;icon.png&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;logo&#34;</span> <span style="color:#50fa7b">width</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;25&#34;</span> <span style="color:#50fa7b">height</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;25&#34;</span> /&gt; 소만사 라이선스 거절 안내&lt;/<span style="color:#ff79c6">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;idxinfo&#34;</span>&gt;&lt;/<span style="color:#ff79c6">span</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h3</span>&gt;사유 선택 :&lt;/<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option1&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;고객정보 수정 필요&#34;</span> /&gt;고객정보 수정 필요&lt;/<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option2&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;장비 정보 수정 필요&#34;</span> /&gt;장비 정보 수정 필요&lt;/<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option3&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;사용자수 수정 필요&#34;</span> /&gt;사용자수 수정 필요&lt;/<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option4&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;발급구분 수정 필요&#34;</span> /&gt;발급구분 수정 필요&lt;/<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option5&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;(내부) 계약 미확인 보류&#34;</span> /&gt; (내부) 계약 미확인보류&lt;/<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option6&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;기타&#34;</span> /&gt; 기타&lt;/<span style="color:#ff79c6">label</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h3</span>&gt;발급 취소 사유 :&lt;/<span style="color:#ff79c6">h3</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">textarea</span> <span style="color:#50fa7b">style</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;width: 600px&#34;</span> <span style="color:#50fa7b">rows</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;7&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;rejectLicenseContents&#34;</span>&gt;&lt;/<span style="color:#ff79c6">textarea</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;sendRejectEmail&#34;</span>&gt;이메일 발송하기&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;closePop&#34;</span>&gt;취소&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;popup.js&#34;</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#ff79c6">html</span>&gt;
+</span></span></code></pre></div><p><code>popup.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> request_index <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> to_mail <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> to_cc <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sales_support@somansa.com&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> subject <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;[소만사] 라이선스 발급 보류 안내 메일입니다.&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">window</span>.onload <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">document</span>.body.style.width <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;700px&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">document</span>.body.style.height <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;700px&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">window</span>.resizeTo(<span style="color:#bd93f9">700</span>, <span style="color:#bd93f9">700</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// 발급취소 버튼을 누른 경우 쿼리스트링으로 정보 수신
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">var</span> queryString <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">window</span>.location.search;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// queryString을 파싱하여 변수 가져오기
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  request_index <span style="color:#ff79c6">=</span> getUrlParameter(<span style="color:#f1fa8c">&#34;request_index&#34;</span>, queryString);
+</span></span><span style="display:flex;"><span>  to_mail <span style="color:#ff79c6">=</span> getUrlParameter(<span style="color:#f1fa8c">&#34;to_mail&#34;</span>, queryString);
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;idxinfo&#34;</span>).innerHTML <span style="color:#ff79c6">=</span> request_index;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 파라미터 정보로 부터 값 수신
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> getUrlParameter(name, url) {
+</span></span><span style="display:flex;"><span>  name <span style="color:#ff79c6">=</span> name.replace(<span style="color:#f1fa8c">/[\\[\\]]/g</span>, <span style="color:#f1fa8c">&#34;\\\\$&amp;&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">var</span> regex <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">RegExp</span>(<span style="color:#f1fa8c">&#34;[?&amp;]&#34;</span> <span style="color:#ff79c6">+</span> name <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;(=([^&amp;#]*)|&amp;|#|$)&#34;</span>),
+</span></span><span style="display:flex;"><span>  results <span style="color:#ff79c6">=</span> regex.exec(url);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>results) <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">null</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span>results[<span style="color:#bd93f9">2</span>]) <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">decodeURIComponent</span>(results[<span style="color:#bd93f9">2</span>].replace(<span style="color:#f1fa8c">/\\+/g</span>, <span style="color:#f1fa8c">&#34; &#34;</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 익스텐션을 직접 실행한 경우 정보 수신
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>chrome.tabs.query({ active<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>, currentWindow<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span> }, <span style="color:#8be9fd;font-style:italic">function</span> (tabs) {
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// 활성 탭의 정보
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#8be9fd;font-style:italic">var</span> activeTab <span style="color:#ff79c6">=</span> tabs[<span style="color:#bd93f9">0</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// 활성 탭에 메시지를 전송하여 원하는 요소의 값을 가져옴
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  chrome.tabs.sendMessage(activeTab.id, { action<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;getValue&#34;</span>, elementName<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;request_index&#34;</span> }, <span style="color:#8be9fd;font-style:italic">function</span> (response) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (chrome.runtime.lastError) <span style="color:#ff79c6">return</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (response <span style="color:#ff79c6">&amp;&amp;</span> response.value) {
+</span></span><span style="display:flex;"><span>      request_index <span style="color:#ff79c6">=</span> response.value;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  chrome.tabs.sendMessage(activeTab.id, { action<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;getValue&#34;</span>, elementName<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;requestmail&#34;</span> }, <span style="color:#8be9fd;font-style:italic">function</span> (response) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (chrome.runtime.lastError) <span style="color:#ff79c6">return</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (response <span style="color:#ff79c6">&amp;&amp;</span> response.value) {
+</span></span><span style="display:flex;"><span>      to_mail <span style="color:#ff79c6">=</span> response.value;
+</span></span><span style="display:flex;"><span>    } 
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 메일 발송하기 버튼 클릭시 이벤트 처리
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;sendRejectEmail&#34;</span>).addEventListener(<span style="color:#f1fa8c">&#34;click&#34;</span>, <span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">var</span> mail_contents <span style="color:#ff79c6">=</span> makeBody();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">window</span>.location.href <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`mailto:</span><span style="color:#f1fa8c">${</span>to_mail<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">?cc=</span><span style="color:#f1fa8c">${</span>to_cc<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&amp;subject=</span><span style="color:#f1fa8c">${</span>subject<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">-</span><span style="color:#f1fa8c">${</span>company_name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&amp;body=</span><span style="color:#f1fa8c">${</span>mail_contents<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// &#34;취소&#34; 버튼 클릭 시 팝업 닫기
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;closePop&#34;</span>).addEventListener(<span style="color:#f1fa8c">&#34;click&#34;</span>, <span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">window</span>.close();
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> makeBody() {
+</span></span><span style="display:flex;"><span>  <span style="color:#6272a4">// Logic to send email using selected options
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">const</span> option1 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;option1&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> option2 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;option2&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> option3 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;option3&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> option4 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;option4&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> option5 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;option5&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">const</span> option6 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;option6&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">var</span> reason <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;라이선스 발급 요청이 아래와 같은 사유로 발급 보류되었습니다.%0D%0A라이선스 발급 실패 사유 : %0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (option1.checked) {
+</span></span><span style="display:flex;"><span>    reason <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#34; - &#34;</span> <span style="color:#ff79c6">+</span> option1.value <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (option2.checked) {
+</span></span><span style="display:flex;"><span>    reason <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#34; - &#34;</span> <span style="color:#ff79c6">+</span> option2.value <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (option3.checked) {
+</span></span><span style="display:flex;"><span>    reason <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#34; - &#34;</span> <span style="color:#ff79c6">+</span> option3.value <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (option4.checked) {
+</span></span><span style="display:flex;"><span>    reason <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#34; - &#34;</span> <span style="color:#ff79c6">+</span> option4.value <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (option5.checked) {
+</span></span><span style="display:flex;"><span>    reason <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#34; - &#34;</span> <span style="color:#ff79c6">+</span> option5.value <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (option6.checked) {
+</span></span><span style="display:flex;"><span>    reason <span style="color:#ff79c6">+=</span> <span style="color:#f1fa8c">&#34; - &#34;</span> <span style="color:#ff79c6">+</span> option6.value <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">var</span> reject_contents <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;rejectLicenseContents&#34;</span>).value;
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">return</span> reason <span style="color:#ff79c6">+</span> reject_contents.replaceAll(<span style="color:#f1fa8c">&#34;\\n&#34;</span>, <span style="color:#f1fa8c">&#34;%0D%0A&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><code>content.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> btnCancel <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementsByName(<span style="color:#f1fa8c">&#34;btnCancel&#34;</span>)[<span style="color:#bd93f9">0</span>]; <span style="color:#6272a4">// 취소 버튼 DOM
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">if</span> (btnCancel) {
+</span></span><span style="display:flex;"><span>  btnCancel.addEventListener(<span style="color:#f1fa8c">&#34;click&#34;</span>, <span style="color:#8be9fd;font-style:italic">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 버튼을 클릭한 경우, 값을 가져와서 팝업 스크립트로 전달
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">var</span> request_index <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementsByName(<span style="color:#f1fa8c">&#34;request_index&#34;</span>)[<span style="color:#bd93f9">0</span>].value;
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">var</span> to_mail <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementsByName(<span style="color:#f1fa8c">&#34;requestmail&#34;</span>)[<span style="color:#bd93f9">0</span>].value;
+</span></span><span style="display:flex;"><span>    chrome.runtime.sendMessage({ action<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;buttonClicked&#34;</span>, request_index<span style="color:#ff79c6">:</span> request_index, to_mail<span style="color:#ff79c6">:</span> to_mail });
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#6272a4">// 컨텐트 스크립트에서 메시지를 수신하고 처리
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>chrome.runtime.onMessage.addListener(<span style="color:#8be9fd;font-style:italic">function</span> (request, sender, sendResponse) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (request.action <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#34;getValue&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 요소의 이름과 일치하는 모든 요소를 가져옴 (getElementsByName은 배열을 반환)
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">var</span> elements <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementsByName(request.elementName);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 배열의 첫 번째 요소가 존재하고 value 속성이 있는 경우 해당 값을 응답으로 보냄
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">if</span> (elements.length <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0</span> <span style="color:#ff79c6">&amp;&amp;</span> elements[<span style="color:#bd93f9">0</span>].hasAttribute(<span style="color:#f1fa8c">&#34;value&#34;</span>)) {
+</span></span><span style="display:flex;"><span>      sendResponse({ value<span style="color:#ff79c6">:</span> elements[<span style="color:#bd93f9">0</span>].value });
+</span></span><span style="display:flex;"><span>    } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>      sendResponse({ value<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">null</span> });
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  } 
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><p><code>background.js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#6272a4">// background.js
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>chrome.runtime.onMessage.addListener(<span style="color:#8be9fd;font-style:italic">function</span> (request, sender, sendResponse) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">if</span> (request.action <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#34;buttonClicked&#34;</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// 추가적인 변수를 전달하기 위한 쿼리 매개변수를 생성
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">var</span> queryString <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;request_index=&#34;</span> <span style="color:#ff79c6">+</span> request.request_index <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;&amp;to_mail=&#34;</span> <span style="color:#ff79c6">+</span> request.to_mail;
+</span></span><span style="display:flex;"><span>    chrome.windows.create({
+</span></span><span style="display:flex;"><span>      url<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;popup.html?&#34;</span> <span style="color:#ff79c6">+</span> queryString,
+</span></span><span style="display:flex;"><span>      type<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;popup&#34;</span>,
+</span></span><span style="display:flex;"><span>      width<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">700</span>,
+</span></span><span style="display:flex;"><span>      height<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">800</span>,
+</span></span><span style="display:flex;"><span>    });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="manage-extensions">Manage Extensions</h2>
+<h3 id="확장-프로그램-등록하기">확장 프로그램 등록하기</h3>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/9ed182c7-7307-42fa-97ee-b6b63b557cec/Untitled.png" alt="Untitled"></p>
+<p>크롬 확장 프로그램의 확장 프로그램 관리 메뉴를 클릭합니다.</p>
+<p>왼쪽 상단에 “압축해제된 확장 프로그램을 로드합니다.” 항목을 클릭합니다.</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/b80b0acb-c4d0-4b68-b955-8f7ebdf40e71/Untitled.png" alt="Untitled"></p>
+<p>소스코드가 존재하는 디렉토리를 선택하면 아래와 같이 확장 프로그램이 추가됩니다.</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/b16ae0fa-cf0b-4101-8aa6-4ae3f5ff3c6b/Untitled.png" alt="Untitled"></p>
+<p>확장 프로그램 아이콘을 클릭하여 핀셋 아이콘을 누르면 익스텐션 목록에 아이콘이 추가되어 언제든지 실행 가능한 상태가 됩니다.</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/07b63feb-864f-4256-9180-e35a8e68f2e0/Untitled.png" alt="Untitled"></p>
+<p>원하는 테스트를 수행해 봅니다.</p>
+<h3 id="확장-프로그램-디버깅">확장 프로그램 디버깅</h3>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/041299ac-d3b7-49ae-854d-cf1aba1df31f/Untitled.png" alt="Untitled"></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/f8f403f5-eaf8-4d5d-a251-cd9a59d11e85/Untitled.png" alt="Untitled"></p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/462c24f4-4cc0-44a6-88ea-c7e9ac9eb89e/Untitled.png" alt="Untitled"></p>
+<p>확장 프로그램 관리 화면에서 오류 발생 상황을 확인가능합니다. 오류 버튼을 클릭하면 상세한 오류 메시지를 확인 가능합니다. popup.html 에서 개발자 도구를 띄워 콘솔 로그를 확인하면서 오류를 수정할 수도 있습니다.</p>
+<h3 id="확장-프로그램-업데이트">확장 프로그램 업데이트</h3>
+<p>코드 수정이 완료되면 리프레시 버튼을 누르면 즉시 수정된 코드가 반영됩니다.</p>
+<h2 id="limitation">Limitation</h2>
+<p>크롬 익스텐션에서 바로 메일을 발송하는 방법은 없습니다. 따라서 mailto 태그를 이용해 메일 발송 기능과 연동하는 수준으로 개발을 진행했습니다. 바로 메일을 보내고 싶다면 API 서버를 만들어 해당 API로 정보를 전달하고 전달받은 서버에서 메일 발송 처리를 수행하도록 구현하면 됩니다.</p>
+<p>mailto 태그의 character 수 제한은 2000자 입니다. 따라서 mail body 내용 작성에 제한이 있습니다.</p>
+<p><em><strong>2042 characters</strong></em> on Chrome 64.0.3282.186 · 2046 characters on Edge 16.16299 · approximately 32700 characters on Firefox 58.0.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>지금까지 레거시 코드의 수정 없이 크롬 익스텐션을 이용하여 원하는 기능이 수행될 수 있도록 처리해 보았습니다. 생각보다 크롬 익스텐션은 기본적인 자바스크립트에 대한 이해만 있다면 누구든지 쉽게 개발을 진행할 수 있었습니다. 브라우저의 DOM을 접근하여 조작이 가능하고 정보를 얻을 수도 있으며, 스토리지 기능을 이용하여 정보가 휘발되지 않도록 관리도 가능하며, 북마크나 방문 히스토리에도 접근이 가능합니다.</p>
+<p>좋은 아이디어만 있다면 유용한 익스텐션을 개발할 수 있을 것이며, 공개 익스텐션을 개발하여 크롬 웹 스토어에 개시도 해볼 수 있을 거라 생각합니다.</p>
+<h2 id="references">References</h2>
+<p><a href="https://developer.chrome.com/docs/extensions/get-started?hl=ko">확장 프로그램 / 시작하기  |  Get started  |  Chrome for Developers</a></p>
+<p><a href="https://velog.io/@wisdom_lee/%ED%81%AC%EB%A1%AC-%ED%99%95%EC%9E%A5-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8Chrome-extension-%EA%B0%9C%EB%B0%9C-%EA%B0%80%EC%9D%B4%EB%93%9C">velog</a></p>
+</section>
+
+  
+  
+  
+  
+  
+    <a href="https://hwantage.github.io/posts/hugo-deploy-automation/">이전 글: HUGO 사이트 배포를 위한 배치 파일 생성</a>
+  
+  
+  
+  
+  
+  <h3>See Also</h3>
+  <ul>
+	
+	  <li><a href="/posts/js-performance-coding/">Javascript 성능 향상 코딩 팁</a></li>
+	
+	  <li><a href="/posts/js-find/">Javascript find, findIndex, filter</a></li>
+	
+	  <li><a href="/posts/js-serialization/">Javascript 직렬화(serialization)</a></li>
+	
+	  <li><a href="/posts/js-template-literal/">Javascript 템플릿 리터럴(Template literal)</a></li>
+	
+	  <li><a href="/posts/js-function/">Javascript 함수 선언 방법과 호이스팅</a></li>
+	
+  </ul>
+  
+	
+  
+  
+
+  
+  
+  <script src="https://utteranc.es/client.js"
+        repo="hwantage/hwantage.github.io"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>  
+
+
+
+  <footer>
+    
+      <div class="pb-14 taxonomy-list tags-list">
+      
+        <a href="/tags/js/" alt="JS">
+          JS
+        </a>
+      
+        <a href="/tags/chrome/" alt="Chrome">
+          Chrome
+        </a>
+      
+        <a href="/tags/chrome-extension/" alt="Chrome Extension">
+          Chrome Extension
+        </a>
+      
+      </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2024 —
+  <a href="https://hwantage.github.io/">Hwantage world</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://github.com/hwantage" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer>
+
+	
+	<script src="/js/copy-code-button.min.js"></script>
+</body>
+</html>
