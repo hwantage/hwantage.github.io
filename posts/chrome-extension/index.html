@@ -13,7 +13,7 @@
 
 
 
-<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.372b1e0957dd20f70e2ffffd50df8546c8d95ae68740b122ed012d81fc59008c.css" integrity="sha256-NyseCVfdIPcOL//9UN+FRsjZWuaHQLEi7QEtgfxZAIw=" />
+<link rel="stylesheet" href="https://hwantage.github.io/css/app.min.10232d6b1a68a38942183f49bb7b6b0af598311a7c8dd5558c8fe7a46ac5c1f5.css" integrity="sha256-ECMtaxpoo4lCGD9Ju3trCvWYMRp8jdVVjI/npGrFwfU=" />
     
     <link href="/css/copy-code-button.min.css" rel="stylesheet">
 <div id="hwmenu">
@@ -52,101 +52,10 @@
     <path id="blob-path" d="M60,500H0V0h60c0,0,20,172,20,250S60,900,60,500z" />
   </svg>
 </div>
-<style>
-#hwmenu {
-	height: 100%;
-	position: fixed;
-	background-color: #FED057;
-	width: 300px;
-	transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
-	transform: translateX(-100%);
-	left: 60px;
-}
 
-#hwmenu.expanded {
-	transform: translateX(0%);
-	left: 0px;
-}
+<link rel="stylesheet" href="/css/hwmenu.min.css?1707812300">
 
-#hwmenu .menu-inner {
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-#hwmenu #blob {
-	top: 0;
-	z-index: -1;
-	right: 60px;
-	transform: translateX(100%);
-	height: 100%;
-	position: absolute;
-}
-
-#hwmenu #blob-path {
-	height: 100%;
-	fill:  #FED057;
-}
-
-#hwmenu .hamburger {
-	right: 20px;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	margin-top: -10px;	
-}
-
-#hwmenu .hamburger .line {
-	width: 100%;
-	height: 4px;
-	background-color: #fff;
-	position: absolute;
-}
-
-#hwmenu .hamburger .line:nth-child(2) {
-	top: 50%;
-	margin-top: -2px;
-}
-
-#hwmenu .hamburger .line:nth-child(3) {
-	bottom: 0;
-}
-
-#hwmenu .menu-inner ul {
-	padding: 0;
-	list-style: none;
-	width: 80%;
-	margin-left: 10%;
-	position: absolute;
-	top: 10px;
-}
-
-#hwmenu .menu-inner ul li {
-	color: #111827;
-	font-family: sans-serif;
-	padding: 15px 0 15px 15px;
-}
-
-#hwmenu .menu-inner ul li a:hover {
-	text-decoration:underline;
-}
-
-@media screen and (max-width: 1000px) {
-  #hwmenu {
-    display: none;
-  }
-}
-
-.git-icon {
-    height: 25px;
-	width: 25px;
-	float: left;
-	padding-top: 5px;
-    display: flex;
-}
-</style>
-
-<script type="text/javascript" src="/js/hwmenu.min.js?1707806845"></script><div class="terminal-content hideTerm hidden">
+<script type="text/javascript" src="/js/hwmenu.min.js?1707812300"></script><div class="terminal-content hideTerm hidden">
   <div class="terminal-item" style="text-align:right;"><div class="close-terminal"></div></div>
   <div id="terminal" class="terminal-item"></div>
   <div class="terminal-item term-info"><br/></div>
@@ -155,7 +64,7 @@
 </div>
 
 
-<link rel="stylesheet" href="/css/hwterminal.min.css?1707806845" />
+<link rel="stylesheet" href="/css/hwterminal.min.css?1707812300" />
 <script>
  
 window.addEventListener('load', function() {
@@ -325,9 +234,9 @@ window.addEventListener('load', function() {
   }
 </script>
 
-<link rel="stylesheet" href="/css/xterm.min.css?1707806845" />
+<link rel="stylesheet" href="/css/xterm.min.css?1707812300" />
 
-<script type="text/javascript" src="/js/hwterminal.js?1707806845"></script>
+<script type="text/javascript" src="/js/hwterminal.js?1707812300"></script>
 
     </div>
   
@@ -362,6 +271,7 @@ window.addEventListener('load', function() {
     <li><a href="#architecture">Architecture</a></li>
     <li><a href="#project-tree">Project tree</a></li>
     <li><a href="#manifestjson">manifest.json</a></li>
+    <li><a href="#coding">Coding</a></li>
     <li><a href="#manage-extensions">Manage Extensions</a>
       <ul>
         <li><a href="#확장-프로그램-등록하기">확장 프로그램 등록하기</a></li>
@@ -389,16 +299,16 @@ window.addEventListener('load', function() {
 <p>라이선스 센터에서 하단의 “라이선스 요청취소” 버튼을 누르면 크롬 익스텐션이 동작합니다.</p>
 <p>우측 상단의 익스텐션 아이콘을 눌러서 기능을 동작시킬 수도 있습니다.</p>
 <p>팝업창에서 사유를 선택하고 취소사유를 입력하고 이메일 발송하기 버튼을 클릭하면 outlook이 실행되면서 메일 발송 대상자, 제목, 내용등이 자동으로 입력되고 발송하기 버튼을 눌러 취소 메일 발송 절차를 마무리 합니다.</p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/40ecd39c-6ef3-4a72-aae8-6dca46215462/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240213_171049_image.png" alt=""></p>
 <p><code>받는 사람</code> : 요청자의 이메일 주소가 자동으로 포함됩니다.</p>
 <p><code>참조</code> : 세일즈팀 이메일 주소가 자동으로 포함됩니다.</p>
-<p><code>제목</code> : [소만사] 라이선스 발급 보류 안내 메일입니다. 메시지와 고객사 이름 정보가 자동으로 포함됩니다.</p>
+<p><code>제목</code> : 라이선스 발급 보류 안내 메일입니다. 메시지와 고객사 이름 정보가 자동으로 포함됩니다.</p>
 <p><code>내용</code> : 고정 메시지 + 발급 거절 사유 + 발급 취소 메시지 로 구성됩니다.</p>
 <p>담당자는 보내기 버튼만 눌러 거절 메시지 발송을 마무리 합니다.</p>
 <h1 id="chrome-extension">Chrome Extension</h1>
 <p>크롬 익스텐션은 javascript 로 쉽게 개발이 가능합니다.</p>
 <h2 id="architecture">Architecture</h2>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/a004cc25-8bef-4f34-a909-047428c7a924/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240213_171213_image.png" alt=""></p>
 <ul>
 <li><code>popup.html</code>
 <ul>
@@ -427,15 +337,16 @@ window.addEventListener('load', function() {
 </li>
 </ul>
 <h2 id="project-tree">Project tree</h2>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/e73416d1-9fb9-4b6b-a604-627a496ff8e7/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240213_171235_image.png" alt=""></p>
 <h2 id="manifestjson">manifest.json</h2>
 <p>모든 확장 프로그램의 루트 디렉터리에는 확장 프로그램의 구조와 동작에 관한 중요한 정보가 나열된 <code>manifest.json</code> 파일이 있어야 합니다.</p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/0d770f71-6e44-4903-9958-485bd4b0b1ad/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240213_171254_image.png" alt=""></p>
+<h2 id="coding">Coding</h2>
 <p><code>manifest.json</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;manifest_version&#34;</span>: <span style="color:#bd93f9">3</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;소만사 라이선스 거절 메일 발송&#34;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;Somansa license center extension&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;name&#34;</span>: <span style="color:#f1fa8c">&#34;라이선스 거절 메일 발송&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;description&#34;</span>: <span style="color:#f1fa8c">&#34;license center extension&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;version&#34;</span>: <span style="color:#f1fa8c">&#34;1.0&#34;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;permissions&#34;</span>: [<span style="color:#f1fa8c">&#34;activeTab&#34;</span>, <span style="color:#f1fa8c">&#34;tabs&#34;</span>, <span style="color:#f1fa8c">&#34;storage&#34;</span>],
 </span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">&#34;action&#34;</span>: {
@@ -461,7 +372,7 @@ window.addEventListener('load', function() {
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">meta</span> <span style="color:#50fa7b">charset</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;UTF-8&#34;</span> /&gt;
 </span></span><span style="display:flex;"><span>  &lt;/<span style="color:#ff79c6">head</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#ff79c6">body</span>&gt;
-</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h2</span>&gt;&lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;icon.png&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;logo&#34;</span> <span style="color:#50fa7b">width</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;25&#34;</span> <span style="color:#50fa7b">height</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;25&#34;</span> /&gt; 소만사 라이선스 거절 안내&lt;/<span style="color:#ff79c6">h2</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h2</span>&gt;&lt;<span style="color:#ff79c6">img</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;icon.png&#34;</span> <span style="color:#50fa7b">alt</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;logo&#34;</span> <span style="color:#50fa7b">width</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;25&#34;</span> <span style="color:#50fa7b">height</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;25&#34;</span> /&gt; 라이선스 거절 안내&lt;/<span style="color:#ff79c6">h2</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">span</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;idxinfo&#34;</span>&gt;&lt;/<span style="color:#ff79c6">span</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">h3</span>&gt;사유 선택 :&lt;/<span style="color:#ff79c6">h3</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">input</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;checkbox&#34;</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;option1&#34;</span> <span style="color:#50fa7b">value</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;고객정보 수정 필요&#34;</span> /&gt;고객정보 수정 필요&lt;/<span style="color:#ff79c6">label</span>&gt;&lt;<span style="color:#ff79c6">br</span> /&gt;
@@ -480,8 +391,8 @@ window.addEventListener('load', function() {
 </span></span></code></pre></div><p><code>popup.js</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> request_index <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> to_mail <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> to_cc <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sales_support@somansa.com&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> subject <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;[소만사] 라이선스 발급 보류 안내 메일입니다.&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> to_cc <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;sales_support@xxx.com&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">var</span> subject <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;라이선스 발급 보류 안내 메일입니다.&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">window</span>.onload <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span> () {
 </span></span><span style="display:flex;"><span>  <span style="color:#8be9fd;font-style:italic">document</span>.body.style.width <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;700px&#34;</span>;
@@ -612,19 +523,15 @@ window.addEventListener('load', function() {
 </span></span><span style="display:flex;"><span>});
 </span></span></code></pre></div><h2 id="manage-extensions">Manage Extensions</h2>
 <h3 id="확장-프로그램-등록하기">확장 프로그램 등록하기</h3>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/9ed182c7-7307-42fa-97ee-b6b63b557cec/Untitled.png" alt="Untitled"></p>
 <p>크롬 확장 프로그램의 확장 프로그램 관리 메뉴를 클릭합니다.</p>
 <p>왼쪽 상단에 “압축해제된 확장 프로그램을 로드합니다.” 항목을 클릭합니다.</p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/b80b0acb-c4d0-4b68-b955-8f7ebdf40e71/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240213_170924_image.png" alt=""></p>
 <p>소스코드가 존재하는 디렉토리를 선택하면 아래와 같이 확장 프로그램이 추가됩니다.</p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/b16ae0fa-cf0b-4101-8aa6-4ae3f5ff3c6b/Untitled.png" alt="Untitled"></p>
+<p><img src="../assets/20240213_170858_image.png" alt=""></p>
 <p>확장 프로그램 아이콘을 클릭하여 핀셋 아이콘을 누르면 익스텐션 목록에 아이콘이 추가되어 언제든지 실행 가능한 상태가 됩니다.</p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/07b63feb-864f-4256-9180-e35a8e68f2e0/Untitled.png" alt="Untitled"></p>
-<p>원하는 테스트를 수행해 봅니다.</p>
+<p><img src="../assets/20240213_171010_image.png" alt=""></p>
+<p>아이콘을 클릭해 원하는 테스트를 수행해 봅니다.</p>
 <h3 id="확장-프로그램-디버깅">확장 프로그램 디버깅</h3>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/041299ac-d3b7-49ae-854d-cf1aba1df31f/Untitled.png" alt="Untitled"></p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/f8f403f5-eaf8-4d5d-a251-cd9a59d11e85/Untitled.png" alt="Untitled"></p>
-<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/8183a920-5524-4db4-a0a9-b5af74757153/462c24f4-4cc0-44a6-88ea-c7e9ac9eb89e/Untitled.png" alt="Untitled"></p>
 <p>확장 프로그램 관리 화면에서 오류 발생 상황을 확인가능합니다. 오류 버튼을 클릭하면 상세한 오류 메시지를 확인 가능합니다. popup.html 에서 개발자 도구를 띄워 콘솔 로그를 확인하면서 오류를 수정할 수도 있습니다.</p>
 <h3 id="확장-프로그램-업데이트">확장 프로그램 업데이트</h3>
 <p>코드 수정이 완료되면 리프레시 버튼을 누르면 즉시 수정된 코드가 반영됩니다.</p>
