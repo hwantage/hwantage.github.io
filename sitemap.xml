@@ -1,497 +1,158 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-  <url>
-    <loc>https://hwantage.github.io/tags/chrome/</loc>
-    <lastmod>2024-02-12T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/chrome/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/chrome-extension/</loc>
-    <lastmod>2024-02-12T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/chrome-extension/" />
-  </url>
   <url>
     <loc>https://hwantage.github.io/</loc>
     <lastmod>2024-02-12T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/categories/javascript/</loc>
-    <lastmod>2024-02-12T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/categories/javascript/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/js/</loc>
-    <lastmod>2024-02-12T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/js/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/</loc>
     <lastmod>2024-02-12T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/</loc>
-    <lastmod>2024-02-12T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/categories/</loc>
-    <lastmod>2024-02-12T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/categories/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/chrome-extension/</loc>
     <lastmod>2024-02-12T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/chrome-extension/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/auto-deploy/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/auto-deploy/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/commit/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/commit/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/categories/front-end/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/categories/front-end/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/github-pages/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/github-pages/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/hugo/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/hugo/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/chrome-extension/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/hugo-deploy-automation/</loc>
     <lastmod>2024-01-27T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/hugo-deploy-automation/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/ssg/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/ssg/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/%EB%B0%B0%EC%B9%98/</loc>
-    <lastmod>2024-01-27T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/%EB%B0%B0%EC%B9%98/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/hugo-deploy-automation/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/js-performance-coding/</loc>
     <lastmod>2024-01-23T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-performance-coding/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/performance/</loc>
-    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/performance/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/</loc>
-    <lastmod>2024-01-23T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/%EC%84%B1%EB%8A%A5/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/filter/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/filter/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/find/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/find/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/findindex/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/findindex/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/function/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/function/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/hoisting/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/hoisting/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-performance-coding/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/js-find/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-find/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-find/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/js-serialization/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-serialization/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-serialization/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/js-template-literal/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-template-literal/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-template-literal/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/js-function/</loc>
     <lastmod>2024-01-22T14:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-function/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/template-literal/</loc>
-    <lastmod>2024-01-22T14:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/template-literal/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-function/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/js-destructuring-assignment/</loc>
     <lastmod>2024-01-22T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-destructuring-assignment/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/</loc>
-    <lastmod>2024-01-22T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/daum/</loc>
-    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/daum/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/google-search-console/</loc>
-    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/google-search-console/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/js-destructuring-assignment/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/google-search-console/</loc>
     <lastmod>2024-01-21T11:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/google-search-console/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/naver-search-advisor/</loc>
-    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/naver-search-advisor/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/robots.txt/</loc>
-    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/robots.txt/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/sitemap.xml/</loc>
-    <lastmod>2024-01-21T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/sitemap.xml/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/google-analytics/</loc>
-    <lastmod>2024-01-20T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/google-analytics/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/google-search-console/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/google-analytics/</loc>
     <lastmod>2024-01-20T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/google-analytics/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/google-analytics/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/utterances/</loc>
     <lastmod>2024-01-20T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/utterances/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/utterances/</loc>
-    <lastmod>2024-01-20T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/utterances/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/</loc>
-    <lastmod>2024-01-20T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/%EA%B5%AC%EA%B8%80-%EC%95%A0%EB%84%90%EB%A6%AC%ED%8B%B1%EC%8A%A4/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/</loc>
-    <lastmod>2024-01-20T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/fake-terminal/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/fake-terminal/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/xterm.js/</loc>
-    <lastmod>2024-01-19T10:29:50+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/xterm.js/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/utterances/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/fake-terminal/</loc>
     <lastmod>2024-01-19T10:29:50+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/fake-terminal/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/image/</loc>
-    <lastmod>2024-01-16T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/image/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/powershell/</loc>
-    <lastmod>2024-01-16T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/powershell/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/symbolic-link/</loc>
-    <lastmod>2024-01-16T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/symbolic-link/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/</loc>
-    <lastmod>2024-01-16T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/fake-terminal/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/symboliclink/</loc>
     <lastmod>2024-01-16T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/symboliclink/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/css-deduplicate/</loc>
-    <lastmod>2024-01-16T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/css-deduplicate/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/symboliclink/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/css-deduplicate/</loc>
     <lastmod>2024-01-16T11:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/css-deduplicate/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/file-merge/</loc>
-    <lastmod>2024-01-16T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/file-merge/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/postcss/</loc>
-    <lastmod>2024-01-16T11:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/postcss/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/css-deduplicate/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/css-deduplicate-2/</loc>
     <lastmod>2024-01-15T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/css-deduplicate-2/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B0%B0%ED%8F%AC/</loc>
-    <lastmod>2024-01-15T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/npm-%ED%8C%A8%ED%82%A4%EC%A7%80-%EB%B0%B0%ED%8F%AC/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/css-deduplicate-2/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/npm-publish/</loc>
     <lastmod>2024-01-14T10:32:14+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/npm-publish/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/npm-publish/</loc>
-    <lastmod>2024-01-14T10:32:14+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/npm-publish/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/postcss-delete-duplicate-selector/</loc>
-    <lastmod>2024-01-14T10:32:14+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/postcss-delete-duplicate-selector/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/npm-publish/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/hugo/</loc>
     <lastmod>2024-01-12T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/hugo/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/jam-stack/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/jam-stack/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/node/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/node/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/node.js/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/node.js/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/tags/nvm/</loc>
-    <lastmod>2024-01-12T13:14:52+09:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/tags/nvm/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/hugo/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/posts/nvm/</loc>
     <lastmod>2024-01-12T13:14:52+09:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/nvm/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/posts/nvm/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/about/</loc>
     <lastmod>2022-08-27T09:16:45+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/about/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/categories/css/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/categories/css/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/about/" />
   </url>
   <url>
     <loc>https://hwantage.github.io/search/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/search/" />
-  </url>
-  <url>
-    <loc>https://hwantage.github.io/categories/uncategories/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/categories/uncategories/" />
+	<xhtml:link rel="alternate" hreflang="x-default" href="https://hwantage.github.io/search/" />
   </url>
 </urlset>
