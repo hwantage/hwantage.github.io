@@ -218,5 +218,17 @@
       "date": "2024-02-12 14:14:52",
       "type": "posts"
     }
+  ,
+    {
+      "id": "18",
+	  "permalink": "https://hwantage.github.io/posts/gitinit/",
+      "title": "GIT 초기 명령어",
+      "tags": ["git", "github"],
+      "description": "git 초기화 실행 명령어",
+      "category": "[env]",
+      "contents": "GIT 초기화 git init git add . git commit -m \u0026#34;first commit\u0026#34; git remote add origin https://... git branch --set-upstream-to=origin/main main git push git branch --set-upstream-to=origin/main main 을 실행하지 않으면 git push origin main 으로 실행해야 하기 때문에 설정을 해두어야 한다.\n",
+      "date": "2024-05-16 15:06:52",
+      "type": "posts"
+    }
   
 ]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/git/</link>
+    <description>Recent content in git on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Thu, 16 May 2024 15:06:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIT 초기 명령어</title>
+      <link>https://hwantage.github.io/posts/gitinit/</link>
+      <pubDate>Thu, 16 May 2024 15:06:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/gitinit/</guid>
+      <description>GIT 초기화 git init git add . git commit -m &amp;#34;first commit&amp;#34; git remote add origin https://.</description>
+    </item>
+  </channel>
+</rss>

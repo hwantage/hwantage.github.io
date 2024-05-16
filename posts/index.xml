@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Mon, 12 Feb 2024 14:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 16 May 2024 15:06:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GIT 초기 명령어</title>
+      <link>https://hwantage.github.io/posts/gitinit/</link>
+      <pubDate>Thu, 16 May 2024 15:06:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/gitinit/</guid>
+      <description>GIT 초기화 git init git add . git commit -m &amp;#34;first commit&amp;#34; git remote add origin https://.</description>
+    </item>
     <item>
       <title>크롬 익스텐션 개발기</title>
       <link>https://hwantage.github.io/posts/chrome-extension/</link>
