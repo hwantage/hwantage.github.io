@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Mon, 12 Feb 2024 14:14:52 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2024 15:06:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Javascript 메모리 영역</title>
+      <link>https://hwantage.github.io/posts/jsmemory/</link>
+      <pubDate>Tue, 21 May 2024 15:06:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/jsmemory/</guid>
+      <description>Javascript 메모리 영역 자바스크립트에서는 두 가지의 메모리 영역을 사용한다. Call stack 과 Memory heap 영역이다.</description>
+    </item>
     <item>
       <title>크롬 익스텐션 개발기</title>
       <link>https://hwantage.github.io/posts/chrome-extension/</link>
