@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradle Build Helper on Hwantage world</title>
+    <link>https://hwantage.github.io/tags/gradle-build-helper/</link>
+    <description>Recent content in Gradle Build Helper on Hwantage world</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Thu, 30 Jan 2025 18:04:52 +0900</lastBuildDate>
+    <atom:link href="https://hwantage.github.io/tags/gradle-build-helper/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gradle 빌드를 편리하게 VSCode 익스텐션 Gradle Build Helper 소개</title>
+      <link>https://hwantage.github.io/posts/gradle-build-helper/</link>
+      <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/gradle-build-helper/</guid>
+      <description>Gradle Task 실행 방법 Gradle Task는 보통 terminal 창을 열어 아래와 같이 실행하면 된다.&#xA;gradlew clean&#xD;gradlew build 그러나 멀티 모듈 프로젝트 구조에서는 아래와 같은 형태로 수행해야 한다.</description>
+    </item>
+  </channel>
+</rss>

@@ -7,8 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Tue, 21 May 2024 15:06:52 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jan 2025 18:04:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>build</title>
+      <link>https://hwantage.github.io/tags/build/</link>
+      <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/build/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gradle</title>
+      <link>https://hwantage.github.io/tags/gradle/</link>
+      <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/gradle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gradle Build Helper</title>
+      <link>https://hwantage.github.io/tags/gradle-build-helper/</link>
+      <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/gradle-build-helper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visual Studio Code</title>
+      <link>https://hwantage.github.io/tags/visual-studio-code/</link>
+      <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/visual-studio-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vscode extension</title>
+      <link>https://hwantage.github.io/tags/vscode-extension/</link>
+      <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/tags/vscode-extension/</guid>
+      <description></description>
+    </item>
     <item>
       <title>const</title>
       <link>https://hwantage.github.io/tags/const/</link>
