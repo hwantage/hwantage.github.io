@@ -4,7 +4,7 @@
     <title>마크업 에디터 on Hwantage world</title>
     <link>https://hwantage.github.io/tags/%EB%A7%88%ED%81%AC%EC%97%85-%EC%97%90%EB%94%94%ED%84%B0/</link>
     <description>Recent content in 마크업 에디터 on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Tue, 16 Jan 2024 13:14:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/symboliclink/</link>
       <pubDate>Tue, 16 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/symboliclink/</guid>
-      <description>Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 hugo server 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.</description>
+      <description>&lt;p&gt;Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 &lt;code&gt;hugo server&lt;/code&gt; 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

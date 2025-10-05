@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sitemap.xml on Hwantage world</title>
+    <title>Sitemap.xml on Hwantage world</title>
     <link>https://hwantage.github.io/tags/sitemap.xml/</link>
-    <description>Recent content in sitemap.xml on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Sitemap.xml on Hwantage world</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Sun, 21 Jan 2024 11:14:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/google-search-console/</link>
       <pubDate>Sun, 21 Jan 2024 11:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/google-search-console/</guid>
-      <description>검색엔진에 노출이 되도록 블로그를 설정합니다.&#xA;구글 검색 노출 방법 구글 서치 콘솔 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.</description>
+      <description>&lt;p&gt;검색엔진에 노출이 되도록 블로그를 설정합니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;구글-검색-노출-방법&#34;&gt;구글 검색 노출 방법&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://search.google.com/search-console/about?hl=ko&#34;&gt;구글 서치 콘솔&lt;/a&gt; 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

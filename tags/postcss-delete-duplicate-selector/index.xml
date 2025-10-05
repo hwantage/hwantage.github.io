@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>postcss-delete-duplicate-selector on Hwantage world</title>
+    <title>Postcss-Delete-Duplicate-Selector on Hwantage world</title>
     <link>https://hwantage.github.io/tags/postcss-delete-duplicate-selector/</link>
-    <description>Recent content in postcss-delete-duplicate-selector on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Postcss-Delete-Duplicate-Selector on Hwantage world</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Sun, 14 Jan 2024 10:32:14 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/npm-publish/</link>
       <pubDate>Sun, 14 Jan 2024 10:32:14 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/npm-publish/</guid>
-      <description>CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거) 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hwantage.github.io/posts/css-deduplicate/&#34;&gt;CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거)&lt;/a&gt; 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

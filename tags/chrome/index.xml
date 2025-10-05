@@ -4,7 +4,7 @@
     <title>Chrome on Hwantage world</title>
     <link>https://hwantage.github.io/tags/chrome/</link>
     <description>Recent content in Chrome on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Mon, 12 Feb 2024 14:14:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/chrome-extension/</link>
       <pubDate>Mon, 12 Feb 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/chrome-extension/</guid>
-      <description>Summary 라이선스 발급 취소 사유 메일 발송 크롬 익스텐션 개발 후기.&#xA;Abstract 사내 라이선스 센터 발급 취소시 발급 취소 사유를 이메일로 발송하는 기능에 대한 요구사항으로 개발을 진행했습니다.</description>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;&#xA;&lt;p&gt;라이선스 발급 취소 사유 메일 발송 크롬 익스텐션 개발 후기.&lt;/p&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;사내 라이선스 센터 발급 취소시 발급 취소 사유를 이메일로 발송하는 기능에 대한 요구사항으로 개발을 진행했습니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

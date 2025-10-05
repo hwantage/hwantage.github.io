@@ -4,10 +4,10 @@
     <title>About me on Hwantage world</title>
     <link>https://hwantage.github.io/about/</link>
     <description>Recent content in About me on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Sat, 27 Aug 2022 09:16:45 +0000</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://hwantage.github.io/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

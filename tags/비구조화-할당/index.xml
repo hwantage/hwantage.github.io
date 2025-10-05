@@ -4,7 +4,7 @@
     <title>비구조화 할당 on Hwantage world</title>
     <link>https://hwantage.github.io/tags/%EB%B9%84%EA%B5%AC%EC%A1%B0%ED%99%94-%ED%95%A0%EB%8B%B9/</link>
     <description>Recent content in 비구조화 할당 on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Mon, 22 Jan 2024 13:14:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/js-destructuring-assignment/</link>
       <pubDate>Mon, 22 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-destructuring-assignment/</guid>
-      <description>정의 비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)</description>
+      <description>&lt;h2 id=&#34;정의&#34;&gt;정의&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Template literal on Hwantage world</title>
+    <title>Template Literal on Hwantage world</title>
     <link>https://hwantage.github.io/tags/template-literal/</link>
-    <description>Recent content in Template literal on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Template Literal on Hwantage world</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Mon, 22 Jan 2024 14:14:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/js-template-literal/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-template-literal/</guid>
-      <description>ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다.</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 &lt;code&gt;백틱(backtick) 문자&lt;/code&gt; `를 사용합니다. 템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다. 문자열 인터폴레이션은 ${}으로 표현식을 감싸 사용합니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

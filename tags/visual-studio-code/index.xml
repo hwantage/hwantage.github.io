@@ -4,7 +4,7 @@
     <title>Visual Studio Code on Hwantage world</title>
     <link>https://hwantage.github.io/tags/visual-studio-code/</link>
     <description>Recent content in Visual Studio Code on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Thu, 30 Jan 2025 18:04:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/gradle-build-helper/</link>
       <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/gradle-build-helper/</guid>
-      <description>Gradle Task 실행 방법 Gradle Task는 보통 terminal 창을 열어 아래와 같이 실행하면 된다.&#xA;gradlew clean&#xD;gradlew build 그러나 멀티 모듈 프로젝트 구조에서는 아래와 같은 형태로 수행해야 한다.</description>
+      <description>&lt;h1 id=&#34;gradle-task-실행-방법&#34;&gt;Gradle Task 실행 방법&lt;/h1&gt;&#xA;&lt;p&gt;Gradle Task는 보통 terminal 창을 열어 아래와 같이 실행하면 된다.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gradlew clean&#xD;&#xA;gradlew build&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;그러나 멀티 모듈 프로젝트 구조에서는 아래와 같은 형태로 수행해야 한다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>fake terminal on Hwantage world</title>
+    <title>Fake Terminal on Hwantage world</title>
     <link>https://hwantage.github.io/tags/fake-terminal/</link>
-    <description>Recent content in fake terminal on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Fake Terminal on Hwantage world</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Fri, 19 Jan 2024 10:29:50 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/fake-terminal/</link>
       <pubDate>Fri, 19 Jan 2024 10:29:50 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/fake-terminal/</guid>
-      <description>Xterm.js 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.&#xA;데모를 확인해보세요. DEMO&#xA;시작하기 먼저, 모듈을 설치해야 합니다.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;../assets/20240119_113054_image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://xtermjs.org/&#34;&gt;Xterm.js&lt;/a&gt; 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.&lt;/p&gt;&#xA;&lt;p&gt;데모를 확인해보세요. &lt;a href=&#34;https://hwantage.github.io/fake-terminal/demo/&#34;&gt;DEMO&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;시작하기&#34;&gt;시작하기&lt;/h1&gt;&#xA;&lt;p&gt;먼저, 모듈을 설치해야 합니다.  &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt;을 통해서만 제공 되므로 다음을 실행하여 xterm.js를 해당 모듈을 종속성으로 추가해야 합니다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

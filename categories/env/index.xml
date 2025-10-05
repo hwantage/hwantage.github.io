@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>env on Hwantage world</title>
+    <title>Env on Hwantage world</title>
     <link>https://hwantage.github.io/categories/env/</link>
-    <description>Recent content in env on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Env on Hwantage world</description>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Thu, 16 May 2024 15:06:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/gitinit/</link>
       <pubDate>Thu, 16 May 2024 15:06:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/gitinit/</guid>
-      <description>GIT 초기화 git init git add . git commit -m &amp;#34;first commit&amp;#34; git remote add origin https://.</description>
+      <description>&lt;h1 id=&#34;git-초기화&#34;&gt;GIT 초기화&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init&#xA;&#xA;git add .&#xA;&#xA;git commit -m &amp;#34;first commit&amp;#34;&#xA;&#xA;git remote add origin https://...&#xA;&#xA;git branch --set-upstream-to=origin/main main&#xA;&#xA;git push&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;git branch --set-upstream-to=origin/main main&lt;/code&gt; 을 실행하지 않으면 &lt;code&gt;git push origin main&lt;/code&gt; 으로 실행해야 하기 때문에 설정을 해두어야 한다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

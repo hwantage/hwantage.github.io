@@ -4,157 +4,164 @@
     <title>Hwantage world</title>
     <link>https://hwantage.github.io/</link>
     <description>Recent content on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
-    <lastBuildDate>Thu, 30 Jan 2025 18:04:52 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Oct 2025 13:14:52 +0900</lastBuildDate>
     <atom:link href="https://hwantage.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>아이폰 17 에어 티다이렉트몰 구매 후기</title>
+      <link>https://hwantage.github.io/posts/iphone-air/</link>
+      <pubDate>Sat, 04 Oct 2025 13:14:52 +0900</pubDate>
+      <guid>https://hwantage.github.io/posts/iphone-air/</guid>
+      <description>&lt;p&gt;T 다이렉트몰 채팅 상담을 통해 아이폰 17 Air 버전을 구매한 내용을 정리해 본다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;t-다이렉트몰-구매-상담-채팅&#34;&gt;T 다이렉트몰 구매 상담 채팅&lt;/h2&gt;&#xA;&lt;p&gt;구매 상담은 카카오톡을 이용해 진행되는데 토요일 저녁 8시부터 약 1시간 가량의 상담을 통해 구매를 진행했다.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Gradle 빌드를 편리하게 VSCode 익스텐션 Gradle Build Helper 소개</title>
       <link>https://hwantage.github.io/posts/gradle-build-helper/</link>
       <pubDate>Thu, 30 Jan 2025 18:04:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/gradle-build-helper/</guid>
-      <description>Gradle Task 실행 방법 Gradle Task는 보통 terminal 창을 열어 아래와 같이 실행하면 된다.&#xA;gradlew clean&#xD;gradlew build 그러나 멀티 모듈 프로젝트 구조에서는 아래와 같은 형태로 수행해야 한다.</description>
+      <description>&lt;h1 id=&#34;gradle-task-실행-방법&#34;&gt;Gradle Task 실행 방법&lt;/h1&gt;&#xA;&lt;p&gt;Gradle Task는 보통 terminal 창을 열어 아래와 같이 실행하면 된다.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gradlew clean&#xD;&#xA;gradlew build&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;그러나 멀티 모듈 프로젝트 구조에서는 아래와 같은 형태로 수행해야 한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript 메모리 영역</title>
       <link>https://hwantage.github.io/posts/jsmemory/</link>
       <pubDate>Tue, 21 May 2024 15:06:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/jsmemory/</guid>
-      <description>Javascript 메모리 영역 자바스크립트에서는 두 가지의 메모리 영역을 사용한다. Call stack 과 Memory heap 영역이다.</description>
+      <description>&lt;h1 id=&#34;javascript-메모리-영역&#34;&gt;Javascript 메모리 영역&lt;/h1&gt;&#xA;&lt;p&gt;자바스크립트에서는 두 가지의 메모리 영역을 사용한다. Call stack 과 Memory heap 영역이다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GIT 초기 명령어</title>
       <link>https://hwantage.github.io/posts/gitinit/</link>
       <pubDate>Thu, 16 May 2024 15:06:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/gitinit/</guid>
-      <description>GIT 초기화 git init git add . git commit -m &amp;#34;first commit&amp;#34; git remote add origin https://.</description>
+      <description>&lt;h1 id=&#34;git-초기화&#34;&gt;GIT 초기화&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git init&#xA;&#xA;git add .&#xA;&#xA;git commit -m &amp;#34;first commit&amp;#34;&#xA;&#xA;git remote add origin https://...&#xA;&#xA;git branch --set-upstream-to=origin/main main&#xA;&#xA;git push&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;git branch --set-upstream-to=origin/main main&lt;/code&gt; 을 실행하지 않으면 &lt;code&gt;git push origin main&lt;/code&gt; 으로 실행해야 하기 때문에 설정을 해두어야 한다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>크롬 익스텐션 개발기</title>
       <link>https://hwantage.github.io/posts/chrome-extension/</link>
       <pubDate>Mon, 12 Feb 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/chrome-extension/</guid>
-      <description>Summary 라이선스 발급 취소 사유 메일 발송 크롬 익스텐션 개발 후기.&#xA;Abstract 사내 라이선스 센터 발급 취소시 발급 취소 사유를 이메일로 발송하는 기능에 대한 요구사항으로 개발을 진행했습니다.</description>
+      <description>&lt;h1 id=&#34;summary&#34;&gt;Summary&lt;/h1&gt;&#xA;&lt;p&gt;라이선스 발급 취소 사유 메일 발송 크롬 익스텐션 개발 후기.&lt;/p&gt;&#xA;&lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;&#xA;&lt;p&gt;사내 라이선스 센터 발급 취소시 발급 취소 사유를 이메일로 발송하는 기능에 대한 요구사항으로 개발을 진행했습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HUGO 사이트 배포를 위한 배치 파일 생성</title>
       <link>https://hwantage.github.io/posts/hugo-deploy-automation/</link>
       <pubDate>Sat, 27 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/hugo-deploy-automation/</guid>
-      <description>블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다.</description>
+      <description>&lt;p&gt;블로그를 Github 에 commit 하기 위해서는 우선 hugo 빌드를 수행하고 git add 명령어 및 커밋 메시지 작성후 push를 해야 합니다.&#xA;이 과정은 몇 번의 command 명령어를 입력해야 하기 때문에 귀찮고 번거로운 작업이 됩니다.&#xA;이 포스트에서는 이러한 과정을 배치 파일을 생성하여 한번의 명령어로 처리하는 방법을 소개하겠습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript 성능 향상 코딩 팁</title>
       <link>https://hwantage.github.io/posts/js-performance-coding/</link>
       <pubDate>Tue, 23 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-performance-coding/</guid>
-      <description>자바스크립트 성능 측정 방법 console.time console.time(0); // 여러가지 로직 수행 console.timeEnd(0); console.time(&amp;#39;t1&amp;#39;); // 다양한 로직 수행 console.</description>
+      <description>&lt;h2 id=&#34;자바스크립트-성능-측정-방법&#34;&gt;자바스크립트 성능 측정 방법&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;console.time&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;console.time(&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// 여러가지 로직 수행&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;console.timeEnd(&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;console.time(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;t1&amp;#39;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// 다양한 로직 수행&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;console.timeEnd(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;t1&amp;#39;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;7468.280029296875&lt;/span&gt; ms&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;&#xA;&lt;li&gt;performance.now&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; t1 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; performance.now();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// 여러가지 로직 수행&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;var&lt;/span&gt; t2 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; performance.now();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;console.log(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;소요 시간: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; (t2 &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt; t1) &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;ms&amp;#39;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;소요 시간&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;5976.399999976158&lt;/span&gt;ms&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;console.time 이 더 사용하기 쉬우나 비표준이므로 디버깅 용도로만 사용할 것. 프로덕션 환경에서는 사용하지 않는 것이 좋다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript find, findIndex, filter</title>
       <link>https://hwantage.github.io/posts/js-find/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-find/</guid>
-      <description>find find() 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소 의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.</description>
+      <description>&lt;h2 id=&#34;find&#34;&gt;find&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;code&gt;find()&lt;/code&gt;&lt;/strong&gt; 메서드는 주어진 판별 함수를 만족하는 &lt;strong&gt;첫 번째 요소&lt;/strong&gt; 의 &lt;strong&gt;값&lt;/strong&gt;을 반환합니다. 그런 요소가 없다면 &lt;code&gt;undefined&lt;/code&gt;를 반환합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript 직렬화(serialization)</title>
       <link>https://hwantage.github.io/posts/js-serialization/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-serialization/</guid>
-      <description>직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.</description>
+      <description>&lt;p&gt;직렬화의 의미는 자바스크립트의 메모리 상에 존재하는 Object 나 데이터 구조를 다른 용도로 사용하기 위해 포맷을 변환하는 것.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript 템플릿 리터럴(Template literal)</title>
       <link>https://hwantage.github.io/posts/js-template-literal/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-template-literal/</guid>
-      <description>ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 백틱(backtick) 문자 `를 사용합니다.</description>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;ES6는 템플릿 리터럴(Template literal)이라고 불리는 새로운 문자열 표기법을 도입하였습니다. 템플릿 리터럴은 일반 문자열과 비슷해 보이지만, ‘ 또는 “ 같은 통상적인 따옴표 문자 대신 &lt;code&gt;백틱(backtick) 문자&lt;/code&gt; `를 사용합니다. 템플릿 리터럴은 + 연산자를 사용하지 않아도 간단한 방법으로 새로운 문자열을 삽입할 수 있는 기능을 제공합니다. 이를 문자열 인터폴레이션(String Interpolation)이라 합니다. 문자열 인터폴레이션은 ${}으로 표현식을 감싸 사용합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript 함수 선언 방법과 호이스팅</title>
       <link>https://hwantage.github.io/posts/js-function/</link>
       <pubDate>Mon, 22 Jan 2024 14:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-function/</guid>
-      <description>함수 선언 방법 함수선언문 (Function Declaration) // 일반적인 함수 선언 방법 function add(a, b) { return a + b } 함수표현식 (Function expression) // arrow function으로 함수표현식 선언 방법 const myFunc1 = () =&amp;gt; { } // 매개변수가 없을 경우 const myFunc2 = x =&amp;gt; { } // 매개변수가 한 개인 경우, 소괄호를 생략 가능 const myFunc3 = (x, y) =&amp;gt; { } // 매개변수가 여러 개인 경우, 소괄호를 생략 불가 // Body 전개 방법 const myFunc4 = x =&amp;gt; { return x * 2 } // single line block const myFunc5 = x =&amp;gt; x * 2 // 함수 몸체가 한줄의 구문이라면 중괄호 생략 가능 const myFunc6 = () =&amp;gt; { return { a: 1 }} const myFunc7 = () =&amp;gt; ({ a: 1 }) // 위 표현과 동일.</description>
+      <description>&lt;h2 id=&#34;함수-선언-방법&#34;&gt;함수 선언 방법&lt;/h2&gt;&#xA;&lt;h3 id=&#34;함수선언문-function-declaration&#34;&gt;함수선언문 (Function Declaration)&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// 일반적인 함수 선언 방법&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;function&lt;/span&gt; add(a, b) {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; a &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; b&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;함수표현식-function-expression&#34;&gt;함수표현식 (Function expression)&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-jsx&#34; data-lang=&#34;jsx&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// arrow function으로 함수표현식 선언 방법&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc1 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; () =&amp;gt; {  } &lt;span style=&#34;color:#6272a4&#34;&gt;// 매개변수가 없을 경우&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc2 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; x =&amp;gt; { } &lt;span style=&#34;color:#6272a4&#34;&gt;// 매개변수가 한 개인 경우, 소괄호를 생략 가능&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc3 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; (x, y) =&amp;gt; { } &lt;span style=&#34;color:#6272a4&#34;&gt;// 매개변수가 여러 개인 경우, 소괄호를 생략 불가&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;// Body 전개 방법&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc4 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; x =&amp;gt; { &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; x &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt; }  &lt;span style=&#34;color:#6272a4&#34;&gt;// single line block&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc5 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; x =&amp;gt; x &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;2&lt;/span&gt;             &lt;span style=&#34;color:#6272a4&#34;&gt;// 함수 몸체가 한줄의 구문이라면 중괄호 생략 가능 &#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc6 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; () =&amp;gt; { &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; { a&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; }}  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; myFunc7 &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; () =&amp;gt; ({ a&lt;span style=&#34;color:#ff79c6&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt; }) &lt;span style=&#34;color:#6272a4&#34;&gt;// 위 표현과 동일. 객체 반환시는 소괄호를 사용.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;호이스팅hoisting&#34;&gt;호이스팅(hoisting)&lt;/h2&gt;&#xA;&lt;p&gt;예제 부터 보면&lt;/p&gt;</description>
     </item>
     <item>
       <title>Javascript 비구조화 할당</title>
       <link>https://hwantage.github.io/posts/js-destructuring-assignment/</link>
       <pubDate>Mon, 22 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/js-destructuring-assignment/</guid>
-      <description>정의 비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)</description>
+      <description>&lt;h2 id=&#34;정의&#34;&gt;정의&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;비구조화 할당(destructuring assignment) 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식(expression)&lt;/p&gt;</description>
     </item>
     <item>
       <title>HUGO로 제작한 블로그를 구글 검색, 네이버 검색, 다음 검색에 노출시키기</title>
       <link>https://hwantage.github.io/posts/google-search-console/</link>
       <pubDate>Sun, 21 Jan 2024 11:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/google-search-console/</guid>
-      <description>검색엔진에 노출이 되도록 블로그를 설정합니다.&#xA;구글 검색 노출 방법 구글 서치 콘솔 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.</description>
+      <description>&lt;p&gt;검색엔진에 노출이 되도록 블로그를 설정합니다.&lt;/p&gt;&#xA;&lt;h2 id=&#34;구글-검색-노출-방법&#34;&gt;구글 검색 노출 방법&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://search.google.com/search-console/about?hl=ko&#34;&gt;구글 서치 콘솔&lt;/a&gt; 로 접속하여 두번째 URL 접두어에 등록을 하면 됩니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HUGO 블로그에 구글 애널리틱스 연결하기</title>
       <link>https://hwantage.github.io/posts/google-analytics/</link>
       <pubDate>Sat, 20 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/google-analytics/</guid>
-      <description>HUGO를 통해 블로그를 생성하고 나서 과연 방문객이 얼마나 될지 궁금할 것이다.&#xA;구글 애널리틱스를 이용하여 방문현황을 파악해 보자.</description>
+      <description>&lt;p&gt;HUGO를 통해 블로그를 생성하고 나서 과연 방문객이 얼마나 될지 궁금할 것이다.&lt;/p&gt;&#xA;&lt;p&gt;구글 애널리틱스를 이용하여 방문현황을 파악해 보자.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HUGO 블로그에 댓글 기능 연동</title>
       <link>https://hwantage.github.io/posts/utterances/</link>
       <pubDate>Sat, 20 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/utterances/</guid>
-      <description>HUGO를 통해 블로그 포스트 하단에 댓글 기능을 연동하는 방법을 알아보겠습니다.&#xA;댓글 기능을 연동하는 방법은 대표적인 것이 Disqus 입니다.</description>
+      <description>&lt;p&gt;HUGO를 통해 블로그 포스트 하단에 댓글 기능을 연동하는 방법을 알아보겠습니다.&lt;/p&gt;&#xA;&lt;p&gt;댓글 기능을 연동하는 방법은 대표적인 것이 Disqus 입니다. 실제로 많은 사이트들이 Disqus를 기반으로 댓글 기능을 사용합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xterm.js 를 이용한 fake terminal 웹 제작</title>
       <link>https://hwantage.github.io/posts/fake-terminal/</link>
       <pubDate>Fri, 19 Jan 2024 10:29:50 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/fake-terminal/</guid>
-      <description>Xterm.js 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.&#xA;데모를 확인해보세요. DEMO&#xA;시작하기 먼저, 모듈을 설치해야 합니다.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;../assets/20240119_113054_image.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://xtermjs.org/&#34;&gt;Xterm.js&lt;/a&gt; 를 이용하여 웹 사이트에 fake terminal 을 구현합니다.&lt;/p&gt;&#xA;&lt;p&gt;데모를 확인해보세요. &lt;a href=&#34;https://hwantage.github.io/fake-terminal/demo/&#34;&gt;DEMO&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;시작하기&#34;&gt;시작하기&lt;/h1&gt;&#xA;&lt;p&gt;먼저, 모듈을 설치해야 합니다.  &lt;a href=&#34;https://www.npmjs.com/&#34;&gt;npm&lt;/a&gt;을 통해서만 제공 되므로 다음을 실행하여 xterm.js를 해당 모듈을 종속성으로 추가해야 합니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>심볼릭 링크로 마크다운 에디터로 업로드한 이미지 HUGO에서 바로 확인</title>
       <link>https://hwantage.github.io/posts/symboliclink/</link>
       <pubDate>Tue, 16 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/symboliclink/</guid>
-      <description>Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 hugo server 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.</description>
+      <description>&lt;p&gt;Vscode의 Extension 중 하나인 Markdown Editor 를 통해 WYSIWYG 방식으로 편집할 때 이미지를 붙여넣기 하면 마크업 에디터에서는 잘 보이지만 &lt;code&gt;hugo server&lt;/code&gt; 로 서버를 띄워 확인해보면 경로가 맞지 않아 이미지가 뜨지 않게 된다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CSS-Deduplication part1 (postcss 커스텀 스크립트를 이용한 CSS 중복 제거)</title>
       <link>https://hwantage.github.io/posts/css-deduplicate/</link>
       <pubDate>Tue, 16 Jan 2024 11:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/css-deduplicate/</guid>
-      <description>본 포스팅을 통해 postcss 를 이용하는 방법에 대해 배울 수 있습니다. 또한 원하는 플러그인이 없는 경우 custom 플러그인을 작성하는 방법을 학습할 수 있습니다.</description>
+      <description>&lt;p&gt;본 포스팅을 통해 postcss 를 이용하는 방법에 대해 배울 수 있습니다. 또한 원하는 플러그인이 없는 경우 custom 플러그인을 작성하는 방법을 학습할 수 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CSS-Deduplication part 2 (CSS 중복제거 플러그인 제작)</title>
       <link>https://hwantage.github.io/posts/css-deduplicate-2/</link>
       <pubDate>Mon, 15 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/css-deduplicate-2/</guid>
-      <description>이전 포스팅을 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.&#xA;이번 포스팅에서는 media 쿼리에 대한 처리 로직을 추가하고 postcss 플러그인으로 제작해 보도록 하겠습니다.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hwantage.github.io/posts/css-deduplicate/&#34;&gt;이전 포스팅&lt;/a&gt;을 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.&lt;/p&gt;&#xA;&lt;p&gt;이번 포스팅에서는 media 쿼리에 대한 처리 로직을 추가하고 postcss 플러그인으로 제작해 보도록 하겠습니다. &lt;a href=&#34;https://hwantage.github.io/posts/npm-plugin/&#34;&gt;다음 포스팅&lt;/a&gt;을 통해 완성된 플러그인을 npmjs.org 사이트를 통해 배포하고 npm i 명령어로 설치가 가능하게 만들어 보겠습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CSS-Deduplication part 3 (postcss 플러그인을 npmjs.org에 배포)</title>
       <link>https://hwantage.github.io/posts/npm-publish/</link>
       <pubDate>Sun, 14 Jan 2024 10:32:14 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/npm-publish/</guid>
-      <description>CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거) 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://hwantage.github.io/posts/css-deduplicate/&#34;&gt;CSS-Deduplication part1(postcss 커스텀 스크립트를 이용한 CSS 중복 제거)&lt;/a&gt; 포스트를 통해 postcss 커스텀 스크립트로 CSS 중복을 제거하는 방법을 확인할 수 있습니다.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HUGO를 이용한 정적 사이트 생성 및 github pages를 이용한 블로그 운영 방법</title>
       <link>https://hwantage.github.io/posts/hugo/</link>
       <pubDate>Fri, 12 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/hugo/</guid>
-      <description>Agenda&#xA;SSG 개념 JAM Stack 개념 SSG 툴 Github 계정 생성 및 사용 Github pages 사용법 HUGO를 이용한 블로그 생성 Markdown 사용법 VSCode Markdown 에디터 활용법 SSG 개념 정적 사이트 : 단순 html, css, js 로만 구성된 사이트.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Agenda&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SSG 개념&lt;/li&gt;&#xA;&lt;li&gt;JAM Stack 개념&lt;/li&gt;&#xA;&lt;li&gt;SSG 툴&lt;/li&gt;&#xA;&lt;li&gt;Github 계정 생성 및 사용&lt;/li&gt;&#xA;&lt;li&gt;Github pages 사용법&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;HUGO를 이용한 블로그 생성&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;Markdown 사용법&lt;/li&gt;&#xA;&lt;li&gt;VSCode Markdown 에디터 활용법&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ssg-개념&#34;&gt;SSG 개념&lt;/h2&gt;&#xA;&lt;p&gt;정적 사이트 : 단순 html, css, js 로만 구성된 사이트.&lt;/p&gt;</description>
     </item>
     <item>
       <title>nvm을 이용한 node.js의 버전 관리 방법</title>
       <link>https://hwantage.github.io/posts/nvm/</link>
       <pubDate>Fri, 12 Jan 2024 13:14:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/nvm/</guid>
-      <description>새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.</description>
+      <description>&lt;p&gt;새 노트북에서 node 를 설치후 기존에 잘 돌아가던 프로젝트를 빌드 하거나 실행하면 다음과 같은 에러가 발생하였다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

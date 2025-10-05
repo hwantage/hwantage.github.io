@@ -4,7 +4,7 @@
     <title>Javascript on Hwantage world</title>
     <link>https://hwantage.github.io/tags/javascript/</link>
     <description>Recent content in Javascript on Hwantage world</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Tue, 21 May 2024 15:06:52 +0900</lastBuildDate>
@@ -14,7 +14,7 @@
       <link>https://hwantage.github.io/posts/jsmemory/</link>
       <pubDate>Tue, 21 May 2024 15:06:52 +0900</pubDate>
       <guid>https://hwantage.github.io/posts/jsmemory/</guid>
-      <description>Javascript 메모리 영역 자바스크립트에서는 두 가지의 메모리 영역을 사용한다. Call stack 과 Memory heap 영역이다.</description>
+      <description>&lt;h1 id=&#34;javascript-메모리-영역&#34;&gt;Javascript 메모리 영역&lt;/h1&gt;&#xA;&lt;p&gt;자바스크립트에서는 두 가지의 메모리 영역을 사용한다. Call stack 과 Memory heap 영역이다.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
